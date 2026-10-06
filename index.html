@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f6f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#17141b" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23c2501c'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'%3E31%3C/text%3E%3C/svg%3E">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px/1.5 system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Edas Geburtstag 31.10.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: Kommandozentrale zum Abtelefonieren – Kopf mit Fortschritt, Tabs, Karten pro Location in 4 Distanz-Zonen ab Friedrich-Engels-Platz */
+:root{
+  --bg:#f6f4f1; --surface:#ffffff; --sunk:#ece8e2; --line:#ddd6cc;
+  --fg:#211c26; --muted:#6c6475; --faint:#9a92a3;
+  --accent:#c2501c; --accent-ink:#ffffff; --accent-soft:#f6e3d8;
+  --t1:#b07a12; --t1s:#f5ead2; --t2:#127a6b; --t2s:#d6efe9; --t3:#2f5fb3; --t3s:#dde7f8; --t4:#7a5a9c; --t4s:#ebe2f4;
+  --ok:#2c7a3c; --oks:#dcefdf; --warn:#a8650a; --warns:#f7ead2; --bad:#b3302a; --bads:#f6dcda;
+  --water:#c9dcec; --road:#d9cfc2; --mapbg:#efeae3;
+  --f-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:12px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17141b; --surface:#211d26; --sunk:#2a2530; --line:#3a3342;
+  --fg:#f1ecf4; --muted:#b2a9ba; --faint:#857c8e;
+  --accent:#f0874f; --accent-ink:#1b1210; --accent-soft:#3d2620;
+  --t1:#e2b04a; --t1s:#3a2f17; --t2:#4cc4ae; --t2s:#163631; --t3:#7ea6ee; --t3s:#1c2a44; --t4:#b997dc; --t4s:#2e2440;
+  --ok:#6fcf80; --oks:#1b3320; --warn:#e8a94c; --warns:#3a2b14; --bad:#f07f78; --bads:#3d1e1c;
+  --water:#22374a; --road:#3d3545; --mapbg:#1d1a22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17141b; --surface:#211d26; --sunk:#2a2530; --line:#3a3342;
+  --fg:#f1ecf4; --muted:#b2a9ba; --faint:#857c8e;
+  --accent:#f0874f; --accent-ink:#1b1210; --accent-soft:#3d2620;
+  --t1:#e2b04a; --t1s:#3a2f17; --t2:#4cc4ae; --t2s:#163631; --t3:#7ea6ee; --t3s:#1c2a44; --t4:#b997dc; --t4s:#2e2440;
+  --ok:#6fcf80; --oks:#1b3320; --warn:#e8a94c; --warns:#3a2b14; --bad:#f07f78; --bads:#3d1e1c;
+  --water:#22374a; --road:#3d3545; --mapbg:#1d1a22; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.55 var(--f-body);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:20px 64px}
+a{color:var(--accent)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.1}
+button,select,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* Kopf */
+.head{display:grid;grid-template-columns:1fr auto;gap:16px 28px;align-items:end;padding-block:8px 18px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.head h1{font-size:clamp(30px,5.4vw,52px);font-weight:800;letter-spacing:-.02em;margin-top:6px}
+.head h1 em{font-style:normal;color:var(--accent)}
+.facts{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;color:var(--muted);font-size:14px}
+.facts b{color:var(--fg);font-weight:600}
+.progress{min-width:250px}
+.progress .nums{display:flex;gap:18px}
+.progress .n{display:flex;flex-direction:column}
+.progress .n b{font-family:var(--f-display);font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.progress .n span{font-size:12px;color:var(--muted)}
+.bar{height:8px;border-radius:99px;background:var(--sunk);margin-top:10px;overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.sync{font-size:12px;color:var(--faint);margin-top:8px}
+@media (max-width:760px){.head{grid-template-columns:1fr}}
+
+/* Tabs */
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);display:flex;gap:4px;overflow-x:auto;padding-block:10px;border-bottom:1px solid var(--line);scrollbar-width:none}
+.tab{border:1px solid transparent;background:none;padding:8px 14px;border-radius:99px;cursor:pointer;white-space:nowrap;font-weight:600;color:var(--muted)}
+.tab:hover{color:var(--fg);background:var(--sunk)}
+.tab[aria-selected="true"]{background:var(--fg);color:var(--bg)}
+.panel{padding-top:20px}
+
+/* Hinweisbox */
+.how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:22px}
+.how > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.how h3{font-size:16px;margin-bottom:6px}
+.how ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.how li+li{margin-top:3px}
+
+/* Filter */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:18px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;color:var(--muted)}
+.chip[aria-pressed="true"]{border-color:var(--fg);color:var(--fg);background:var(--sunk)}
+.filters .sp{flex:1}
+
+/* Zonen */
+.zone{margin-top:30px}
+.zone-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.zone-h .tag{font-family:var(--f-mono);font-size:12px;padding:3px 8px;border-radius:6px;font-weight:500}
+.zone-h h2{font-size:24px;font-weight:700}
+.zone-h p{margin:0;color:var(--muted);font-size:14px;flex-basis:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+@media (max-width:420px){.grid{grid-template-columns:1fr}}
+
+/* Karte */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.card.done-no{opacity:.62}
+.plate{position:relative;height:96px;display:flex;align-items:flex-end;justify-content:space-between;padding:12px 14px;overflow:hidden}
+.plate .plz{font-family:var(--f-display);font-weight:800;font-size:58px;line-height:.8;letter-spacing:-.04em;opacity:.9}
+.plate .pins{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.plate a{font-size:12px;font-weight:600;background:var(--surface);color:var(--fg);text-decoration:none;padding:4px 9px;border-radius:99px;border:1px solid var(--line)}
+.plate a:hover{border-color:var(--fg)}
+.fav{position:absolute;top:8px;left:10px;border:none;background:none;font-size:22px;cursor:pointer;color:var(--fg);opacity:.35;line-height:1;padding:2px}
+.fav[aria-pressed="true"]{opacity:1;color:var(--accent)}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:12px;flex:1;min-width:0}
+.title-row{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.card h3{font-size:21px;font-weight:700}
+.addr{font-size:13px;color:var(--muted);margin-top:3px}
+.time{flex:none;text-align:right;font-family:var(--f-mono);font-size:13px;padding:4px 8px;border-radius:8px;font-variant-numeric:tabular-nums;line-height:1.2}
+.time small{display:block;font-family:var(--f-body);font-size:10px;opacity:.8}
+.time.ok{background:var(--oks);color:var(--ok)} .time.far{background:var(--warns);color:var(--warn)}
+.money{border-radius:10px;padding:10px 12px;background:var(--sunk)}
+.money b{display:block;font-size:15px}
+.money span{font-size:13px;color:var(--muted)}
+.money.ok{background:var(--oks)} .money.ok b{color:var(--ok)}
+.money.check{background:var(--warns)} .money.check b{color:var(--warn)}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.feat div{border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:12px;min-width:0}
+.feat div span{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.feat div b{font-weight:600}
+.y{color:var(--ok)} .n0{color:var(--bad)} .q{color:var(--warn)}
+.contact{display:grid;grid-template-columns:auto 1fr auto;gap:4px 10px;font-size:14px;align-items:center}
+.contact dt{color:var(--muted);font-size:12px}
+.contact dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.copy{border:1px solid var(--line);background:none;border-radius:6px;font-size:11px;padding:2px 7px;cursor:pointer;color:var(--muted)}
+.copy:hover{color:var(--fg);border-color:var(--fg)}
+.notes{margin:0;padding-left:18px;font-size:13px;color:var(--muted)}
+.notes li+li{margin-top:2px}
+.warnline{font-size:13px;background:var(--warns);color:var(--warn);border-radius:8px;padding:7px 10px}
+.badline{font-size:13px;background:var(--bads);color:var(--bad);border-radius:8px;padding:7px 10px}
+.src{font-size:11px;color:var(--faint)}
+.src a{color:var(--faint)}
+
+/* Indizes */
+.scores{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.meter{min-width:0}
+.m-top{display:flex;justify-content:space-between;align-items:baseline;font-size:12px;color:var(--muted)}
+.m-top b{font-family:var(--f-display);font-size:24px;line-height:1;font-variant-numeric:tabular-nums}
+.m-bar{height:6px;border-radius:99px;background:var(--sunk);margin-top:5px;overflow:hidden}
+.m-bar i{display:block;height:100%;border-radius:99px}
+.m-sub{font-size:11px;color:var(--faint)}
+details.why summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none}
+details.why summary::before{content:"▸ "} details.why[open] summary::before{content:"▾ "}
+.why-in{font-size:12px;padding-top:6px}
+.why-in ul{list-style:none;padding:0;margin:4px 0 10px}
+.why-in li{display:flex;justify-content:space-between;gap:10px;padding:2px 0;border-bottom:1px dotted var(--line)}
+.rank{font-size:15px;font-weight:500;opacity:.8;margin-right:8px;align-self:flex-end}
+.sortsel{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 10px;font-size:13px}
+
+/* Fotos & Aktionen */
+.plate.has-img{height:132px;color:#fff!important}
+.plate .ph{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.plate.has-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(0,0,0,.6));pointer-events:none}
+.plate > *:not(.ph){position:relative;z-index:1}
+.plate.has-img .plz{text-shadow:0 2px 10px rgba(0,0,0,.45);opacity:1}
+.plate.has-img .fav{color:#fff;opacity:.85;text-shadow:0 1px 6px rgba(0,0,0,.5)} .plate.has-img .fav[aria-pressed="true"]{color:var(--accent);opacity:1}
+.actions{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.act{display:flex;align-items:center;justify-content:center;min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font-weight:700;font-size:14px;text-decoration:none;cursor:pointer}
+.act:first-child{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.act.off{color:var(--faint);background:var(--sunk);border-color:var(--sunk);font-weight:500;font-size:12px}
+.writer{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px}
+.seg button[data-writer]{padding:6px 12px;font-size:13px}
+details.howwrap{margin-bottom:22px}
+details.howwrap > summary{cursor:pointer;font-weight:700;font-size:14px;color:var(--muted);margin-bottom:10px;list-style:none}
+details.howwrap > summary::before{content:"▸ "} details.howwrap[open] > summary::before{content:"▾ "}
+details.howwrap .how{margin-bottom:0}
+.tab svg,.tl-short{display:none}
+.tbl-tools{display:none;align-items:center;gap:8px;margin-bottom:10px}
+#lmap.has-tiles .lf-bez{fill-opacity:0;stroke:var(--fg);stroke-opacity:.28;stroke-width:1}
+#lmap.has-tiles .lf-bez.z1,#lmap.has-tiles .lf-bez.z2{fill-opacity:.22}
+#lmap.has-tiles .lf-donau,#lmap.has-tiles .lf-kanal,#lmap.has-tiles .lf-water{display:none}
+#lmap.has-tiles .lf-lab b{font-size:15px;opacity:.55;color:var(--fg)} #lmap.has-tiles .lf-lab span{display:none}
+
+/* Status-Leiste */
+.status{border-top:1px dashed var(--line);padding-top:12px;display:flex;flex-direction:column;gap:9px}
+.st-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ck{display:flex;align-items:center;gap:7px;font-size:14px;font-weight:600;cursor:pointer;user-select:none}
+.ck input{width:20px;height:20px;accent-color:var(--accent);cursor:pointer}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:none;background:none;padding:5px 9px;font-size:12px;cursor:pointer;color:var(--muted)}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.lbl{font-size:12px;color:var(--muted)}
+.note-in{width:100%;border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:7px 10px;font-size:13px;resize:vertical;min-height:36px}
+details.mail{border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+details.mail summary{cursor:pointer;padding:9px 12px;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.mail summary::after{content:"+";font-family:var(--f-mono);color:var(--muted)}
+details.mail[open] summary::after{content:"–"}
+.mail-in{padding:0 12px 12px;display:flex;flex-direction:column;gap:8px}
+.mail-in .to{font-size:13px}
+.mail-in pre{white-space:pre-wrap;font-family:var(--f-body);font-size:13px;margin:0;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;max-height:320px;overflow:auto}
+.btns{display:flex;flex-wrap:wrap;gap:6px}
+.btn{border:1px solid var(--fg);background:var(--fg);color:var(--bg);border-radius:8px;padding:6px 11px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.btn.ghost{background:none;color:var(--fg);border-color:var(--line)}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:8px 14px;border-radius:99px;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+
+/* Extra-Listen */
+.side{margin-top:34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.side > div{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--surface)}
+.side h3{font-size:17px;margin-bottom:8px}
+.side ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+.side li+li{margin-top:6px}
+.side li b{color:var(--fg)}
+
+ .leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-tile-container, .leaflet-pane > svg, .leaflet-pane > canvas, .leaflet-zoom-box, .leaflet-image-layer, .leaflet-layer { position: absolute; left: 0; top: 0; } .leaflet-container { overflow: hidden; } .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow { -webkit-user-select: none; -moz-user-select: none; user-select: none; -webkit-user-drag: none; } .leaflet-tile::selection { background: transparent; } .leaflet-safari .leaflet-tile { image-rendering: -webkit-optimize-contrast; } .leaflet-safari .leaflet-tile-container { width: 1600px; height: 1600px; -webkit-transform-origin: 0 0; } .leaflet-marker-icon, .leaflet-marker-shadow { display: block; } .leaflet-container .leaflet-overlay-pane svg { max-width: none !important; max-height: none !important; } .leaflet-container .leaflet-marker-pane img, .leaflet-container .leaflet-shadow-pane img, .leaflet-container .leaflet-tile-pane img, .leaflet-container img.leaflet-image-layer, .leaflet-container .leaflet-tile { max-width: none !important; max-height: none !important; width: auto; padding: 0; } .leaflet-container img.leaflet-tile { mix-blend-mode: plus-lighter; } .leaflet-container.leaflet-touch-zoom { -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; } .leaflet-container.leaflet-touch-drag { -ms-touch-action: pinch-zoom; touch-action: none; touch-action: pinch-zoom; } .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom { -ms-touch-action: none; touch-action: none; } .leaflet-container { -webkit-tap-highlight-color: transparent; } .leaflet-container a { -webkit-tap-highlight-color: rgba(51, 181, 229, 0.4); } .leaflet-tile { filter: inherit; visibility: hidden; } .leaflet-tile-loaded { visibility: inherit; } .leaflet-zoom-box { width: 0; height: 0; -moz-box-sizing: border-box; box-sizing: border-box; z-index: 800; } .leaflet-overlay-pane svg { -moz-user-select: none; } .leaflet-pane { z-index: 400; } .leaflet-tile-pane { z-index: 200; } .leaflet-overlay-pane { z-index: 400; } .leaflet-shadow-pane { z-index: 500; } .leaflet-marker-pane { z-index: 600; } .leaflet-tooltip-pane { z-index: 650; } .leaflet-popup-pane { z-index: 700; } .leaflet-map-pane canvas { z-index: 100; } .leaflet-map-pane svg { z-index: 200; } .leaflet-vml-shape { width: 1px; height: 1px; } .lvml { display: inline-block; position: absolute; } .leaflet-control { position: relative; z-index: 800; pointer-events: visiblePainted; pointer-events: auto; } .leaflet-top, .leaflet-bottom { position: absolute; z-index: 1000; pointer-events: none; } .leaflet-top { top: 0; } .leaflet-right { right: 0; } .leaflet-bottom { bottom: 0; } .leaflet-left { left: 0; } .leaflet-control { float: left; clear: both; } .leaflet-right .leaflet-control { float: right; } .leaflet-top .leaflet-control { margin-top: 10px; } .leaflet-bottom .leaflet-control { margin-bottom: 10px; } .leaflet-left .leaflet-control { margin-left: 10px; } .leaflet-right .leaflet-control { margin-right: 10px; } .leaflet-fade-anim .leaflet-popup { opacity: 0; -webkit-transition: opacity 0.2s linear; -moz-transition: opacity 0.2s linear; transition: opacity 0.2s linear; } .leaflet-fade-anim .leaflet-map-pane .leaflet-popup { opacity: 1; } .leaflet-zoom-animated { -webkit-transform-origin: 0 0; -ms-transform-origin: 0 0; transform-origin: 0 0; } svg.leaflet-zoom-animated { will-change: transform; } .leaflet-zoom-anim .leaflet-zoom-animated { -webkit-transition: -webkit-transform 0.25s cubic-bezier(0,0,0.25,1); -moz-transition: -moz-transform 0.25s cubic-bezier(0,0,0.25,1); transition: transform 0.25s cubic-bezier(0,0,0.25,1); } .leaflet-zoom-anim .leaflet-tile, .leaflet-pan-anim .leaflet-tile { -webkit-transition: none; -moz-transition: none; transition: none; } .leaflet-zoom-anim .leaflet-zoom-hide { visibility: hidden; } .leaflet-interactive { cursor: pointer; } .leaflet-grab { cursor: -webkit-grab; cursor: -moz-grab; cursor: grab; } .leaflet-crosshair, .leaflet-crosshair .leaflet-interactive { cursor: crosshair; } .leaflet-popup-pane, .leaflet-control { cursor: auto; } .leaflet-dragging .leaflet-grab, .leaflet-dragging .leaflet-grab .leaflet-interactive, .leaflet-dragging .leaflet-marker-draggable { cursor: move; cursor: -webkit-grabbing; cursor: -moz-grabbing; cursor: grabbing; } .leaflet-marker-icon, .leaflet-marker-shadow, .leaflet-image-layer, .leaflet-pane > svg path, .leaflet-tile-container { pointer-events: none; } .leaflet-marker-icon.leaflet-interactive, .leaflet-image-layer.leaflet-interactive, .leaflet-pane > svg path.leaflet-interactive, svg.leaflet-image-layer.leaflet-interactive path { pointer-events: visiblePainted; pointer-events: auto; } .leaflet-container { background: #ddd; outline-offset: 1px; } .leaflet-container a { color: #0078A8; } .leaflet-zoom-box { border: 2px dotted #38f; background: rgba(255,255,255,0.5); } .leaflet-container { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; font-size: 12px; font-size: 0.75rem; line-height: 1.5; } .leaflet-bar { box-shadow: 0 1px 5px rgba(0,0,0,0.65); border-radius: 4px; } .leaflet-bar a { background-color: #fff; border-bottom: 1px solid #ccc; width: 26px; height: 26px; line-height: 26px; display: block; text-align: center; text-decoration: none; color: black; } .leaflet-bar a, .leaflet-control-layers-toggle { background-position: 50% 50%; background-repeat: no-repeat; display: block; } .leaflet-bar a:hover, .leaflet-bar a:focus { background-color: #f4f4f4; } .leaflet-bar a:first-child { border-top-left-radius: 4px; border-top-right-radius: 4px; } .leaflet-bar a:last-child { border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; border-bottom: none; } .leaflet-bar a.leaflet-disabled { cursor: default; background-color: #f4f4f4; color: #bbb; } .leaflet-touch .leaflet-bar a { width: 30px; height: 30px; line-height: 30px; } .leaflet-touch .leaflet-bar a:first-child { border-top-left-radius: 2px; border-top-right-radius: 2px; } .leaflet-touch .leaflet-bar a:last-child { border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; } .leaflet-control-zoom-in, .leaflet-control-zoom-out { font: bold 18px 'Lucida Console', Monaco, monospace; text-indent: 1px; } .leaflet-touch .leaflet-control-zoom-in, .leaflet-touch .leaflet-control-zoom-out { font-size: 22px; } .leaflet-control-layers { box-shadow: 0 1px 5px rgba(0,0,0,0.4); background: #fff; border-radius: 5px; } .leaflet-control-layers-toggle { width: 36px; height: 36px; } .leaflet-retina .leaflet-control-layers-toggle { background-size: 26px 26px; } .leaflet-touch .leaflet-control-layers-toggle { width: 44px; height: 44px; } .leaflet-control-layers .leaflet-control-layers-list, .leaflet-control-layers-expanded .leaflet-control-layers-toggle { display: none; } .leaflet-control-layers-expanded .leaflet-control-layers-list { display: block; position: relative; } .leaflet-control-layers-expanded { padding: 6px 10px 6px 6px; color: #333; background: #fff; } .leaflet-control-layers-scrollbar { overflow-y: scroll; overflow-x: hidden; padding-right: 5px; } .leaflet-control-layers-selector { margin-top: 2px; position: relative; top: 1px; } .leaflet-control-layers label { display: block; font-size: 13px; font-size: 1.08333em; } .leaflet-control-layers-separator { height: 0; border-top: 1px solid #ddd; margin: 5px -10px 5px -6px; } .leaflet-default-icon-path { } .leaflet-container .leaflet-control-attribution { background: #fff; background: rgba(255, 255, 255, 0.8); margin: 0; } .leaflet-control-attribution, .leaflet-control-scale-line { padding: 0 5px; color: #333; line-height: 1.4; } .leaflet-control-attribution a { text-decoration: none; } .leaflet-control-attribution a:hover, .leaflet-control-attribution a:focus { text-decoration: underline; } .leaflet-attribution-flag { display: inline !important; vertical-align: baseline !important; width: 1em; height: 0.6669em; } .leaflet-left .leaflet-control-scale { margin-left: 5px; } .leaflet-bottom .leaflet-control-scale { margin-bottom: 5px; } .leaflet-control-scale-line { border: 2px solid #777; border-top: none; line-height: 1.1; padding: 2px 5px 1px; white-space: nowrap; -moz-box-sizing: border-box; box-sizing: border-box; background: rgba(255, 255, 255, 0.8); text-shadow: 1px 1px #fff; } .leaflet-control-scale-line:not(:first-child) { border-top: 2px solid #777; border-bottom: none; margin-top: -2px; } .leaflet-control-scale-line:not(:first-child):not(:last-child) { border-bottom: 2px solid #777; } .leaflet-touch .leaflet-control-attribution, .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar { box-shadow: none; } .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar { border: 2px solid rgba(0,0,0,0.2); background-clip: padding-box; } .leaflet-popup { position: absolute; text-align: center; margin-bottom: 20px; } .leaflet-popup-content-wrapper { padding: 1px; text-align: left; border-radius: 12px; } .leaflet-popup-content { margin: 13px 24px 13px 20px; line-height: 1.3; font-size: 13px; font-size: 1.08333em; min-height: 1px; } .leaflet-popup-content p { margin: 17px 0; margin: 1.3em 0; } .leaflet-popup-tip-container { width: 40px; height: 20px; position: absolute; left: 50%; margin-top: -1px; margin-left: -20px; overflow: hidden; pointer-events: none; } .leaflet-popup-tip { width: 17px; height: 17px; padding: 1px; margin: -10px auto 0; pointer-events: auto; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); } .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: white; color: #333; box-shadow: 0 3px 14px rgba(0,0,0,0.4); } .leaflet-container a.leaflet-popup-close-button { position: absolute; top: 0; right: 0; border: none; text-align: center; width: 24px; height: 24px; font: 16px/24px Tahoma, Verdana, sans-serif; color: #757575; text-decoration: none; background: transparent; } .leaflet-container a.leaflet-popup-close-button:hover, .leaflet-container a.leaflet-popup-close-button:focus { color: #585858; } .leaflet-popup-scrolled { overflow: auto; } .leaflet-oldie .leaflet-popup-content-wrapper { -ms-zoom: 1; } .leaflet-oldie .leaflet-popup-tip { width: 24px; margin: 0 auto; -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678)"; filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.70710678, M12=0.70710678, M21=-0.70710678, M22=0.70710678); } .leaflet-oldie .leaflet-control-zoom, .leaflet-oldie .leaflet-control-layers, .leaflet-oldie .leaflet-popup-content-wrapper, .leaflet-oldie .leaflet-popup-tip { border: 1px solid #999; } .leaflet-div-icon { background: #fff; border: 1px solid #666; } .leaflet-tooltip { position: absolute; padding: 6px; background-color: #fff; border: 1px solid #fff; border-radius: 3px; color: #222; white-space: nowrap; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; pointer-events: none; box-shadow: 0 1px 3px rgba(0,0,0,0.4); } .leaflet-tooltip.leaflet-interactive { cursor: pointer; pointer-events: auto; } .leaflet-tooltip-top:before, .leaflet-tooltip-bottom:before, .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { position: absolute; pointer-events: none; border: 6px solid transparent; background: transparent; content: ""; } .leaflet-tooltip-bottom { margin-top: 6px; } .leaflet-tooltip-top { margin-top: -6px; } .leaflet-tooltip-bottom:before, .leaflet-tooltip-top:before { left: 50%; margin-left: -6px; } .leaflet-tooltip-top:before { bottom: 0; margin-bottom: -12px; border-top-color: #fff; } .leaflet-tooltip-bottom:before { top: 0; margin-top: -12px; margin-left: -6px; border-bottom-color: #fff; } .leaflet-tooltip-left { margin-left: -6px; } .leaflet-tooltip-right { margin-left: 6px; } .leaflet-tooltip-left:before, .leaflet-tooltip-right:before { top: 50%; margin-top: -6px; } .leaflet-tooltip-left:before { right: 0; margin-right: -12px; border-left-color: #fff; } .leaflet-tooltip-right:before { left: 0; margin-left: -12px; border-right-color: #fff; } @media print { .leaflet-control { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+/* Leaflet-Karte im Seitenstil */
+#lmap{height:600px;width:100%;background:var(--mapbg);font:inherit}
+@media (max-width:600px){#lmap{height:440px}}
+.leaflet-container{background:var(--mapbg);font-family:var(--f-body)}
+.leaflet-control-zoom a{background:var(--surface)!important;color:var(--fg)!important;border-color:var(--line)!important}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--surface) 80%,transparent)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--muted)!important}
+.lf-bez{fill:var(--surface);fill-opacity:1;stroke:var(--line);stroke-width:1.2}
+.lf-bez.z1{fill:var(--t1s)} .lf-bez.z2{fill:var(--t2s)}
+.lf-bez:hover{fill-opacity:.75}
+.lf-ring{fill:none;stroke:var(--t1);stroke-width:2.5;stroke-dasharray:6 4}
+.lf-donau{fill:none;stroke:var(--water);stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+.lf-kanal{fill:none;stroke:var(--water);stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.lf-lab{background:none;border:none;text-align:center;pointer-events:none}
+.lf-lab b{display:block;font-family:var(--f-display);font-weight:800;font-size:20px;line-height:1;color:var(--faint);opacity:.9}
+.lf-lab span{display:block;font-size:10px;color:var(--faint);white-space:nowrap;letter-spacing:.03em}
+.lf-water{background:none;border:none;font-style:italic;font-size:12px;color:var(--muted);white-space:nowrap;pointer-events:none}
+.lf-pin{background:none;border:none}
+.lf-pin div{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:var(--surface);font:700 12px var(--f-mono);border:2.5px solid var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.35);transition:transform .15s}
+.lf-pin.sel div{transform:scale(1.35);border-color:var(--fg)}
+.lf-pin.fav div::after{content:"★";position:absolute;margin:-26px 0 0 26px;color:var(--accent);font-size:13px;text-shadow:0 0 2px var(--surface)}
+.lf-home{background:none;border:none}
+.lf-home div{display:flex;flex-direction:row-reverse;align-items:center;gap:6px;font-weight:700;font-size:12px;color:var(--fg);white-space:nowrap}
+.lf-home i{width:22px;height:22px;background:var(--accent);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);display:block}
+.lf-home span{background:var(--surface);padding:1px 6px;border-radius:6px;border:1px solid var(--line)}
+
+/* Tabelle */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table.ov{border-collapse:collapse;width:100%;min-width:1180px;font-size:13px}
+table.ov th{position:sticky;top:0;background:var(--sunk);text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:9px 10px;white-space:nowrap;cursor:pointer;user-select:none;border-bottom:1px solid var(--line)}
+table.ov th[aria-sort="descending"]::after{content:" ▼"} table.ov th[aria-sort="ascending"]::after{content:" ▲"}
+table.ov td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:middle}
+table.ov tr:last-child td{border-bottom:none}
+table.ov tr.no td{opacity:.55}
+table.ov tr:hover td{background:color-mix(in srgb,var(--sunk) 55%,transparent)}
+table.ov .nm{font-weight:700;font-size:14px;white-space:nowrap}
+table.ov .nm a{color:var(--fg);text-decoration:none} table.ov .nm a:hover{color:var(--accent)}
+table.ov .zt{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:99px;white-space:nowrap}
+table.ov .num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+table.ov .sc{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono)}
+table.ov .sc i{display:inline-block;width:38px;height:5px;border-radius:99px;background:var(--sunk);overflow:hidden}
+table.ov .sc i b{display:block;height:100%}
+table.ov select{border:1px solid var(--line);background:var(--bg);border-radius:6px;padding:3px 5px;font-size:12px}
+table.ov input[type=checkbox]{width:18px;height:18px;accent-color:var(--accent)}
+table.ov .ct{white-space:nowrap;font-size:12px}
+table.ov .ct span{display:block}
+table.ov .fav{position:static;font-size:18px}
+.tbl-note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* Karte (Map) */
+.maplayout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}
+@media (max-width:860px){.maplayout{grid-template-columns:1fr}}
+.mapbox{background:var(--mapbg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative}
+.mapbox svg#map{display:block;width:100%;height:auto}
+.mapinfo{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:14px 16px;align-self:start}
+.mapinfo h3{font-size:19px}
+.legend{display:flex;flex-wrap:wrap;gap:10px 14px;font-size:13px;margin-bottom:12px;align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:5px}
+.pin{cursor:pointer}
+.pin circle{stroke:var(--surface);stroke-width:2.5}
+.pin text{font:700 11px var(--f-mono);fill:var(--surface);pointer-events:none}
+.pin.sel circle{stroke:var(--fg);stroke-width:3.5}
+.maplist{margin:12px 0 0;padding:0;list-style:none;font-size:13px;max-height:340px;overflow:auto}
+.maplist li{padding:5px 0;border-top:1px solid var(--line);cursor:pointer;display:flex;gap:8px}
+.maplist li:hover{color:var(--accent)}
+.maplist .no{font-family:var(--f-mono);min-width:22px;text-align:center;border-radius:5px;color:var(--surface);font-size:11px;padding-top:2px}
+
+/* Fortgehen */
+.go-top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin-bottom:18px}
+.go-top select{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:7px 10px;max-width:100%}
+.go-top p{margin:0;font-size:13px;color:var(--muted);flex-basis:100%}
+.evgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+@media (max-width:420px){.evgrid{grid-template-columns:1fr}}
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:flex;flex-direction:column;gap:9px;min-width:0}
+.ev h3{font-size:19px}
+.ev .meta{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:12px;padding:3px 8px;border-radius:99px;background:var(--sunk);font-weight:600}
+.pill.ok{background:var(--oks);color:var(--ok)} .pill.q{background:var(--warns);color:var(--warn)}
+.ev .price{font-family:var(--f-display);font-size:22px;font-weight:700}
+.ev p{margin:0;font-size:14px;color:var(--muted)}
+.ev .way{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px dashed var(--line);padding-top:9px;font-size:13px;flex-wrap:wrap}
+.ev .way b{font-family:var(--f-mono);font-size:15px}
+.goodtoknow{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.goodtoknow > div{border-left:3px solid var(--accent);padding:4px 0 4px 14px}
+.goodtoknow h3{font-size:16px;margin-bottom:4px}
+.goodtoknow p{margin:0;font-size:14px;color:var(--muted)}
+
+/* Spickzettel */
+.cheat{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.cheat > div{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.cheat h3{font-size:18px;margin-bottom:8px}
+.cheat ol{margin:0;padding-left:20px;font-size:14px}
+.cheat ol li+li{margin-top:5px}
+.cheat pre{white-space:pre-wrap;font-family:var(--f-body);font-size:13px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;margin:8px 0}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* Gästeliste */
+.g-sum{display:grid;grid-template-columns:1.3fr repeat(4,1fr) 1.6fr;gap:10px;margin-bottom:16px}
+.g-tile.go{grid-column:auto}
+.g-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;min-width:0}
+.g-tile b{display:block;font-family:var(--f-display);font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.g-tile span{font-size:12px;color:var(--muted)}
+.g-tile.total{background:var(--fg);color:var(--bg);border-color:var(--fg)} .g-tile.total span{color:inherit;opacity:.75}
+.g-bar{grid-column:1/-1;height:10px;border-radius:99px;background:var(--sunk);display:flex;overflow:hidden}
+.g-bar i{display:block;height:100%}
+.g-add{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin-bottom:16px;display:flex;flex-direction:column;gap:8px}
+.g-add-row{display:flex;gap:8px;flex-wrap:wrap}
+.g-add input,.g-add select,.g-add textarea{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:9px 11px;font-size:15px;min-width:0}
+.g-add input{flex:1 1 180px}
+.g-add textarea{width:100%;resize:vertical;margin:8px 0}
+.g-bulk summary{cursor:pointer;font-size:13px;color:var(--muted)}
+.g-group{margin-top:18px}
+.g-group h3{font-size:17px;display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.g-group h3 i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.g-group h3 span{font-family:var(--f-mono);font-size:13px;color:var(--muted);font-weight:500}
+.g-rows{background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.g-row{display:grid;grid-template-columns:minmax(110px,1fr) auto auto auto minmax(130px,1.1fr) auto;gap:10px;align-items:center;padding:9px 12px;border-top:1px solid var(--line)}
+.g-row:first-child{border-top:none}
+.g-name{font-weight:700;font-size:15px;min-width:0;overflow-wrap:anywhere}
+.g-row .seg button{padding:6px 9px}
+.g-row .seg button[aria-pressed="true"][data-gs="fix"]{background:var(--ok);color:var(--surface)}
+.g-row .seg button[aria-pressed="true"][data-gs="vielleicht"]{background:var(--warn);color:var(--surface)}
+.g-row .seg button[aria-pressed="true"][data-gs="abgesagt"]{background:var(--bad);color:var(--surface)}
+.g-go,.g-plus{display:flex;flex-direction:column;gap:2px;min-width:0}
+.g-lab{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.g-go .seg button[aria-pressed="true"][data-ggo="ja"]{background:var(--ok);color:var(--surface)}
+.g-go .seg button[aria-pressed="true"][data-ggo="vlt"]{background:var(--warn);color:var(--surface)}
+.g-go .seg button[aria-pressed="true"][data-ggo="nein"]{background:var(--bad);color:var(--surface)}
+.step{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.step button{border:none;background:none;width:32px;height:30px;font-size:17px;cursor:pointer;color:var(--fg)}
+.step button:disabled{color:var(--faint);cursor:default}
+.step b{min-width:30px;text-align:center;font-size:13px}
+.g-tile.go{display:flex;flex-direction:column;justify-content:center}
+.g-tile.go b small{font-size:15px;color:var(--warn);font-family:var(--f-body)}
+.g-note{border:1px solid var(--line);background:var(--bg);border-radius:8px;padding:6px 9px;font-size:13px;width:100%;min-width:0}
+.g-del{border:none;background:none;color:var(--faint);cursor:pointer;font-size:13px;padding:6px;border-radius:6px;white-space:nowrap}
+.g-del:hover{color:var(--bad)} .g-del.arm{background:var(--bads);color:var(--bad);font-weight:700}
+.g-empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:22px;text-align:center;color:var(--muted)}
+@media (max-width:1000px){.g-sum{grid-template-columns:repeat(4,1fr)} .g-tile.total,.g-tile.go{grid-column:span 2}}
+@media (max-width:760px){
+  .g-tile{padding:10px 12px} .g-tile b{font-size:24px}
+  .g-row{grid-template-columns:1fr auto;grid-template-areas:"n d" "s s" "g p" "o o";gap:8px}
+  .g-name{grid-area:n} .g-del{grid-area:d}
+  .g-row > .seg{grid-area:s;display:flex} .g-row > .seg button{flex:1;padding:8px 4px}
+  .g-go{grid-area:g} .g-go .seg{display:flex} .g-go .seg button{flex:1;padding:7px 6px}
+  .g-plus{grid-area:p;align-items:flex-end}
+  .g-note{grid-area:o}
+}
+/* Handy */
+@media (max-width:640px){
+  body{font-size:15px}
+  .wrap{padding-block:12px calc(86px + env(safe-area-inset-bottom,0px))}
+  .head{gap:12px;padding-block:2px 12px}
+  .head h1{font-size:34px}
+  .facts{font-size:13px;gap:2px 12px}
+  .progress{min-width:0}
+  .progress .nums{justify-content:space-between}
+  .progress .n b{font-size:24px}
+  .tabs{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:1000;display:flex;justify-content:space-around;gap:2px;background:var(--surface);border-top:1px solid var(--line);border-bottom:none;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+  .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;padding:6px 2px;border-radius:12px;min-width:0}
+  .tab[aria-selected="true"]{background:var(--sunk);color:var(--accent)}
+  .tab svg,.tl-short{display:block}
+  .tl-full{display:none}
+  .panel{padding-top:14px}
+  .how{grid-template-columns:1fr;gap:10px}
+  .filters{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;padding-bottom:2px}
+  .filters::-webkit-scrollbar{display:none}
+  .chip{white-space:nowrap;padding:8px 13px}
+  .filters .sp{display:none}
+  .filters .lbl[for="sortSel"]{display:none}
+  .zone{margin-top:22px}
+  .zone-h h2{font-size:21px}
+  .grid,.evgrid{grid-template-columns:1fr;gap:14px}
+  .card h3{font-size:20px}
+  .plate{height:84px} .plate.has-img{height:150px}
+  .plate .plz{font-size:48px}
+  .plate a{font-size:12px;padding:6px 10px}
+  .fav{font-size:26px}
+  .seg button{padding:8px 10px;font-size:13px}
+  .ck input{width:24px;height:24px}
+  .copy{padding:5px 9px}
+  .feat div{padding:6px}
+  .contact{font-size:14px}
+  .tbl-tools{display:flex}
+  .tbl-wrap{border:none;background:none;overflow:visible}
+  table.ov{min-width:0}
+  table.ov thead{display:none}
+  table.ov,table.ov tbody{display:block}
+  table.ov tr{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px 10px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px;margin-bottom:10px;position:relative}
+  table.ov td{display:block;border:none;padding:0;min-width:0}
+  table.ov td[data-l]:not([data-l=""])::before{content:attr(data-l);display:block;font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px}
+  table.ov td.nm{grid-column:1/-1;padding-right:36px;white-space:normal}
+  table.ov td.tfav{position:absolute;top:8px;right:8px}
+  table.ov td[data-l="Kosten"],table.ov td[data-l="Kontakt"]{grid-column:1/-1}
+  table.ov td[data-l="Karaoke"],table.ov td[data-l="Eigene Musik"]{grid-column:span 1}
+  table.ov select{padding:6px;font-size:14px;width:100%}
+  table.ov tr:hover td{background:none}
+  .maplayout{gap:12px}
+  #lmap{height:62vh;min-height:380px}
+  .mapinfo{padding:12px 14px}
+  .go-top select{width:100%}
+  .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="head">
+    <div>
+      <div class="eyebrow">Partylocation-Suche · Wien</div>
+      <h1>Edas Geburtstag <em>31.10.</em></h1>
+      <div class="facts">
+        <span><b>Sa, 31.10.2026</b> (Halloween)</span>
+        <span><b>~20 Leute</b></span>
+        <span>Budget: <b>≤ 500 € Mindestkonsum</b> ohne Miete <i>oder</i> <b>≤ 200 € Miete</b> ohne Mindestkonsum</span>
+        <span>Start: <b>Friedrich-Engels-Platz</b></span>
+      </div>
+    </div>
+    <div class="progress" aria-live="polite">
+      <div class="nums">
+        <div class="n"><b id="pAsked">0</b><span>angefragt</span></div>
+        <div class="n"><b id="pFree">0</b><span>frei / Angebot</span></div>
+        <div class="n"><b id="pNo">0</b><span>abgesagt</span></div>
+        <div class="n"><b id="pTotal">0</b><span>Locations</span></div>
+      </div>
+      <div class="bar" id="pBar"></div>
+      <div class="sync" id="sync">Speicher wird verbunden …</div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Bereiche">
+    <button class="tab" role="tab" id="tab-locations" aria-selected="true" data-panel="locations"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg><span class="tl-full">Locations</span><span class="tl-short">Orte</span></button>
+    <button class="tab" role="tab" id="tab-tabelle" aria-selected="false" data-panel="tabelle"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M3 15h18M10 4v16" stroke="currentColor" stroke-width="2"/></svg><span class="tl-full">Tabelle</span><span class="tl-short">Tabelle</span></button>
+    <button class="tab" role="tab" id="tab-karte" aria-selected="false" data-panel="karte"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z M9 4v14M15 6v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="tl-full">Karte</span><span class="tl-short">Karte</span></button>
+    <button class="tab" role="tab" id="tab-gaeste" aria-selected="false" data-panel="gaeste"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M16 4.8a3.3 3.3 0 0 1 0 6.4M18 14.8c1.9.6 3.1 2.4 3.5 5.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="tl-full">Gästeliste</span><span class="tl-short">Gäste</span></button>
+    <button class="tab" role="tab" id="tab-fortgehen" aria-selected="false" data-panel="fortgehen"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 3h8l-4 7z M12 10v8M8 21h8" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg><span class="tl-full">Fortgehen danach</span><span class="tl-short">Danach</span></button>
+    <button class="tab" role="tab" id="tab-spick" aria-selected="false" data-panel="spick"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="tl-full">Anruf-Spickzettel</span><span class="tl-short">Anrufen</span></button>
+  </nav>
+
+  <!-- LOCATIONS -->
+  <section class="panel" id="panel-locations" role="tabpanel" aria-labelledby="tab-locations">
+    <details class="howwrap" id="howwrap" open><summary>So funktioniert die Seite</summary>
+    <div class="how">
+      <div><h3>So arbeitest du die Liste ab</h3><ul>
+        <li>Anrufen, dann <b>„Angefragt“</b> anhaken und die Antwort setzen.</li>
+        <li>Niemand hebt ab? Den <b>E-Mail-Entwurf</b> aufklappen, kopieren, abschicken.</li>
+        <li>Kuchen fragst du telefonisch: Feld <b>„Kuchen“</b> setzen.</li>
+        <li>★ markiert eure Favoriten. Die Entwürfe sind mit Edas Namen und Nummer unterschrieben.</li>
+      </ul></div>
+      <div><h3>Wie verlässlich sind die Infos?</h3><ul>
+        <li><b class="y">Website 2026</b>: direkt auf der Seite der Location geprüft.</li>
+        <li><b class="q">Ältere Quelle</b>: aus Artikeln/Portalen, Preise können sich geändert haben.</li>
+        <li>Eine Online-Belegung für den 31.10. hat keine der Locations veröffentlicht. Ausgebucht-Infos habe ich keine gefunden, dafür sind Locations mit eigener Halloween-Party unten aussortiert.</li>
+      </ul></div>
+      <div><h3>Die zwei Indizes</h3><ul>
+        <li><b>Verfügbarkeit</b>: wie wahrscheinlich ihr am Halloween-Samstag noch Platz bekommt (Betriebsart, Beliebtheit, Wochenend-Regeln).</li>
+        <li><b>Location-Score</b>: wie gut die Location insgesamt ist (Lage 30 %, Bedingungen 25 %, Extras 20 %, Bewertung 15 %, Größe 10 %).</li>
+        <li>„Wie berechnet?“ auf jeder Karte zeigt die Rechnung. Oben rechts kannst du danach sortieren.</li>
+      </ul></div>
+      <div><h3>Wegzeit</h3><ul>
+        <li>Grün = bis 30 min Öffis ab Friedrich-Engels-Platz, orange = länger.</li>
+        <li>Zeiten sind von mir geschätzt. „Route“ öffnet Google Maps mit der echten Verbindung.</li>
+      </ul></div>
+    </div>
+    </details>
+
+    <div class="filters" role="group" aria-label="Filter">
+      <button class="chip" id="f-karaoke" aria-pressed="false">Mit Karaoke</button>
+      <button class="chip" id="f-music" aria-pressed="false">Eigene Musik ok</button>
+      <button class="chip" id="f-30" aria-pressed="false">Nur ≤ 30 min</button>
+      <button class="chip" id="f-fav" aria-pressed="false">★ Favoriten</button>
+      <button class="chip" id="f-open" aria-pressed="false">Noch nicht angefragt</button>
+      <button class="chip" id="f-hideNo" aria-pressed="false">Absagen ausblenden</button>
+      <span class="sp"></span>
+      <label for="sortSel" class="lbl">Sortieren</label>
+      <select id="sortSel" class="sortsel">
+        <option value="zones">nach Zonen</option>
+        <option value="avail">Verfügbarkeit 31.10.</option>
+        <option value="score">Location-Score</option>
+        <option value="both">Kombiniert</option>
+      </select>
+    </div>
+
+    <div id="zones"></div>
+
+    <div class="side">
+      <div><h3>Aussortiert: wahrscheinlich am 31.10. belegt</h3><ul>
+        <li><b>Celeste</b> (1050): feiert jedes Jahr seine eigene große Halloween-Party im Club, 2025 „The Return of the Great Halloween Bash“. Eher Partyziel als Mietlocation an dem Abend.</li>
+        <li><b>Babuder's exklusiv</b>: Exklusivbuchung nur So–Di. Für Samstag bleibt die Tischreservierung (Karte ist trotzdem in der Liste).</li>
+      </ul></div>
+      <div><h3>Aussortiert: über Budget oder zu groß</h3><ul>
+        <li><b>Pia's Wohlleben</b> (1040): hätte Karaoke, aber 680 € Mindestkonsum + 100 € Kaution + 60 € Reinigung.</li>
+        <li><b>Shebeen</b> (1070): Partyraum erst ab 40 Personen.</li>
+        <li><b>Bestens Bar</b> (1070): 1.200 € Mindestkonsum, ab 30 Personen.</li>
+        <li><b>Klub GRU</b> (1090): 800 € Mindestkonsum bei geschlossener Gesellschaft.</li>
+        <li><b>Luftbad als ganzes Lokal</b>: Fr/Sa 1.500 € + 200 € Miete (nur der Teilbereich passt, siehe Karte).</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <!-- TABELLE -->
+  <section class="panel" id="panel-tabelle" role="tabpanel" aria-labelledby="tab-tabelle" hidden>
+    <div class="tbl-tools"><label for="tblSort" class="lbl">Sortieren nach</label>
+      <select id="tblSort" class="sortsel"><option value="both">Gesamt</option><option value="avail">Verfügbarkeit</option><option value="score">Location-Score</option><option value="min">Wegzeit</option><option value="name">Name</option><option value="answer">Antwort</option></select></div>
+    <div class="tbl-wrap"><table class="ov" id="ovTable"></table></div>
+    <p class="tbl-note">Spaltenkopf antippen zum Sortieren. Häkchen, Antwort und Kuchen hier ändern sich auch auf den Karten. Auf dem Handy seitlich wischen.</p>
+  </section>
+
+  <!-- GÄSTE -->
+  <section class="panel" id="panel-gaeste" role="tabpanel" aria-labelledby="tab-gaeste" hidden>
+    <div class="g-sum" id="gSum"></div>
+    <form class="g-add" id="gAdd" autocomplete="off">
+      <label for="gName" class="lbl">Gast hinzufügen</label>
+      <div class="g-add-row">
+        <input id="gName" type="text" placeholder="Name, z. B. Lisa" enterkeyhint="done">
+        <select id="gStatus" aria-label="Status">
+          <option value="offen">offen</option><option value="fix">fix</option><option value="vielleicht">vielleicht</option><option value="abgesagt">abgesagt</option>
+        </select>
+        <button class="btn" type="submit">Hinzufügen</button>
+      </div>
+      <details class="g-bulk"><summary>Mehrere auf einmal einfügen</summary>
+        <textarea id="gBulk" rows="4" placeholder="Ein Name pro Zeile oder mit Komma getrennt"></textarea>
+        <button class="btn ghost" type="button" id="gBulkBtn">Alle als „offen“ hinzufügen</button>
+      </details>
+    </form>
+    <div class="filters" role="group" aria-label="Gäste filtern" id="gFilter">
+      <button class="chip" data-gf="alle" aria-pressed="true">Alle</button>
+      <button class="chip" data-gf="fix" aria-pressed="false">Fix</button>
+      <button class="chip" data-gf="vielleicht" aria-pressed="false">Vielleicht</button>
+      <button class="chip" data-gf="offen" aria-pressed="false">Offen</button>
+      <button class="chip" data-gf="abgesagt" aria-pressed="false">Abgesagt</button>
+      <span class="sp"></span>
+      <button class="chip" id="gCopy" type="button">Liste kopieren</button>
+    </div>
+    <div id="gList"></div>
+  </section>
+
+  <!-- KARTE -->
+  <section class="panel" id="panel-karte" role="tabpanel" aria-labelledby="tab-karte" hidden>
+    <div class="legend" id="legend"></div>
+    <div class="filters" role="group" aria-label="Ebenen">
+      <button class="chip" id="l-loc" aria-pressed="true">Locations</button>
+      <button class="chip" id="l-go" aria-pressed="false">Halloween-Partys</button>
+    </div>
+    <div class="maplayout">
+      <div class="mapbox"><div id="lmap" aria-label="Karte von Wien mit allen Locations"></div><svg id="map" viewBox="0 0 800 670" role="img" aria-label="Schematische Karte von Wien mit allen Locations" hidden></svg></div>
+      <aside class="mapinfo" id="mapinfo">
+        <h3>Pin antippen</h3>
+        <p class="lbl" id="mapnote">Zoomen und verschieben wie bei Google Maps. Echte Bezirksgrenzen, Donau, Donaukanal und Ring. Straßen kann diese Vorschau nicht laden, deshalb öffnet jeder Pin die genaue Lage in Google Maps.</p>
+        <ul class="maplist" id="maplist"></ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FORTGEHEN -->
+  <section class="panel" id="panel-fortgehen" role="tabpanel" aria-labelledby="tab-fortgehen" hidden>
+    <div class="go-top">
+      <label for="fromBar"><b>Ich feiere vorher in:</b></label>
+      <select id="fromBar"></select>
+      <p>Die Wegzeit unter jeder Party rechnet sich ab dieser Bar (geschätzt, Luftlinie + Öffis). „Route“ zeigt die echte Nachtverbindung in Google Maps.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Partyfilter">
+      <button class="chip" id="g-confirmed" aria-pressed="false">Nur für 2026 bestätigt</button>
+      <button class="chip" id="g-sort" aria-pressed="false">Nach Wegzeit sortieren</button>
+    </div>
+    <p class="lbl" id="goCount" style="margin:-6px 0 14px"></p>
+    <div class="evgrid" id="events"></div>
+    <div class="goodtoknow">
+      <div><h3>U-Bahn fährt die ganze Nacht</h3><p>Samstag auf Sonntag fahren alle U-Bahn-Linien durch (Wochenend-Nachtbetrieb). Dazu kommen die Nightline-Busse (N-Linien).</p></div>
+      <div><h3>Sonntag ist Allerheiligen</h3><p>Der 1.11. ist Feiertag. Supermärkte haben zu, das heißt: Getränke und Kuchen bis Samstag besorgen.</p></div>
+      <div><h3>Kostüm lohnt sich</h3><p>Viele Clubs geben an Halloween verkleidet Rabatt oder freien Eintritt (z. B. The Loft). Mit 20 Leuten im Kostüm kommt ihr leichter rein.</p></div>
+      <div><h3>Tickets früh kaufen</h3><p>Große Partys (Ottakringer, Dome) sind an Halloween oft ausverkauft. Gruppentickets fragen, manchmal günstiger.</p></div>
+      <div><h3>Ausweis mitnehmen</h3><p>Viele Events sind ab 18 oder 19, The Nun ab 16. Türsteher kontrollieren an Halloween streng.</p></div>
+    </div>
+  </section>
+
+  <!-- SPICKZETTEL -->
+  <section class="panel" id="panel-spick" role="tabpanel" aria-labelledby="tab-spick" hidden>
+    <div class="cheat">
+      <div><h3>Am Telefon fragen</h3><ol>
+        <li>Ist <b>Samstag, 31.10.</b> für ca. <b>20 Personen</b> frei?</li>
+        <li>Raummiete? Mindestkonsum? Kaution oder Reinigungspauschale?</li>
+        <li>Bis wann dürfen wir bleiben (Sperrstunde)?</li>
+        <li>Eigene Musik (Handy/Spotify/USB) oder fixer DJ?</li>
+        <li>Gibt's Karaoke oder darf man eine Anlage mitbringen?</li>
+        <li>Darf ich eine <b>Geburtstagstorte</b> mitbringen? Kostet das was?</li>
+        <li>Getränkepakete oder Specials für Gruppen?</li>
+        <li>Wie wird fix reserviert (Anzahlung, Bestätigung per Mail)?</li>
+      </ol></div>
+      <div><h3>Kurzer Einstieg</h3>
+        <pre id="phoneIntro"></pre>
+        <p class="lbl">Halloween ist ein starker Abend für Bars. Wenn sie zögern: „Wir sind 20 Leute, die ab 20 Uhr sicher konsumieren“ hilft oft.</p>
+      </div>
+      <div><h3>Danach festhalten</h3><ol>
+        <li>Wer hat abgehoben (Name)?</li>
+        <li>Konditionen in die Notiz der Karte schreiben.</li>
+        <li>Zusage immer per Mail bestätigen lassen.</li>
+        <li>Kaution: Frist für kostenloses Storno fragen.</li>
+      </ol></div>
+    </div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+const VIENNA={"bez":{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"n":18,"name":"W\u00e4hring"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.33922,48.21794],[16.34079,48.22236],[16.34575,48.22392],[16.3463,48.22469],[16.34758,48.23043],[16.34845,48.23154],[16.35099,48.23269],[16.34765,48.23264],[16.34806,48.23439],[16.34459,48.2338],[16.33946,48.23455],[16.33501,48.23455],[16.335,48.23778],[16.32731,48.23783],[16.32043,48.24018],[16.31781,48.24062],[16.31702,48.2418],[16.31381,48.2423],[16.30891,48.24388],[16.30467,48.24621],[16.30495,48.24763],[16.29963,48.24935],[16.29396,48.24984],[16.28563,48.25167],[16.27961,48.24832],[16.2798,48.24666],[16.28214,48.24626],[16.29051,48.24651],[16.28831,48.24521],[16.28664,48.24314],[16.2814,48.24186],[16.2824,48.24072],[16.2859,48.2401],[16.29143,48.24031],[16.29133,48.23733],[16.29407,48.23851],[16.29633,48.23843],[16.29953,48.23592],[16.3089,48.23287],[16.31282,48.23324],[16.31385,48.23216],[16.31345,48.23068],[16.31911,48.22994],[16.32027,48.2289],[16.32014,48.22734],[16.32276,48.22722],[16.32478,48.22845],[16.32581,48.22715],[16.32931,48.22581],[16.33394,48.22354],[16.33349,48.22106],[16.33687,48.22035],[16.33606,48.21839],[16.33922,48.21794]]]]}},{"type":"Feature","properties":{"n":17,"name":"Hernals"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.3381,48.21587],[16.33922,48.21794],[16.33606,48.21839],[16.33687,48.22035],[16.33349,48.22106],[16.33394,48.22354],[16.32931,48.22581],[16.32581,48.22715],[16.32478,48.22845],[16.32276,48.22722],[16.32014,48.22734],[16.32027,48.2289],[16.31911,48.22994],[16.31345,48.23068],[16.31385,48.23216],[16.31282,48.23324],[16.3089,48.23287],[16.29953,48.23592],[16.29633,48.23843],[16.29407,48.23851],[16.29133,48.23733],[16.29143,48.24031],[16.2859,48.2401],[16.2824,48.24072],[16.2814,48.24186],[16.28664,48.24314],[16.28831,48.24521],[16.29051,48.24651],[16.28214,48.24626],[16.2798,48.24666],[16.27961,48.24832],[16.28563,48.25167],[16.2833,48.25441],[16.28241,48.25701],[16.28278,48.25902],[16.27728,48.25746],[16.27275,48.25771],[16.26949,48.25688],[16.26654,48.25469],[16.26758,48.25257],[16.26194,48.24999],[16.26257,48.24899],[16.26089,48.24752],[16.25823,48.24618],[16.25594,48.24676],[16.25539,48.24466],[16.25402,48.2436],[16.25384,48.24058],[16.25641,48.24046],[16.26332,48.23807],[16.26464,48.23681],[16.26113,48.23482],[16.25749,48.23218],[16.25411,48.23083],[16.25305,48.2298],[16.25191,48.22595],[16.25055,48.22391],[16.25085,48.22214],[16.25385,48.22394],[16.25548,48.22557],[16.25817,48.22537],[16.26376,48.22723],[16.27343,48.22773],[16.27753,48.22667],[16.28178,48.22443],[16.28401,48.22497],[16.28392,48.22339],[16.28517,48.22234],[16.28832,48.22409],[16.29447,48.22533],[16.29853,48.2241],[16.30135,48.22542],[16.30341,48.22514],[16.30401,48.22325],[16.30936,48.22334],[16.30998,48.2241],[16.31813,48.22122],[16.31711,48.21812],[16.31947,48.21594],[16.32254,48.21598],[16.32283,48.21386],[16.32921,48.21496],[16.3358,48.21578],[16.33649,48.21284],[16.3381,48.21587]]]]}},{"type":"Feature","properties":{"n":19,"name":"D\u00f6bling"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.28563,48.25167],[16.29396,48.24984],[16.29963,48.24935],[16.30495,48.24763],[16.30467,48.24621],[16.30891,48.24388],[16.31381,48.2423],[16.31702,48.2418],[16.31781,48.24062],[16.32043,48.24018],[16.32731,48.23783],[16.335,48.23778],[16.33501,48.23455],[16.33946,48.23455],[16.34459,48.2338],[16.34806,48.23439],[16.34765,48.23264],[16.35099,48.23269],[16.35316,48.23406],[16.35397,48.23682],[16.35885,48.237],[16.36068,48.24054],[16.36356,48.24446],[16.36768,48.24892],[16.36883,48.25084],[16.36866,48.25362],[16.36627,48.25783],[16.36633,48.25946],[16.36546,48.26203],[16.36961,48.26342],[16.35318,48.28404],[16.35073,48.28438],[16.34535,48.29117],[16.33843,48.28966],[16.34038,48.28831],[16.3417,48.28581],[16.3339,48.28252],[16.32895,48.28122],[16.32754,48.27871],[16.32619,48.27789],[16.3223,48.27814],[16.31794,48.27889],[16.31531,48.2779],[16.3118,48.27468],[16.30882,48.27461],[16.30559,48.27313],[16.30173,48.27248],[16.29757,48.274],[16.29451,48.27269],[16.29171,48.27287],[16.28624,48.27121],[16.28495,48.26923],[16.28322,48.26831],[16.28403,48.26711],[16.28854,48.26739],[16.29131,48.26522],[16.28932,48.26292],[16.28672,48.26243],[16.28351,48.26038],[16.28278,48.25902],[16.28241,48.25701],[16.2833,48.25441],[16.28563,48.25167]]]]}},{"type":"Feature","properties":{"n":21,"name":"Floridsdorf"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.39537,48.23705],[16.40062,48.23984],[16.39996,48.24182],[16.4031,48.24203],[16.40667,48.24295],[16.40875,48.24422],[16.41044,48.246],[16.41508,48.24651],[16.42164,48.24659],[16.42511,48.24741],[16.42538,48.25258],[16.42763,48.25195],[16.42875,48.25421],[16.43272,48.25978],[16.43567,48.2602],[16.43417,48.26232],[16.43763,48.2627],[16.44396,48.26239],[16.4474,48.25988],[16.45011,48.26368],[16.46453,48.27234],[16.46806,48.27407],[16.47034,48.27568],[16.47194,48.27601],[16.46455,48.27952],[16.45786,48.28316],[16.43763,48.29261],[16.43745,48.30445],[16.43677,48.30718],[16.43532,48.3101],[16.43509,48.31263],[16.43552,48.31518],[16.43499,48.3175],[16.42523,48.32107],[16.42204,48.32251],[16.41713,48.32335],[16.41405,48.32322],[16.4101,48.32237],[16.40145,48.32002],[16.40011,48.31746],[16.39422,48.31894],[16.39135,48.31996],[16.39252,48.32097],[16.3924,48.32326],[16.38824,48.32305],[16.38855,48.32162],[16.38661,48.31974],[16.38241,48.32015],[16.37891,48.3178],[16.37765,48.31575],[16.37781,48.31356],[16.37968,48.31114],[16.38107,48.30788],[16.3803,48.306],[16.38209,48.3046],[16.38113,48.30341],[16.38161,48.302],[16.37705,48.3027],[16.37495,48.29924],[16.37279,48.29662],[16.37568,48.29355],[16.37618,48.29054],[16.37507,48.28901],[16.36789,48.28851],[16.3649,48.28788],[16.36399,48.28655],[16.36506,48.2839],[16.36646,48.28275],[16.36411,48.28173],[16.36041,48.283],[16.35318,48.28404],[16.36961,48.26342],[16.37597,48.25588],[16.38224,48.24928],[16.38759,48.24406],[16.39537,48.23705]]]]}},{"type":"Feature","properties":{"n":20,"name":"Brigittenau"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.36468,48.2258],[16.36764,48.22686],[16.36939,48.22853],[16.37474,48.23027],[16.37853,48.22861],[16.3803,48.22635],[16.38519,48.22853],[16.38401,48.23106],[16.39537,48.23705],[16.38759,48.24406],[16.38224,48.24928],[16.37597,48.25588],[16.36961,48.26342],[16.36546,48.26203],[16.36633,48.25946],[16.36627,48.25783],[16.36866,48.25362],[16.36883,48.25084],[16.36768,48.24892],[16.36356,48.24446],[16.36068,48.24054],[16.35885,48.237],[16.35835,48.23475],[16.35889,48.2326],[16.36051,48.22964],[16.36468,48.2258]]]]}},{"type":"Feature","properties":{"n":23,"name":"Liesing"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.21532,48.12876],[16.2128,48.1269],[16.21399,48.12537],[16.21613,48.12446],[16.21843,48.12541],[16.22275,48.12617],[16.22635,48.12785],[16.23328,48.1307],[16.24166,48.13189],[16.2474,48.13171],[16.25081,48.13052],[16.25445,48.13033],[16.25897,48.13153],[16.26134,48.13312],[16.26442,48.13427],[16.26837,48.13454],[16.27121,48.13422],[16.27504,48.133],[16.27799,48.13267],[16.28111,48.13085],[16.28505,48.13154],[16.29508,48.13019],[16.29578,48.12602],[16.29805,48.1252],[16.30204,48.12245],[16.30688,48.12033],[16.30943,48.12023],[16.31115,48.12628],[16.31551,48.12557],[16.31627,48.12648],[16.31995,48.13341],[16.32225,48.137],[16.32183,48.13849],[16.33829,48.1352],[16.34318,48.13404],[16.34811,48.13328],[16.35537,48.13008],[16.36286,48.12937],[16.36378,48.13216],[16.36799,48.13923],[16.36915,48.14247],[16.3714,48.14278],[16.37434,48.14822],[16.37127,48.14886],[16.35921,48.15188],[16.35684,48.15226],[16.3464,48.1526],[16.33838,48.15391],[16.33531,48.15589],[16.33287,48.15997],[16.32781,48.1561],[16.32432,48.15724],[16.31905,48.15802],[16.31632,48.15736],[16.316,48.15856],[16.30857,48.15953],[16.30134,48.1611],[16.2947,48.15703],[16.29004,48.1583],[16.29146,48.16067],[16.29323,48.16253],[16.28904,48.163],[16.28841,48.15884],[16.2844,48.15747],[16.28229,48.15996],[16.27843,48.15946],[16.27656,48.16034],[16.2782,48.16215],[16.27639,48.16338],[16.27027,48.15656],[16.26021,48.16063],[16.25607,48.16102],[16.25367,48.16071],[16.24966,48.15833],[16.24392,48.1571],[16.2295,48.15151],[16.22729,48.15016],[16.22197,48.1537],[16.22043,48.15388],[16.21985,48.15307],[16.21668,48.15404],[16.21619,48.15275],[16.21412,48.15193],[16.20995,48.15142],[16.20768,48.14997],[16.20708,48.14832],[16.20979,48.14654],[16.21321,48.14279],[16.21363,48.14167],[16.21597,48.14122],[16.21977,48.13618],[16.22204,48.13664],[16.23009,48.1375],[16.23566,48.13785],[16.23391,48.13515],[16.23592,48.13467],[16.23584,48.13274],[16.22935,48.1317],[16.22309,48.13008],[16.21532,48.12876]]]]}},{"type":"Feature","properties":{"n":22,"name":"Donaustadt"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.57422,48.14513],[16.57468,48.15201],[16.57319,48.15396],[16.57054,48.15587],[16.57192,48.15705],[16.5736,48.15961],[16.57238,48.16251],[16.57028,48.16389],[16.56831,48.16442],[16.56537,48.16431],[16.5609,48.16269],[16.55884,48.16106],[16.55509,48.1648],[16.55144,48.16485],[16.55248,48.16271],[16.55028,48.16275],[16.547,48.16534],[16.54745,48.16674],[16.54557,48.16776],[16.54462,48.17067],[16.5448,48.17202],[16.54787,48.17242],[16.54819,48.17375],[16.54668,48.17775],[16.54298,48.17858],[16.54128,48.17752],[16.53889,48.17764],[16.53835,48.17651],[16.54102,48.17573],[16.54198,48.17355],[16.53816,48.17414],[16.5362,48.17352],[16.53391,48.17415],[16.53361,48.17531],[16.53634,48.17545],[16.53351,48.17777],[16.53492,48.18321],[16.53839,48.18149],[16.53841,48.18334],[16.53521,48.18408],[16.53586,48.18736],[16.53692,48.18953],[16.539,48.19213],[16.53527,48.19898],[16.5335,48.20113],[16.53528,48.20542],[16.54146,48.21332],[16.54322,48.21691],[16.54382,48.21941],[16.54413,48.22407],[16.54716,48.23337],[16.54997,48.23969],[16.54507,48.24097],[16.54543,48.24339],[16.53664,48.24353],[16.53837,48.24845],[16.53991,48.25519],[16.54421,48.26369],[16.53583,48.26493],[16.53027,48.26359],[16.52986,48.26279],[16.52176,48.26423],[16.51805,48.26528],[16.5164,48.26768],[16.51008,48.26853],[16.51135,48.27172],[16.50652,48.2738],[16.50391,48.27429],[16.50609,48.27804],[16.50878,48.28139],[16.51005,48.28197],[16.51212,48.28623],[16.51044,48.28787],[16.50499,48.28915],[16.49941,48.29105],[16.49338,48.29258],[16.49243,48.29335],[16.47861,48.29386],[16.47815,48.2913],[16.47988,48.28244],[16.48069,48.28062],[16.47895,48.27686],[16.47846,48.27413],[16.47534,48.27468],[16.47194,48.27601],[16.47034,48.27568],[16.46806,48.27407],[16.46453,48.27234],[16.45011,48.26368],[16.4474,48.25988],[16.44396,48.26239],[16.43763,48.2627],[16.43417,48.26232],[16.43567,48.2602],[16.43272,48.25978],[16.42875,48.25421],[16.42763,48.25195],[16.42538,48.25258],[16.42511,48.24741],[16.42164,48.24659],[16.41508,48.24651],[16.41044,48.246],[16.40875,48.24422],[16.40667,48.24295],[16.4031,48.24203],[16.39996,48.24182],[16.40062,48.23984],[16.39537,48.23705],[16.3987,48.23422],[16.40656,48.22803],[16.42144,48.21705],[16.43417,48.20805],[16.45714,48.19247],[16.47559,48.18033],[16.4909,48.1707],[16.49569,48.16796],[16.4943,48.16697],[16.51101,48.15962],[16.51379,48.15914],[16.5224,48.1554],[16.52399,48.1545],[16.53743,48.14534],[16.54056,48.1439],[16.54555,48.14262],[16.55643,48.14037],[16.56352,48.13858],[16.57326,48.13591],[16.57369,48.13772],[16.57422,48.14513]]]]}},{"type":"Feature","properties":{"n":3,"name":"Landstra\u00dfe"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.39268,48.17622],[16.39429,48.17607],[16.39497,48.17921],[16.39746,48.18057],[16.40129,48.18419],[16.40005,48.18549],[16.40184,48.18639],[16.41006,48.18385],[16.41227,48.18614],[16.41416,48.1855],[16.41501,48.18662],[16.41697,48.18627],[16.41768,48.18798],[16.42001,48.18696],[16.42596,48.18592],[16.42832,48.18704],[16.42234,48.18881],[16.41929,48.19006],[16.41047,48.19519],[16.40703,48.19787],[16.40456,48.20111],[16.40225,48.20227],[16.39737,48.20322],[16.39498,48.20465],[16.3932,48.20985],[16.39129,48.21251],[16.38956,48.21338],[16.3856,48.21381],[16.38213,48.21205],[16.38152,48.2096],[16.37837,48.20527],[16.37388,48.20101],[16.37244,48.20065],[16.37233,48.19849],[16.37647,48.19249],[16.37822,48.18881],[16.38144,48.18545],[16.38273,48.18361],[16.38733,48.17993],[16.39268,48.17622]]]]}},{"type":"Feature","properties":{"n":2,"name":"Leopoldstadt"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.38213,48.21205],[16.3856,48.21381],[16.38956,48.21338],[16.39129,48.21251],[16.3932,48.20985],[16.39498,48.20465],[16.39737,48.20322],[16.40225,48.20227],[16.40456,48.20111],[16.40703,48.19787],[16.41047,48.19519],[16.41929,48.19006],[16.42234,48.18881],[16.46467,48.17637],[16.47274,48.1733],[16.4817,48.16955],[16.48819,48.16743],[16.49246,48.16578],[16.49569,48.16796],[16.4909,48.1707],[16.47559,48.18033],[16.44734,48.19905],[16.43417,48.20805],[16.42144,48.21705],[16.40656,48.22803],[16.3987,48.23422],[16.39537,48.23705],[16.38401,48.23106],[16.38519,48.22853],[16.3803,48.22635],[16.37853,48.22861],[16.37474,48.23027],[16.36939,48.22853],[16.36764,48.22686],[16.36468,48.2258],[16.36559,48.22077],[16.36738,48.21919],[16.37075,48.21651],[16.37243,48.21416],[16.37398,48.21318],[16.37732,48.21243],[16.38113,48.21252],[16.38213,48.21205]]]]}},{"type":"Feature","properties":{"n":5,"name":"Margareten"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.34696,48.17991],[16.35282,48.18046],[16.35853,48.18192],[16.36606,48.18452],[16.36199,48.18868],[16.35942,48.19083],[16.36124,48.19286],[16.35893,48.19462],[16.35659,48.19741],[16.35306,48.19685],[16.35155,48.19538],[16.35152,48.19317],[16.35059,48.19176],[16.34862,48.19048],[16.3424,48.1894],[16.33897,48.18916],[16.34696,48.17991]]]]}},{"type":"Feature","properties":{"n":4,"name":"Wieden"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.36606,48.18452],[16.37078,48.18584],[16.37097,48.18668],[16.37822,48.18881],[16.37647,48.19249],[16.37233,48.19849],[16.37244,48.20065],[16.37118,48.20033],[16.36627,48.20142],[16.36316,48.20038],[16.35916,48.19819],[16.35659,48.19741],[16.35893,48.19462],[16.36124,48.19286],[16.35942,48.19083],[16.36199,48.18868],[16.36606,48.18452]]]]}},{"type":"Feature","properties":{"n":1,"name":"Innere Stadt"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.36316,48.20038],[16.36627,48.20142],[16.37118,48.20033],[16.37388,48.20101],[16.37837,48.20527],[16.38152,48.2096],[16.38213,48.21205],[16.38113,48.21252],[16.37732,48.21243],[16.37398,48.21318],[16.37243,48.21416],[16.37075,48.21651],[16.36738,48.21919],[16.36666,48.21865],[16.35766,48.21451],[16.35374,48.21504],[16.35242,48.2093],[16.3531,48.20761],[16.35877,48.20336],[16.36119,48.20206],[16.36316,48.20038]]]]}},{"type":"Feature","properties":{"n":7,"name":"Neubau"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.33648,48.19657],[16.34463,48.19812],[16.35078,48.20032],[16.35714,48.20206],[16.35877,48.20336],[16.3531,48.20761],[16.34867,48.20701],[16.34518,48.20732],[16.33567,48.20928],[16.33424,48.207],[16.33424,48.20488],[16.33449,48.20234],[16.33648,48.19657]]]]}},{"type":"Feature","properties":{"n":6,"name":"Mariahilf"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.33897,48.18916],[16.3424,48.1894],[16.34862,48.19048],[16.35059,48.19176],[16.35152,48.19317],[16.35155,48.19538],[16.35306,48.19685],[16.35659,48.19741],[16.35916,48.19819],[16.36316,48.20038],[16.36119,48.20206],[16.35877,48.20336],[16.35714,48.20206],[16.35078,48.20032],[16.34463,48.19812],[16.33648,48.19657],[16.33642,48.19496],[16.33454,48.19156],[16.33629,48.189],[16.33897,48.18916]]]]}},{"type":"Feature","properties":{"n":9,"name":"Alsergrund"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.3381,48.21587],[16.3433,48.21606],[16.35306,48.21543],[16.35374,48.21504],[16.35766,48.21451],[16.36666,48.21865],[16.36738,48.21919],[16.36559,48.22077],[16.36468,48.2258],[16.36051,48.22964],[16.35889,48.2326],[16.35835,48.23475],[16.35885,48.237],[16.35397,48.23682],[16.35316,48.23406],[16.35099,48.23269],[16.34845,48.23154],[16.34758,48.23043],[16.3463,48.22469],[16.34575,48.22392],[16.34079,48.22236],[16.33922,48.21794],[16.3381,48.21587]]]]}},{"type":"Feature","properties":{"n":8,"name":"Josefstadt"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.33567,48.20928],[16.34518,48.20732],[16.34867,48.20701],[16.3531,48.20761],[16.35242,48.2093],[16.35374,48.21504],[16.35306,48.21543],[16.3433,48.21606],[16.3381,48.21587],[16.33649,48.21284],[16.33567,48.20928]]]]}},{"type":"Feature","properties":{"n":14,"name":"Penzing"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.20462,48.20303],[16.20648,48.20547],[16.20734,48.2054],[16.21071,48.20775],[16.21263,48.2065],[16.22315,48.20255],[16.2295,48.20376],[16.23172,48.20347],[16.23289,48.20478],[16.23506,48.20369],[16.23874,48.2026],[16.24628,48.20199],[16.24881,48.20124],[16.26255,48.19462],[16.26706,48.19361],[16.27848,48.19254],[16.28731,48.19131],[16.30225,48.18833],[16.31143,48.18787],[16.31266,48.19089],[16.31757,48.1907],[16.31474,48.19235],[16.31413,48.19413],[16.31002,48.19512],[16.31116,48.1972],[16.31159,48.19974],[16.31586,48.19979],[16.30623,48.20442],[16.30179,48.20547],[16.29611,48.20607],[16.29136,48.20793],[16.28506,48.20714],[16.28311,48.20829],[16.28315,48.21308],[16.28251,48.21468],[16.27822,48.21563],[16.27271,48.21572],[16.27033,48.21622],[16.2676,48.21811],[16.26086,48.21853],[16.25711,48.22026],[16.25436,48.22049],[16.25085,48.22214],[16.25055,48.22391],[16.25191,48.22595],[16.25305,48.2298],[16.25411,48.23083],[16.25749,48.23218],[16.26113,48.23482],[16.26464,48.23681],[16.26332,48.23807],[16.25641,48.24046],[16.24733,48.24099],[16.24305,48.23964],[16.23876,48.23901],[16.23499,48.24148],[16.23453,48.24347],[16.23827,48.24907],[16.23349,48.25068],[16.23106,48.25097],[16.22717,48.25374],[16.22084,48.25696],[16.21857,48.25889],[16.21255,48.26064],[16.20718,48.26445],[16.2053,48.26479],[16.20323,48.26378],[16.20207,48.2583],[16.20294,48.25728],[16.20006,48.25539],[16.19772,48.25456],[16.19505,48.25165],[16.19354,48.25061],[16.1935,48.24834],[16.19077,48.24398],[16.19171,48.24119],[16.1913,48.23834],[16.19022,48.23543],[16.19082,48.2341],[16.19528,48.23208],[16.19615,48.23052],[16.1917,48.22932],[16.19043,48.22782],[16.18792,48.22631],[16.18363,48.22526],[16.18239,48.2239],[16.1872,48.22378],[16.18967,48.2242],[16.19332,48.22404],[16.19545,48.2225],[16.19226,48.22025],[16.19332,48.21755],[16.19511,48.21487],[16.19904,48.21313],[16.2023,48.2128],[16.20566,48.21168],[16.20685,48.21032],[16.20476,48.20923],[16.20261,48.20713],[16.20031,48.20662],[16.19949,48.20477],[16.20312,48.20311],[16.20462,48.20303]]]]}},{"type":"Feature","properties":{"n":13,"name":"Hietzing"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.28904,48.163],[16.29262,48.16901],[16.29364,48.17122],[16.29584,48.17103],[16.29835,48.17337],[16.29932,48.17254],[16.30527,48.17118],[16.31107,48.17572],[16.31625,48.18301],[16.31736,48.18651],[16.31143,48.18787],[16.30225,48.18833],[16.28731,48.19131],[16.27848,48.19254],[16.26706,48.19361],[16.26255,48.19462],[16.24881,48.20124],[16.24628,48.20199],[16.23874,48.2026],[16.23506,48.20369],[16.23289,48.20478],[16.23172,48.20347],[16.2295,48.20376],[16.22315,48.20255],[16.21263,48.2065],[16.21071,48.20775],[16.20734,48.2054],[16.20648,48.20547],[16.20462,48.20303],[16.2025,48.19843],[16.20119,48.19707],[16.20116,48.19457],[16.20028,48.19164],[16.19704,48.18686],[16.19313,48.18451],[16.19047,48.18133],[16.18734,48.17958],[16.18501,48.1778],[16.18478,48.17456],[16.17912,48.17173],[16.1818,48.16964],[16.19095,48.16705],[16.19342,48.16465],[16.19467,48.16161],[16.19392,48.15725],[16.19545,48.15483],[16.20068,48.1562],[16.22197,48.1537],[16.22729,48.15016],[16.2295,48.15151],[16.24392,48.1571],[16.24966,48.15833],[16.25367,48.16071],[16.25607,48.16102],[16.26021,48.16063],[16.27027,48.15656],[16.27639,48.16338],[16.2782,48.16215],[16.27656,48.16034],[16.27843,48.15946],[16.28229,48.15996],[16.2844,48.15747],[16.28841,48.15884],[16.28904,48.163]]]]}},{"type":"Feature","properties":{"n":16,"name":"Ottakring"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.25085,48.22214],[16.25436,48.22049],[16.25711,48.22026],[16.26086,48.21853],[16.2676,48.21811],[16.27033,48.21622],[16.27271,48.21572],[16.27822,48.21563],[16.28251,48.21468],[16.28315,48.21308],[16.28311,48.20829],[16.28506,48.20714],[16.29136,48.20793],[16.29611,48.20607],[16.30179,48.20547],[16.30623,48.20442],[16.30792,48.20356],[16.30961,48.20617],[16.30995,48.20793],[16.33079,48.20474],[16.33424,48.20488],[16.33424,48.207],[16.33567,48.20928],[16.33649,48.21284],[16.3358,48.21578],[16.32921,48.21496],[16.32283,48.21386],[16.32254,48.21598],[16.31947,48.21594],[16.31711,48.21812],[16.31813,48.22122],[16.30998,48.2241],[16.30936,48.22334],[16.30401,48.22325],[16.30341,48.22514],[16.30135,48.22542],[16.29853,48.2241],[16.29447,48.22533],[16.28832,48.22409],[16.28517,48.22234],[16.28392,48.22339],[16.28401,48.22497],[16.28178,48.22443],[16.27753,48.22667],[16.27343,48.22773],[16.26376,48.22723],[16.25817,48.22537],[16.25548,48.22557],[16.25385,48.22394],[16.25085,48.22214]]]]}},{"type":"Feature","properties":{"n":15,"name":"Rudolfsheim-F\u00fcnfhaus"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.31736,48.18651],[16.32488,48.18447],[16.32908,48.18453],[16.33093,48.18504],[16.33629,48.189],[16.33454,48.19156],[16.33642,48.19496],[16.33648,48.19657],[16.33449,48.20234],[16.33424,48.20488],[16.33079,48.20474],[16.30995,48.20793],[16.30961,48.20617],[16.30792,48.20356],[16.31586,48.19979],[16.31159,48.19974],[16.31116,48.1972],[16.31002,48.19512],[16.31413,48.19413],[16.31474,48.19235],[16.31757,48.1907],[16.31266,48.19089],[16.31143,48.18787],[16.31736,48.18651]]]]}},{"type":"Feature","properties":{"n":10,"name":"Favoriten"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.43425,48.12063],[16.43172,48.12487],[16.43138,48.12613],[16.43113,48.13173],[16.43003,48.1323],[16.43035,48.13857],[16.43345,48.13867],[16.42719,48.14804],[16.4044,48.16776],[16.39437,48.17476],[16.39268,48.17622],[16.38733,48.17993],[16.38273,48.18361],[16.38144,48.18545],[16.37822,48.18881],[16.37097,48.18668],[16.37078,48.18584],[16.36606,48.18452],[16.35853,48.18192],[16.35282,48.18046],[16.34696,48.17991],[16.34443,48.17936],[16.33883,48.17711],[16.34162,48.17494],[16.3433,48.1749],[16.34477,48.17257],[16.3428,48.1724],[16.34234,48.17059],[16.33459,48.17174],[16.33308,48.16933],[16.32913,48.16403],[16.33156,48.16201],[16.33531,48.15589],[16.33838,48.15391],[16.3464,48.1526],[16.35684,48.15226],[16.35921,48.15188],[16.37127,48.14886],[16.37434,48.14822],[16.3714,48.14278],[16.36915,48.14247],[16.36799,48.13923],[16.36378,48.13216],[16.36286,48.12937],[16.36311,48.12909],[16.36878,48.12799],[16.37352,48.12776],[16.38171,48.12688],[16.38557,48.12606],[16.38824,48.12519],[16.3953,48.12405],[16.40235,48.12268],[16.40207,48.12163],[16.40449,48.12071],[16.40552,48.1186],[16.41005,48.11894],[16.40893,48.12105],[16.41772,48.12133],[16.42013,48.12376],[16.42486,48.12231],[16.43425,48.12063]]]]}},{"type":"Feature","properties":{"n":12,"name":"Meidling"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.33287,48.15997],[16.33156,48.16201],[16.32913,48.16403],[16.33308,48.16933],[16.33459,48.17174],[16.34234,48.17059],[16.3428,48.1724],[16.34477,48.17257],[16.3433,48.1749],[16.34162,48.17494],[16.33883,48.17711],[16.34443,48.17936],[16.34696,48.17991],[16.33897,48.18916],[16.33629,48.189],[16.33093,48.18504],[16.32908,48.18453],[16.32488,48.18447],[16.31736,48.18651],[16.31625,48.18301],[16.31107,48.17572],[16.30527,48.17118],[16.29932,48.17254],[16.29835,48.17337],[16.29584,48.17103],[16.29364,48.17122],[16.29262,48.16901],[16.28904,48.163],[16.29323,48.16253],[16.29146,48.16067],[16.29004,48.1583],[16.2947,48.15703],[16.30134,48.1611],[16.30857,48.15953],[16.316,48.15856],[16.31632,48.15736],[16.31905,48.15802],[16.32432,48.15724],[16.32781,48.1561],[16.33287,48.15997]]]]}},{"type":"Feature","properties":{"n":11,"name":"Simmering"},"geometry":{"type":"MultiPolygon","coordinates":[[[[16.43345,48.13867],[16.4506,48.1396],[16.45357,48.14068],[16.45824,48.14348],[16.45914,48.1436],[16.4633,48.14723],[16.47406,48.15462],[16.47571,48.15726],[16.47728,48.15725],[16.48537,48.15587],[16.49066,48.15951],[16.49565,48.1569],[16.51101,48.15962],[16.4943,48.16697],[16.49246,48.16578],[16.48819,48.16743],[16.4817,48.16955],[16.47274,48.1733],[16.46467,48.17637],[16.42832,48.18704],[16.42596,48.18592],[16.42001,48.18696],[16.41768,48.18798],[16.41697,48.18627],[16.41501,48.18662],[16.41416,48.1855],[16.41227,48.18614],[16.41006,48.18385],[16.40184,48.18639],[16.40005,48.18549],[16.40129,48.18419],[16.39746,48.18057],[16.39497,48.17921],[16.39429,48.17607],[16.39268,48.17622],[16.39437,48.17476],[16.4044,48.16776],[16.42719,48.14804],[16.43345,48.13867]]]]}}]},"donau":[[[16.35318,48.28404],[16.36961,48.26342],[16.37597,48.25588],[16.38224,48.24928],[16.38759,48.24406],[16.39537,48.23705],[16.3987,48.23422],[16.40656,48.22803],[16.42144,48.21705],[16.43417,48.20805],[16.47559,48.18033],[16.4909,48.1707],[16.4943,48.16697],[16.49569,48.16796],[16.51101,48.15962]]],"kanal":[[[16.36546,48.26203],[16.36633,48.25946],[16.36627,48.25783],[16.36866,48.25362],[16.36883,48.25084],[16.36768,48.24892],[16.36356,48.24446],[16.36068,48.24054],[16.35885,48.237],[16.35835,48.23475],[16.35889,48.2326],[16.36051,48.22964],[16.36468,48.2258],[16.36559,48.22077],[16.36738,48.21919],[16.37075,48.21651],[16.37243,48.21416],[16.37398,48.21318],[16.37732,48.21243],[16.38113,48.21252],[16.38213,48.21205],[16.3856,48.21381],[16.38956,48.21338],[16.39129,48.21251],[16.3932,48.20985],[16.39498,48.20465],[16.39737,48.20322],[16.40225,48.20227],[16.40456,48.20111],[16.40703,48.19787],[16.41047,48.19519],[16.41929,48.19006],[16.42234,48.18881]]]};
+const HOME = {name:"Friedrich-Engels-Platz", lat:48.2423, lng:16.3792, q:"Friedrich-Engels-Platz, 1200 Wien"};
+const TIERS = {
+  1:{name:"1. Bezirk", tag:"Top-Wahl", desc:"Mitten in der Stadt, für alle Gäste leicht erreichbar.", c:"--t1", s:"--t1s"},
+  2:{name:"Innenbezirke", tag:"2. Wahl", desc:"Bezirke 2–9. Wegzeit ab Friedrich-Engels-Platz steht auf jeder Karte.", c:"--t2", s:"--t2s"},
+  3:{name:"Bis 30 min vom Start", tag:"Nah am Start", desc:"Außenbezirke, höchstens ca. 30 Minuten vom Friedrich-Engels-Platz. Meist direkt in der Brigittenau.", c:"--t3", s:"--t3s"},
+  4:{name:"Mehr als 30 min", tag:"Weiter weg", desc:"Passt vom Budget, ist aber eine Reise. Nur wenn sonst nichts klappt.", c:"--t4", s:"--t4s"}
+};
+
+const VENUES = [
+ {id:"iltoro", name:"IL TORO", tier:1, plz:"1010", addr:"Rudolfsplatz 1, 1010 Wien", lat:48.2149, lng:16.3720,
+  phone:"+43 660 526 01 73", email:"cafe@iltoro.at", web:"https://iltoro.at", hours:"nach Vereinbarung, max. bis 03:00",
+  model:"Keine Raummiete", money:"ok", moneyTxt:"Keine Raummiete, ihr zahlt nur, was ihr trinkt. Getränkepakete möglich.",
+  cap:"bis 100", karaoke:"laut Gästen ja", music:"ja (USB / DJ-Pult)", cake:"?", min:20, route:"Tram 31 bis Schottenring, 5 min zu Fuß",
+  notes:["Exklusive Eventlocation mit Tonanlage, DJ-Pult, Flatscreen, Fotobox","Mehrere Gäste-Bewertungen erwähnen Karaoke","Rückmeldung laut Website am selben Tag, auch per WhatsApp"],
+  verified:"Website 2026", src:"https://iltoro.at"},
+ {id:"babuders", name:"Babuder's", tier:1, plz:"1010", addr:"Tiefer Graben 22, 1010 Wien", lat:48.2117, lng:16.3667,
+  phone:"+43 699 11 00 6246", email:"office@babuders.at", web:"https://www.babuders.at", hours:"Mi–Do 18–24, Fr–Sa 20–02",
+  model:"Tischreservierung gratis", money:"ok", moneyTxt:"Tischreservierung für 1–20 Personen per Mail. Kein Mindestkonsum angegeben. Das Podium (VIP-Bereich) fasst bis 25.",
+  cap:"60, Podium 25", karaoke:"ja, 30.000 Songs", music:"nein (Karaoke-DJ)", cake:"?", min:22, route:"Tram 31 bis Schottenring, 8 min zu Fuß",
+  warn:"Exklusiv nur So–Di buchbar. Am Samstag teilt ihr die Bar mit anderen Gästen, reserviert also das Podium.",
+  notes:["Echte Karaokebar mit Profi-Sound, Auftritt kann gefilmt werden","Halloween-Samstag wird voll, früh reservieren"],
+  verified:"Website 2026", src:"https://www.babuders.at"},
+ {id:"singyoursong", name:"Sing Your Song", tier:1, plz:"1010", addr:"Elisabethstraße 13 (Eingang Eschenbachgasse 5), 1010 Wien", lat:48.2010, lng:16.3642,
+  phone:"", email:"", web:"", hours:"Mo–Do 21–02, Fr–Sa 20–04",
+  model:"Konditionen unbekannt", money:"check", moneyTxt:"Laut Falter für Veranstaltungen bis 150 Personen zu mieten. Preise sind nirgends veröffentlicht.",
+  cap:"64 + Bar 15", karaoke:"ja, Karaokekeller", music:"nein (Karaoke-DJ)", cake:"?", min:28, route:"Tram 2 / U-Bahn Richtung Karlsplatz",
+  warn:"Keine Telefonnummer oder Mail gefunden. Vor Ort fragen oder über Google Maps / Instagram schreiben.",
+  notes:["Kellerbar, Karaoke bis 4 Uhr früh","Bei Karlsplatz/Oper, sehr zentral"],
+  verified:"Ältere Quelle", src:"https://www.falter.at/lokal/5194/sing-your-song"},
+
+ {id:"usw", name:"U.S.W.", tier:2, plz:"1080", addr:"Laudongasse 10, 1080 Wien", lat:48.2096, lng:16.3494,
+  phone:"+43 676 530 08 94", email:"info@uswbeisl.online", web:"https://www.uswbeisl.com/spaces/middle-bar", hours:"Di–Do 18–01, Fr–Sa 18–04",
+  model:"Keine Miete, kein Mindestkonsum", money:"ok", moneyTxt:"Keine Miete, kein Mindestkonsum. Nur Kaution (kommt zurück) und Reinigungspauschale.",
+  cap:"Mittelbar 25", karaoke:"?", music:"Anlage vorhanden", cake:"?", min:22, route:"Tram 33 Richtung Josefstädter Straße",
+  notes:["Die „Mittelbar“ passt genau für 20: Stehtische, Wuzzler, Beamer, Leinwand","Größere Räume: Schankbereich 35–50, Partyraum 50–100","Sperrstunde am Wochenende 4 Uhr"],
+  verified:"Website 2026", src:"https://www.1000thingsmagazine.com/de/a/2167159/geburtstagsfeier-wien-location-mieten/"},
+ {id:"luftbad", name:"Luftbad", tier:2, plz:"1060", addr:"Luftbadgasse 17, 1060 Wien", lat:48.1974, lng:16.3548,
+  phone:"+43 650 350 65 06", email:"armin.bautz@chello.at", web:"https://luftbad.at", hours:"Partys bis 04:00",
+  model:"500 € Mindestumsatz", money:"check", moneyTxt:"Barbereich oder Partyraum (je ca. 50 Pers.): 500 € Mindestumsatz, 100 € Terminkaution. Ganzes Lokal wäre zu teuer.",
+  cap:"je ca. 50", karaoke:"?", music:"ja (USB, Stream, Laptop, DJ)", cake:"ja, gratis", min:35, route:"U6 Längenfeldgasse o. U4 Pilgramgasse",
+  warn:"Die 500 €-Teilbereich-Option steht im Eventportal. Die eigene Website nennt nur noch das ganze Lokal. Am Telefon nach Bar- oder Partyraum fragen.",
+  notes:["Geburtstagstorte und Knabbereien laut Website ohne Aufpreis","Eigenes Essen: 50 € Abschlag","Longdrinks im Special um 4,60 €","Besichtigung Fr und Sa ab 20 Uhr ohne Termin"],
+  verified:"Website 2026", src:"https://luftbad.at"},
+ {id:"monami", name:"Mon Ami", tier:2, plz:"1060", addr:"Theobaldgasse 9, 1060 Wien", lat:48.2004, lng:16.3594,
+  phone:"0650 743 44 66", email:"office@monami.at", web:"https://monami.at/reservieren/", hours:"Fr–Sa 18–03",
+  model:"Kein Mindestkonsum, keine Miete", money:"ok", moneyTxt:"Keine Mindestkonsumation, keine Raummiete. Ihr reserviert Tische, kein eigener Raum.",
+  cap:"Tischreservierung", karaoke:"nein", music:"nein (Disco)", cake:"?", min:32, route:"U3 Neubaugasse o. U2 Museumsquartier",
+  warn:"Erst ab 21 Jahren, Reservierungen nur übers Formular. JGAs und Polterer werden abgelehnt.",
+  notes:["Vintage-Bar mit Disco, Fotoautomat, Wuzzler","Telefon nur für Reservierungen am selben Tag"],
+  verified:"Website 2026", src:"https://monami.at/reservieren/"},
+ {id:"dreiboegen", name:"Drei Bögen", tier:2, plz:"1030", addr:"Landstraßer Hauptstraße 103, 1030 Wien", lat:48.1988, lng:16.3933,
+  phone:"", email:"pablo@dreiboegen.at", web:"https://dreiboegen.at", hours:"Fr–Sa 17–01",
+  model:"190 € Pauschale", money:"ok", moneyTxt:"Eigener Partyraum im Untergeschoß, 190 € Pauschale (u. a. Reinigung). Essens-/Getränkepakete optional.",
+  cap:"bis 60", karaoke:"?", music:"?", cake:"?", min:35, route:"U3 Rochusgasse / Kardinal-Nagl-Platz",
+  warn:"Website: private Events vor allem So–Mo. Ob der Kellerraum am Samstag geht, per Mail fragen.",
+  notes:["Weinbar mit Greißlerei, Naturweine","Passt in deine Variante „max. 200 € Miete“"],
+  verified:"Website 2026", src:"https://www.1000thingsmagazine.com/de/a/2167159/geburtstagsfeier-wien-location-mieten/"},
+ {id:"nordberg", name:"Nordberg", tier:2, plz:"1090", addr:"Nordbergstraße 12, 1090 Wien", lat:48.2296, lng:16.3592,
+  phone:"", email:"", web:"https://nordberg.wien", hours:"nur private Events",
+  model:"Keine Miete, nach Verbrauch", money:"check", moneyTxt:"Mietfrei, abgerechnet wird nach Konsumation. Kleine Putzpauschale. Höhe eines Mindestumsatzes unbekannt.",
+  cap:"Lounge bis 100", karaoke:"?", music:"ja (DJ-Pult, Bühne)", cake:"?", min:15, route:"Tram D / 33 Richtung Spittelau",
+  notes:["Club- und Lounge-Bereich, Fotobox im Haus","Für 20 Personen eher die Lounge"],
+  verified:"Ältere Quelle", src:"https://www.herold.at/blog/geburtstag-feiern-wien-lokale/"},
+ {id:"mirakel", name:"Mirakel", tier:2, plz:"1090", addr:"Alser Straße 18, 1090 Wien", lat:48.2156, lng:16.3541,
+  phone:"", email:"", web:"http://www.partyraum-vermietung.at", hours:"nur geschlossene Gesellschaften",
+  model:"Keine Miete, 50 € Reinigung", money:"check", moneyTxt:"Miete kostenlos, 50 € Reinigungsgeld. Verschiedene Varianten auf der Website.",
+  cap:"ca. 280 m², 3 Räume", karaoke:"?", music:"ja", cake:"?", min:22, route:"Tram 33 / 43 Richtung Alser Straße",
+  notes:["Sixties-Interieur mit Kinoraum (eigene Filme auf Leinwand)","Eher groß für 20, dafür ganz für euch"],
+  verified:"Ältere Quelle", src:"https://www.vienna.at/partyraum-mieten-in-wien-das-sind-die-besten-locations-fuer-die-private-feier/3465626"},
+
+ {id:"hikxs", name:"…hikxs! Partykeller", tier:3, plz:"1200", addr:"Pasettistraße 24, 1200 Wien", lat:48.2385, lng:16.3835,
+  phone:"", email:"", web:"http://www.meineparty.at/partykeller/", hours:"bis 02:00",
+  model:"Keine Raummiete", money:"ok", moneyTxt:"Keine Raummiete und keine Reinigung, wenn ihr die Getränke vor Ort nehmt (Pauschalpreis). Exklusiv auch eigene Getränke möglich.",
+  cap:"60–100", karaoke:"?", music:"ja, eigene erlaubt", cake:"ja (Buffet erlaubt)", min:8, route:"Zu Fuß oder 1–2 Stationen Bus/Tram",
+  warn:"Sperrstunde 2 Uhr. Kontakt nur über die Website gefunden.",
+  notes:["Praktisch ums Eck vom Friedrich-Engels-Platz","Knabbereien und Buffet dürfen selbst mitgebracht werden"],
+  verified:"Ältere Quelle", src:"https://www.herold.at/blog/geburtstag-feiern-wien-lokale/"},
+ {id:"razavi", name:"Das Razavi", tier:3, plz:"1200", addr:"Hartlgasse 4, 1200 Wien", lat:48.2318, lng:16.3712,
+  phone:"", email:"", web:"http://www.razavi.at", hours:"nur private Feiern",
+  model:"0 € Miete ab 500 € Umsatz", money:"ok", moneyTxt:"Variante A: Miete frei bei 500 € Mindestumsatz. Variante B: Abendmiete ca. 220 € (knapp über deinem Limit).",
+  cap:"bis 50", karaoke:"?", music:"?", cake:"?", min:10, route:"Tram 33 / Bus, ca. 10 min",
+  notes:["Gemütliches Lokal mit vielen Polstermöbeln, öffnet nur für Feiern","Ideale Größe für 20 Leute"],
+  verified:"Ältere Quelle", src:"https://www.vienna.at/partyraum-mieten-in-wien-das-sind-die-besten-locations-fuer-die-private-feier/3465626"},
+ {id:"soho", name:"Soho Karaoke & Cocktailbar", tier:3, plz:"1200", addr:"Handelskai 94–96 (Millennium City), 1200 Wien", lat:48.2412, lng:16.3852,
+  phone:"", email:"office@soho-vienna.at", web:"https://www.soho-vienna.at", hours:"laut Website",
+  model:"Konditionen unbekannt", money:"check", moneyTxt:"Karaokebar mit Reservierung. Ob und wie man einen Bereich für Gruppen bekommt, ist nicht veröffentlicht.",
+  cap:"?", karaoke:"ja", music:"nein (Karaoke-DJ)", cake:"?", min:8, route:"Tram 2 / U6 Handelskai",
+  warn:"Neuere Bewertungen sind gemischt (lange Wartezeit auf Songs). Bereich mit eigenem Mikro anfragen.",
+  notes:["Karaoke direkt bei dir in der Millennium City","Großer Songkatalog, auch Französisch/Italienisch"],
+  verified:"Ältere Quelle", src:"https://www.1000thingsmagazine.com/de/a/12959/karaoke-bars-wien/"},
+
+ {id:"singsing", name:"SingSing Karaoke", tier:4, plz:"1220", addr:"Donauzentrum, Wagramer Straße 94, 1220 Wien", lat:48.2430, lng:16.4337,
+  phone:"", email:"", web:"https://www.instagram.com/singsing.vienna/", hours:"siehe Instagram",
+  model:"Konditionen unbekannt", money:"check", moneyTxt:"Neue Karaokebar mit VIP-/Lounge-Bereich für Partys. Preise nicht veröffentlicht.",
+  cap:"Lounge", karaoke:"ja", music:"nein (Karaoke)", cake:"?", min:32, route:"Bus/Tram nach Floridsdorf, dann U1 Kagran",
+  warn:"Im Einkaufszentrum: Öffnungszeiten am Halloween-Samstag spät abends unbedingt fragen.",
+  notes:["Happy Hour 17–19 Uhr","Kontakt über Instagram @singsing.vienna"],
+  verified:"Ältere Quelle", src:"https://www.westfield.com/en/austria/donauzentrum/entertainments/singsing-cafe-bar-karaoke/80602"},
+ {id:"roses", name:"Club ro:ses", tier:4, plz:"1120", addr:"Rosenhügelstraße 22, 1120 Wien", lat:48.1662, lng:16.3114,
+  phone:"+43 664 383 49 85", email:"", web:"", hours:"bis 04:00",
+  model:"350 € Mindestumsatz", money:"ok", moneyTxt:"Keine Miete, 350 € Mindestumsatz plus Getränke-Special. Barpersonal, DJ-/Karaokeanlage und Endreinigung inklusive.",
+  cap:"ca. 40 Sitzplätze", karaoke:"ja, inklusive", music:"ja", cake:"ja (eigenes Catering erlaubt)", min:55, route:"U6 Meidling, dann Bus/Tram",
+  notes:["Günstigste Karaoke-Option der Liste","Eigenes Catering oder Gulasch/Toast vom Lokal"],
+  verified:"Ältere Quelle", src:"https://www.herold.at/blog/karaoke-bar-wien"}
+];
+
+/* ---------- Index-Grundlagen (meine Einschätzung aus der Recherche) ----------
+   avail: Faktoren für „kriegen wir am Halloween-Samstag was?“, Basis 50
+   cond:  Bedingungen 0–100 · rating: Google-Schnitt (nur wo gefunden) · fit: passt die Größe zu 20 Leuten (0–1) */
+const META = {
+ iltoro:{cond:95, rating:4.7, ratingN:682, fit:.8, avail:[["Nur eine Feier pro Abend, Samstage sehr gefragt",-15],["Sehr beliebt (680+ Bewertungen)",-10],["Gäste berichten, dass kurzfristig Termine frei wurden",+5]]},
+ babuders:{cond:90, rating:4.4, ratingN:669, fit:.9, avail:[["Tischreservierung bis 20 Personen, kein Exklusiv-Slot nötig",+20],["Halloween-Samstag ist Karaoke-Hochbetrieb",-10],["Exklusiv nur So–Di",-5]]},
+ singyoursong:{cond:45, rating:null, fit:.7, avail:[["Normaler Barbetrieb am Samstag, Gruppenplatz wahrscheinlich",+5],["Mietkonditionen unbekannt",-10],["Halloween-Andrang",-5]]},
+ usw:{cond:95, rating:null, fit:1, avail:[["Drei getrennte Räume, Mittelbar genau für 20",+15],["Wochenend-Pub, Halloween beliebt",-5]]},
+ luftbad:{cond:70, rating:null, fit:.9, avail:[["Zwei Teilbereiche buchbar",+10],["Samstags wird lieber das ganze Lokal vergeben",-10],["Partylokal, Halloween gefragt",-10]]},
+ monami:{cond:100, rating:null, fit:.8, avail:[["Nur Tischreservierung, mehrere Gruppen pro Abend",+15],["Beliebte Disco-Bar, Halloween voll",-10]]},
+ dreiboegen:{cond:85, rating:null, fit:1, avail:[["Private Events laut Website vor allem So–Mo",-20],["Eigener Kellerraum getrennt vom Barbetrieb",+10]]},
+ nordberg:{cond:70, rating:null, fit:.5, avail:[["Zwei Bereiche (Club, Lounge)",+5],["Reine Eventlocation, Halloween-Samstag früh weg",-15]]},
+ mirakel:{cond:80, rating:null, fit:.5, avail:[["Nur eine Gesellschaft pro Abend",-15],["Speziell, weniger Nachfrage",+5]]},
+ hikxs:{cond:90, rating:null, fit:.7, avail:[["Partykeller getrennt von der Bar",+10],["Grätzl-Lokal, wenig Hype",+10],["Infos älter, Betrieb unsicher",-10]]},
+ razavi:{cond:80, rating:null, fit:1, avail:[["Kleines Feierlokal, wenig Konkurrenz im Grätzl",+10],["Nur eine Feier pro Abend, Samstag",-10]]},
+ soho:{cond:45, rating:3.3, ratingN:12, fit:.7, avail:[["Karaokebar mit Reservierung, weniger gehypt",+10]]},
+ singsing:{cond:45, rating:null, fit:.8, avail:[["Öffnungszeiten im Einkaufszentrum am Abend unklar",-15],["Neue Bar, VIP-Lounge für Gruppen",+5]]},
+ roses:{cond:90, rating:null, fit:1, avail:[["Weit draußen, wenig Nachfrage",+15],["Nur eine Feier pro Abend, Samstag",-5]]}
+};
+const TIERLAGE={1:100,2:78,3:62,4:35};
+function clamp(x){return Math.max(0,Math.min(100,Math.round(x)))}
+function availOf(v){
+  const s=STATE[v.id];
+  if(s.answer==="nein") return {val:0, label:"abgesagt", parts:[["Location hat abgesagt",-50]]};
+  if(s.answer==="ja"||s.answer==="angebot") return {val:100, label:"bestätigt", parts:[["Location hat zugesagt / Angebot geschickt",+50]]};
+  const parts=[["Halloween-Samstag, 3½ Wochen vorher (Basis)",0], ...META[v.id].avail];
+  const val=clamp(50+parts.reduce((a,p)=>a+p[1],0));
+  return {val, label: val>=60?"gute Chancen":val>=45?"möglich":"schwierig", parts};
+}
+function scoreOf(v){
+  const m=META[v.id], s=STATE[v.id];
+  const lage=TIERLAGE[v.tier];
+  const k=/^ja|laut/i.test(v.karaoke)?50:(v.karaoke==="?"?12:0);
+  const mu=yn(v.music)==="y"?30:(v.music==="?"?10:0);
+  const cakeKnown = s.cake!=="?" ? s.cake : (/^ja/i.test(v.cake)?"ja":"?");
+  const ca=cakeKnown==="ja"?20:(cakeKnown==="?"?8:0);
+  const extras=k+mu+ca;
+  const rating=m.rating!=null? clamp((m.rating-3)/2*100) : 55;
+  const fit=clamp(m.fit*100);
+  const parts=[
+    ["Lage ("+TIERS[v.tier].name+")", lage, .30],
+    ["Bedingungen & Kosten", m.cond, .25],
+    ["Extras (Karaoke, Musik, Kuchen)", extras, .20],
+    [m.rating!=null?`Bewertung ${m.rating.toFixed(1).replace(".",",")} ★ (${m.ratingN})`:"Bewertung (keine Daten, neutral)", rating, .15],
+    ["Größe passt zu 20 Leuten", fit, .10]
+  ];
+  return {val:clamp(parts.reduce((a,p)=>a+p[1]*p[2],0)), parts};
+}
+function heat(v){return v>=65?"var(--ok)":v>=45?"var(--warn)":"var(--bad)"}
+
+const EVENTS = [
+ {id:"nun", name:"The Nun – Halloween Dome Takeover", where:"Hallmann Dome", addr:"Gutheil-Schoder-Gasse 9, 1100 Wien", lat:48.1626, lng:16.3386,
+  time:"21:00–04:00", price:"ab 15 €", music:"Club, Horror-Visuals, Lichtshow", age:"ab 16", confirmed:true,
+  link:"https://www.laviesta.at/the-nun-dome-takeover-halloween-31-10-2026/", info:"Großevent, laut Veranstalter eine der größten Halloween-Partys Österreichs. Barrierefrei."},
+ {id:"klyo", name:"Halloween Horror Night", where:"KLYO / Urania Dachsaal", addr:"Uraniastraße 1, 1010 Wien", lat:48.2117, lng:16.3838,
+  time:"ab 17:30, Party danach", price:"2025: 119 € mit Dinner", music:"Party hosted by Heartbreak Hotel", age:"–", confirmed:true,
+  link:"https://www.wien.gv.at/veranstaltungen/halloween-horror-night-2026", info:"Eigentlich Dinner + Party-Paket. Ob es Tickets nur für die Party gibt, beim KLYO fragen."},
+ {id:"ottakringer", name:"Halloween Rave – Kein Sonntag ohne Techno", where:"Ottakringer Brauerei", addr:"Ottakringer Platz 1, 1160 Wien", lat:48.2132, lng:16.3226,
+  time:"2025: ab 21:00", price:"2025: ab 40 €", music:"Techno & House, 4 Floors", age:"18+", confirmed:false,
+  link:"https://www.google.com/search?q=Halloween+Rave+Ottakringer+Brauerei+2026", info:"Wiens größte Halloween-Party, jedes Jahr. Kein Wiedereinlass nach dem Verlassen."},
+ {id:"oklub", name:"Halloween Transmission", where:"O – der Klub", addr:"Operngasse 8, 1010 Wien", lat:48.2030, lng:16.3686,
+  time:"2025: ab 22:00", price:"VVK, Preis offen", music:"90s/00s/10s-Hits · Melodic House & Techno · HipHop", age:"19+", confirmed:false,
+  link:"https://www.google.com/search?q=O+der+Klub+Halloween+Transmission+2026", info:"Drei Floors, gut für eine gemischte Gruppe."},
+ {id:"loft", name:"Korruptions Halloween Party", where:"The Loft", addr:"Lerchenfelder Gürtel 37, 1160 Wien", lat:48.2086, lng:16.3403,
+  time:"2025: ab 23:00", price:"mit Kostüm günstiger", music:"Party-Sound, Indie, mehrere Floors", age:"–", confirmed:false,
+  link:"https://www.theloft.at", info:"Traditionelle Halloween-Sause am Gürtel, direkt bei der U6 Thaliastraße/Josefstädter Straße."},
+ {id:"dome", name:"Biggest Halloween Party in Austria", where:"Prater DOME", addr:"Riesenradplatz 7, 1020 Wien", lat:48.2162, lng:16.3962,
+  time:"2025: ab 22:00", price:"Preis offen", music:"Charts, Party-Hits, 4 Areas", age:"18+", confirmed:false,
+  link:"https://www.google.com/search?q=Prater+Dome+Halloween+2026", info:"Davor gibt's im Wurstelprater die Halloween-Parade und um 22 Uhr eine Feuershow (gratis)."},
+ {id:"sauna", name:"Haunted Sauna – Halloween Rave", where:"Pratersauna", addr:"Waldsteingartenstraße 135, 1020 Wien", lat:48.2128, lng:16.4083,
+  time:"2025: ab 22:00", price:"Preis offen", music:"Techno / Elektronisch", age:"18+", confirmed:false,
+  link:"https://www.google.com/search?q=Pratersauna+Halloween+2026", info:"Club im ehemaligen Saunabad im Prater."},
+ {id:"viper", name:"Evil Disco – Halloween Special", where:"Viper Room", addr:"Landstraßer Hauptstraße 38, 1030 Wien", lat:48.2030, lng:16.3880,
+  time:"2025: ab 22:00", price:"Preis offen", music:"Gothic, Metal, Electro", age:"–", confirmed:false,
+  link:"https://www.google.com/search?q=Viper+Room+Wien+Evil+Disco+Halloween+2026", info:"Düster, mit Horror-Klassikern und Kostümwettbewerb."},
+ {id:"chelsea", name:"Halloween Party", where:"Chelsea", addr:"Lerchenfelder Gürtel 29–30 (U-Bahn-Bögen), 1080 Wien", lat:48.2091, lng:16.3418,
+  time:"2025: Liveact 20:30", price:"Preis offen", music:"70s/80s/90s, Garage-Punk live", age:"–", confirmed:false,
+  link:"https://www.google.com/search?q=Chelsea+Wien+Halloween+2026", info:"Szene-Klassiker am Gürtel, Drink-Specials."},
+ {id:"fledermaus", name:"Halloween Monster Party", where:"Cabaret Fledermaus", addr:"Spiegelgasse 2, 1010 Wien", lat:48.2072, lng:16.3699,
+  time:"2025: ab 21:00", price:"Preis offen", music:"Rock & 80s-Pop", age:"–", confirmed:false,
+  link:"https://www.google.com/search?q=Fledermaus+Wien+Halloween+2026", info:"Klein und zentral, gut zu Fuß aus dem 1. Bezirk."},
+ {id:"u4", name:"Death by Disco – Halloween", where:"U4", addr:"Schönbrunner Straße 222, 1120 Wien", lat:48.1863, lng:16.3270,
+  time:"2025: abends", price:"2025: ca. 13 €", music:"Disco, Party-Klassiker", age:"–", confirmed:false,
+  link:"https://www.google.com/search?q=U4+Wien+Death+by+Disco+Halloween+2026", info:"Günstige Club-Alternative, direkt bei U4 Meidling Hauptstraße."},
+ {id:"zoku", name:"Rooftop Halloween Party", where:"Zoku Vienna", addr:"Perspektivstraße 6, 1020 Wien", lat:48.2183, lng:16.4122,
+  time:"2025: ab 18:00", price:"2025: gratis (Anmeldung)", music:"DJs, Cocktails, Kostümwettbewerb", age:"–", confirmed:false,
+  link:"https://livezoku.com/vienna/de/", info:"Eher als Warm-up am frühen Abend, Dachterrasse mit Prater-Blick."}
+];
+
+/* ---------- Status-Speicher ---------- */
+const SENDER = {name:"Eda Karaca", phone:"0699 19951005"};
+const IMG = {
+  iltoro:"https://iltoro.at/wp-content/uploads/IL-TORO-Firmenfeier-Wien.jpg",
+  babuders:"https://www.babuders.at/images/portfolio/001.jpg",
+  usw:"https://cdn.sanity.io/images/s417yc9c/production/c0160f80970ed8fd04da89b6a110448924c05993-3840x3073.jpg?rect=0,529,3840,2016&w=900&h=472&fit=crop",
+  luftbad:"https://luftbad.at/public/img/DSC_0173-bw-min.jpg",
+  monami:"https://cdn.1000thingsmagazine.com/app/uploads/2022/02/mon-ami-c-marie-amenitsch-1344x1008.jpeg",
+  dreiboegen:"https://framerusercontent.com/images/pJoIeQC6XRdCIoFO9zXIBDqs5WY.png"
+};
+const DEF = {asked:false, answer:"offen", cake:"?", fav:false, note:""};
+let STATE = {}; VENUES.forEach(v=>STATE[v.id]={...DEF});
+let SETTINGS = {fromBar:"iltoro"};
+let db = null, useDb = false;
+const LS = "geb3110-v1";
+function lsLoad(){try{const r=JSON.parse(localStorage.getItem(LS)||"null"); if(r){Object.keys(r.state||{}).forEach(k=>{if(STATE[k])STATE[k]={...DEF,...r.state[k]}}); if(r.settings)SETTINGS={...SETTINGS,...r.settings};}}catch(e){}}
+function lsSave(){try{localStorage.setItem(LS,JSON.stringify({state:STATE,settings:SETTINGS}))}catch(e){}}
+lsLoad();
+
+const pending = {};
+function saveVenue(id){
+  lsSave(); renderProgress();
+  if(!useDb) return;
+  clearTimeout(pending[id]);
+  pending[id]=setTimeout(async()=>{
+    try{ await db.collection("status").doc(id).set({...STATE[id]}); }
+    catch(e){ setSync("Speichern fehlgeschlagen, nur in diesem Browser gesichert."); }
+  }, 500);
+}
+let setTimer;
+function saveSettings(){
+  lsSave(); if(!useDb) return;
+  clearTimeout(setTimer);
+  setTimer=setTimeout(async()=>{try{await db.doc("settings/main").set({...SETTINGS})}catch(e){}},400);
+}
+function setSync(t){document.getElementById("sync").textContent=t}
+
+/* ---------- Helfer ---------- */
+const $=s=>document.querySelector(s);
+function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function gmaps(q){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q)}
+function route(from,to){return "https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(from)+"&destination="+encodeURIComponent(to)+"&travelmode=transit"}
+function km(a,b){const R=6371,dLa=(b.lat-a.lat)*Math.PI/180,dLo=(b.lng-a.lng)*Math.PI/180;const x=Math.sin(dLa/2)**2+Math.cos(a.lat*Math.PI/180)*Math.cos(b.lat*Math.PI/180)*Math.sin(dLo/2)**2;return 2*R*Math.asin(Math.sqrt(x))}
+function travel(a,b){const d=km(a,b); if(d<1.1) return {min:Math.max(3,Math.round(d*13)), mode:"zu Fuß", d}; return {min:Math.round(9+d*3.6), mode:"Öffis", d}}
+function toast(t){const el=$("#toast");el.textContent=t;el.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>el.classList.remove("show"),1600)}
+async function copy(text,btn){
+  try{await navigator.clipboard.writeText(text);toast("Kopiert")}
+  catch(e){const pre=btn&&btn.closest(".mail-in")?.querySelector("pre"); if(pre){const r=document.createRange();r.selectNodeContents(pre);const s=getSelection();s.removeAllRanges();s.addRange(r);toast("Text markiert, jetzt kopieren")} else toast("Kopieren ging nicht, bitte markieren")}
+}
+function yn(v){const s=String(v); if(/^ja|vorhanden|inklusive/i.test(s))return "y"; if(/^nein/i.test(s))return "n0"; return "q"}
+
+/* ---------- E-Mail ---------- */
+function mailText(v){
+  const extra = {
+    babuders:"• Wir hätten gern das Podium bzw. einen Bereich für ca. 20 Leute reserviert (ich weiß, exklusiv geht nur So–Di).",
+    luftbad:"• Ginge der Barbereich oder der Partyraum alleine (500 € Mindestumsatz)? Das ganze Lokal brauchen wir nicht.",
+    dreiboegen:"• Ist euer Partyraum im Untergeschoß auch an einem Samstag buchbar, und bleibt es bei der Pauschale von 190 €?",
+    usw:"• Am liebsten hätten wir die Mittelbar (bis 25 Personen).",
+    razavi:"• Gibt es noch die Variante ohne Miete ab 500 € Mindestumsatz?",
+    monami:"• Könnt ihr uns Tische für ca. 20 Personen reservieren? Wir sind alle über 21.",
+    hikxs:"• Wie schaut euer Getränke-Pauschalpreis für den Partykeller aus?",
+    roses:"• Gilt noch der Mindestumsatz von 350 € inkl. Karaokeanlage?",
+    soho:"• Habt ihr einen eigenen Bereich für Gruppen, wo wir Karaoke singen können?",
+    iltoro:"• Habt ihr eine Karaoke-Anlage im Haus? Und gibt es Getränkepakete für ca. 20 Personen?"
+  }[v.id] || "";
+  const subj=`Anfrage Geburtstagsfeier Sa, 31.10.2026 – ca. 20 Personen`;
+  const intro = "ich würde gern meinen Geburtstag am Samstag, 31. Oktober 2026 bei euch feiern.";
+  const body=`Hallo liebes ${v.name}-Team,
+
+${intro} Wir wären ungefähr 20 Leute, Start so gegen 20 Uhr.
+
+Ist der Termin noch frei? Dazu ein paar kurze Fragen:
+• Wie schauen die Konditionen aus (Raummiete, Mindestkonsum, Kaution)?
+• Dürfen wir unsere eigene Musik / Playlist spielen?
+• Gibt es eine Karaoke-Anlage? (wäre super, ist aber kein Muss)
+• Dürfen wir eine Geburtstagstorte mitbringen?
+• Bis wann können wir bleiben?${extra?"\n"+extra:""}
+
+Essen brauchen wir keins, nur Getränke.
+
+Danke schon mal und liebe Grüße
+${SENDER.name}
+${SENDER.phone}`;
+  return {subj, body};
+}
+
+/* ---------- Locations rendern ---------- */
+const F = {karaoke:false,music:false,"30":false,fav:false,open:false,hideNo:false};
+function passes(v){
+  const s=STATE[v.id];
+  if(F.karaoke && !/^ja/i.test(v.karaoke) && !/laut/i.test(v.karaoke)) return false;
+  if(F.music && yn(v.music)!=="y") return false;
+  if(F["30"] && v.min>30) return false;
+  if(F.fav && !s.fav) return false;
+  if(F.open && s.asked) return false;
+  if(F.hideNo && s.answer==="nein") return false;
+  return true;
+}
+function cardHTML(v){
+  const t=TIERS[v.tier], s=STATE[v.id], m=mailText(v);
+  const contactRows = [
+    ["Telefon", v.phone, v.phone?`<a href="tel:${v.phone.replace(/\s/g,"")}">${esc(v.phone)}</a>`:'<span class="q">nicht gefunden</span>'],
+    ["E-Mail", v.email, v.email?esc(v.email):'<span class="q">nicht gefunden</span>'],
+    ["Web", v.web, v.web?`<a href="${esc(v.web)}" target="_blank" rel="noopener">${esc(v.web.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,""))}</a>`:'<span class="q">–</span>'],
+    ["Öffnung", "", esc(v.hours)]
+  ].map(([k,raw,html])=>`<dt>${k}</dt><dd>${html}</dd><span>${raw&&k!=="Web"?`<button class="copy" data-copy="${esc(raw)}" aria-label="${k} kopieren">kopieren</button>`:""}</span>`).join("");
+  const seg=(field,opts)=>`<span class="seg" role="group">${opts.map(([val,lab])=>`<button data-set="${field}" data-val="${val}" aria-pressed="${s[field]===val}">${lab}</button>`).join("")}</span>`;
+  return `<article class="card${s.answer==="nein"?" done-no":""}" id="card-${v.id}">
+    <div class="plate${IMG[v.id]?" has-img":""}" style="background:var(${t.s});color:var(${t.c})">
+      ${IMG[v.id]?`<img class="ph" src="${IMG[v.id]}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.plate').classList.remove('has-img');this.remove()">`:""}
+      <button class="fav" data-fav="${v.id}" aria-pressed="${s.fav}" aria-label="Favorit">★</button>
+      <span class="plz">${v.plz}</span>
+      <span class="pins">
+        <a href="${gmaps(v.name+", "+v.addr)}" target="_blank" rel="noopener">Google Maps &amp; Fotos</a>
+        <a href="${route(HOME.q,v.addr)}" target="_blank" rel="noopener">Route ab Start</a>
+      </span>
+    </div>
+    <div class="body">
+      <div class="title-row">
+        <div><h3>${esc(v.name)}</h3><div class="addr">${esc(v.addr)}</div></div>
+        <div class="time ${v.min<=30?"ok":"far"}">~${v.min} min<small>${esc(v.route)}</small></div>
+      </div>
+      <div class="actions">
+        ${v.phone?`<a class="act" href="tel:${v.phone.replace(/\s/g,"")}">Anrufen</a>`:`<span class="act off">Keine Nr.</span>`}
+        <button class="act" data-openmail="${v.id}">${v.email?"E-Mail":"Nachricht"}</button>
+        <a class="act" href="${gmaps(v.name+", "+v.addr)}" target="_blank" rel="noopener">Maps</a>
+      </div>
+      ${scoresHTML(v)}
+      <div class="money ${v.money}"><b>${esc(v.model)}</b><span>${esc(v.moneyTxt)}</span></div>
+      <div class="feat">
+        <div><span>Karaoke</span><b class="${yn(v.karaoke)}">${esc(v.karaoke)}</b></div>
+        <div><span>Eigene Musik</span><b class="${yn(v.music)}">${esc(v.music)}</b></div>
+        <div><span>Platz</span><b>${esc(v.cap)}</b></div>
+      </div>
+      ${v.warn?`<div class="warnline">${esc(v.warn)}</div>`:""}
+      <dl class="contact">${contactRows}</dl>
+      ${v.notes?.length?`<ul class="notes">${v.notes.map(n=>`<li>${esc(n)}</li>`).join("")}</ul>`:""}
+      <div class="src">Stand: <span class="${v.verified.startsWith("Website")?"y":"q"}">${esc(v.verified)}</span> · <a href="${esc(v.src)}" target="_blank" rel="noopener">Quelle</a></div>
+      <div class="status">
+        <div class="st-row">
+          <label class="ck"><input type="checkbox" id="asked-${v.id}" data-asked="${v.id}" ${s.asked?"checked":""}> Angefragt</label>
+          ${seg("answer",[["offen","offen"],["ja","frei ✓"],["angebot","Angebot"],["nein","belegt ✗"]])}
+        </div>
+        <div class="st-row"><span class="lbl">Kuchen erlaubt?</span>${seg("cake",[["?","?"],["ja","ja"],["nein","nein"]])}${v.cake!=="?"?`<span class="lbl">Info: ${esc(v.cake)}</span>`:""}</div>
+        <textarea class="note-in" id="note-${v.id}" data-note="${v.id}" rows="1" placeholder="Notiz: Name am Telefon, Konditionen, Rückruf …">${esc(s.note)}</textarea>
+        ${v.email?`<details class="mail"><summary>E-Mail-Entwurf</summary><div class="mail-in">
+          <div class="to">An: <b>${esc(v.email)}</b> <button class="copy" data-copy="${esc(v.email)}">Adresse kopieren</button></div>
+          <div class="to">Betreff: ${esc(m.subj)} <button class="copy" data-copy="${esc(m.subj)}">kopieren</button></div>
+          <pre>${esc(m.body)}</pre>
+          <div class="btns"><button class="btn" data-copy="${esc(m.body)}">Text kopieren</button>
+          <a class="btn ghost" href="mailto:${esc(v.email)}?subject=${encodeURIComponent(m.subj)}&body=${encodeURIComponent(m.body)}">Im Mailprogramm öffnen</a></div>
+        </div></details>`:`<details class="mail"><summary>Nachrichten-Entwurf (keine Mail gefunden)</summary><div class="mail-in">
+          <div class="to">Für Kontaktformular, Instagram oder WhatsApp:</div><pre>${esc(m.body)}</pre>
+          <div class="btns"><button class="btn" data-copy="${esc(m.body)}">Text kopieren</button>${v.web?`<a class="btn ghost" href="${esc(v.web)}" target="_blank" rel="noopener">Website öffnen</a>`:""}</div></div></details>`}
+      </div>
+    </div>
+  </article>`;
+}
+function scoresHTML(v){
+  const a=availOf(v), s=scoreOf(v);
+  const meter=(lab,val,sub)=>`<div class="meter"><div class="m-top"><span>${lab}</span><b style="color:${heat(val)}">${val}</b></div><div class="m-bar"><i style="width:${val}%;background:${heat(val)}"></i></div><span class="m-sub">${sub}</span></div>`;
+  return `<div class="scores">${meter("Verfügbarkeit 31.10.",a.val,a.label)}${meter("Location-Score",s.val,s.val>=70?"top":s.val>=55?"solide":"okay")}</div>
+  <details class="why"><summary>Wie berechnet?</summary><div class="why-in">
+    <b>Verfügbarkeit</b> (Basis 50)<ul>${a.parts.map(p=>`<li><span>${esc(p[0])}</span><span class="mono ${p[1]>0?"y":p[1]<0?"n0":""}">${p[1]>0?"+":""}${p[1]}</span></li>`).join("")}</ul>
+    <b>Location-Score</b> (gewichtet)<ul>${s.parts.map(p=>`<li><span>${esc(p[0])}</span><span class="mono">${p[1]} × ${Math.round(p[2]*100)}%</span></li>`).join("")}</ul>
+    <span class="lbl">Meine Schätzung aus den gefundenen Infos, keine echten Buchungsdaten. Deine Antwort-Buttons überschreiben die Verfügbarkeit.</span>
+  </div></details>`;
+}
+let SORT="zones";
+function renderZones(){
+  const z=$("#zones"); let html="";
+  if(SORT!=="zones"){
+    const key=v=>SORT==="avail"?availOf(v).val:SORT==="score"?scoreOf(v).val:Math.round(availOf(v).val*.5+scoreOf(v).val*.5);
+    const list=VENUES.filter(passes).sort((a,b)=>key(b)-key(a));
+    const lab={avail:"Verfügbarkeit am 31.10.",score:"Location-Score",both:"Kombiniert (50/50)"}[SORT];
+    z.innerHTML=`<section class="zone"><div class="zone-h"><h2>Rangliste: ${lab}</h2><span class="lbl">${list.length} Locations</span><p>Farbiges Feld oben auf jeder Karte zeigt die Zone (1. Bezirk, Innenbezirke, ≤ 30 min, weiter weg).</p></div>
+      ${list.length?`<div class="grid">${list.map((v,i)=>cardHTML(v).replace('<span class="plz">',`<span class="plz"><span class="rank mono">#${i+1}</span>`)).join("")}</div>`:`<p class="lbl">Keine Location passt zu den Filtern.</p>`}</section>`;
+    return;
+  }
+  [1,2,3,4].forEach(n=>{
+    const t=TIERS[n]; const list=VENUES.filter(v=>v.tier===n);
+    const vis=list.filter(passes);
+    html+=`<section class="zone"><div class="zone-h"><span class="tag" style="background:var(${t.s});color:var(${t.c})">${t.tag}</span><h2>${t.name}</h2><span class="lbl">${vis.length} von ${list.length}</span><p>${t.desc}</p></div>
+    ${vis.length?`<div class="grid">${vis.map(cardHTML).join("")}</div>`:`<p class="lbl">Keine Location passt zu den Filtern.</p>`}</section>`;
+  });
+  z.innerHTML=html;
+}
+function renderProgress(){
+  const vals=Object.values(STATE);
+  const a=vals.filter(s=>s.asked).length, f=vals.filter(s=>s.answer==="ja"||s.answer==="angebot").length, n=vals.filter(s=>s.answer==="nein").length, T=VENUES.length;
+  $("#pAsked").textContent=a; $("#pFree").textContent=f; $("#pNo").textContent=n; $("#pTotal").textContent=T;
+  const pct=x=>(x/T*100)+"%";
+  $("#pBar").innerHTML=`<i style="width:${pct(f)};background:var(--ok)"></i><i style="width:${pct(n)};background:var(--bad)"></i><i style="width:${pct(Math.max(0,a-f-n))};background:var(--accent)"></i>`;
+  renderTable();
+}
+
+/* ---------- Tabelle ---------- */
+let TSORT={key:"both",dir:-1};
+const TCOLS=[
+  ["fav","★",v=>STATE[v.id].fav?1:0],
+  ["name","Location",v=>v.name.toLowerCase()],
+  ["zone","Zone",v=>v.tier],
+  ["min","Wegzeit",v=>v.min],
+  ["model","Kosten",v=>v.money==="ok"?0:1],
+  ["avail","Verfügb.",v=>availOf(v).val],
+  ["score","Score",v=>scoreOf(v).val],
+  ["both","Gesamt",v=>Math.round(availOf(v).val*.5+scoreOf(v).val*.5)],
+  ["karaoke","Karaoke",v=>yn(v.karaoke)==="y"||/laut/.test(v.karaoke)?0:1],
+  ["music","Eigene Musik",v=>yn(v.music)==="y"?0:1],
+  ["asked","Angefragt",v=>STATE[v.id].asked?1:0],
+  ["answer","Antwort",v=>({ja:0,angebot:1,offen:2,nein:3})[STATE[v.id].answer]],
+  ["cake","Kuchen",v=>({ja:0,"?":1,nein:2})[STATE[v.id].cake]],
+  ["contact","Kontakt",v=>v.phone?0:v.email?1:2]
+];
+function scCell(val){return `<span class="sc"><b style="color:${heat(val)}">${val}</b><i><b style="width:${val}%;background:${heat(val)}"></b></i></span>`}
+function renderTable(){
+  const t=document.getElementById("ovTable"); if(!t) return;
+  const col=TCOLS.find(c=>c[0]===TSORT.key);
+  const rows=VENUES.slice().sort((a,b)=>{const x=col[2](a),y=col[2](b);return (x>y?1:x<y?-1:0)*TSORT.dir});
+  const head=`<thead><tr>${TCOLS.map(c=>`<th data-tsort="${c[0]}" ${c[0]===TSORT.key?`aria-sort="${TSORT.dir<0?"descending":"ascending"}"`:""}>${c[1]}</th>`).join("")}</tr></thead>`;
+  const body=rows.map(v=>{const s=STATE[v.id],tz=TIERS[v.tier],a=availOf(v).val,sc=scoreOf(v).val;
+    return `<tr class="${s.answer==="nein"?"no":""}">
+    <td class="tfav"><button class="fav" data-fav="${v.id}" aria-pressed="${s.fav}" aria-label="Favorit">★</button></td>
+    <td class="nm" data-l=""><a href="${gmaps(v.name+", "+v.addr)}" target="_blank" rel="noopener">${esc(v.name)}</a><div class="lbl">${esc(v.plz)} · ${esc(v.cap)}</div></td>
+    <td data-l="Zone"><span class="zt" style="background:var(${tz.s});color:var(${tz.c})">${tz.name}</span></td>
+    <td data-l="Wegzeit" class="num" style="color:${v.min<=30?"var(--ok)":"var(--warn)"}">~${v.min} min</td>
+    <td data-l="Kosten"><b class="${v.money==="ok"?"y":"q"}">${esc(v.model)}</b></td>
+    <td data-l="Verfügbarkeit">${scCell(a)}</td><td data-l="Score">${scCell(sc)}</td><td data-l="Gesamt">${scCell(Math.round(a*.5+sc*.5))}</td>
+    <td data-l="Karaoke" class="${yn(v.karaoke)}">${esc(v.karaoke)}</td>
+    <td data-l="Eigene Musik" class="${yn(v.music)}">${esc(v.music)}</td>
+    <td data-l="Angefragt"><input type="checkbox" id="t-asked-${v.id}" data-tasked="${v.id}" ${s.asked?"checked":""} aria-label="Angefragt"></td>
+    <td data-l="Antwort"><select id="t-ans-${v.id}" data-tanswer="${v.id}" aria-label="Antwort">${[["offen","offen"],["ja","frei ✓"],["angebot","Angebot"],["nein","belegt ✗"]].map(([k,l])=>`<option value="${k}" ${s.answer===k?"selected":""}>${l}</option>`).join("")}</select></td>
+    <td data-l="Kuchen"><select id="t-cake-${v.id}" data-tcake="${v.id}" aria-label="Kuchen">${[["?","?"],["ja","ja"],["nein","nein"]].map(([k,l])=>`<option value="${k}" ${s.cake===k?"selected":""}>${l}</option>`).join("")}</select></td>
+    <td data-l="Kontakt" class="ct">${v.phone?`<span>${esc(v.phone)}</span>`:""}${v.email?`<span>${esc(v.email)}</span>`:""}${!v.phone&&!v.email?`<span class="q">nur Website</span>`:""}</td>
+  </tr>`}).join("");
+  t.innerHTML=head+"<tbody>"+body+"</tbody>";
+}
+document.addEventListener("click",e=>{const th=e.target.closest("[data-tsort]");if(!th)return;const k=th.dataset.tsort;
+  TSORT = TSORT.key===k ? {key:k,dir:-TSORT.dir} : {key:k,dir:(k==="name"||k==="zone"||k==="min"||k==="model"||k==="answer"||k==="cake"||k==="karaoke"||k==="music"||k==="contact")?1:-1};
+  renderTable(); const ts=document.getElementById("tblSort"); if(ts&&[...ts.options].some(o=>o.value===k)) ts.value=k;});
+document.getElementById("tblSort").addEventListener("change",e=>{const k=e.target.value;TSORT={key:k,dir:(["name","min","answer"].includes(k))?1:-1};renderTable()});
+document.addEventListener("change",e=>{
+  const el=e.target; let id;
+  if((id=el.dataset.tasked)){STATE[id].asked=el.checked}
+  else if((id=el.dataset.tanswer)){STATE[id].answer=el.value; if(el.value!=="offen")STATE[id].asked=true}
+  else if((id=el.dataset.tcake)){STATE[id].cake=el.value}
+  else return;
+  saveVenue(id); rerenderCard(id); renderMap();
+});
+
+/* Events in Locations-Panel */
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-copy]"); if(c){copy(c.dataset.copy,c);return}
+  const fv=e.target.closest("[data-fav]"); if(fv){const id=fv.dataset.fav;STATE[id].fav=!STATE[id].fav;saveVenue(id);if(F.fav)renderZones();else rerenderCard(id);renderMap();renderFrom();return}
+  const sb=e.target.closest("[data-set]"); if(sb){const id=sb.closest(".card").id.slice(5),f=sb.dataset.set;STATE[id][f]=sb.dataset.val;
+    if(f==="answer"&&sb.dataset.val!=="offen")STATE[id].asked=true;
+    saveVenue(id); rerenderCard(id); return}
+});
+document.addEventListener("change",e=>{
+  const ck=e.target.closest("[data-asked]"); if(ck){const id=ck.dataset.asked;STATE[id].asked=ck.checked;saveVenue(id);if(F.open)renderZones();return}
+});
+document.addEventListener("input",e=>{
+  const nt=e.target.closest("[data-note]"); if(nt){const id=nt.dataset.note;STATE[id].note=nt.value;saveVenue(id)}
+});
+function rerenderCard(id){
+  const v=VENUES.find(x=>x.id===id), el=document.getElementById("card-"+id);
+  if(!el) return; const open=el.querySelector("details")?.open;
+  if(!passes(v)){renderZones();return}
+  const tmp=document.createElement("div"); tmp.innerHTML=cardHTML(v); const n=tmp.firstElementChild;
+  if(open) n.querySelector("details").open=true; el.replaceWith(n);
+}
+$("#sortSel").addEventListener("change",e=>{SORT=e.target.value;try{localStorage.setItem(LS+"-sort",SORT)}catch(_){}renderZones()});
+try{const so=localStorage.getItem(LS+"-sort");if(so){SORT=so;$("#sortSel").value=so}}catch(e){}
+Object.keys(F).forEach(k=>{const b=document.getElementById("f-"+k);b.addEventListener("click",()=>{F[k]=!F[k];b.setAttribute("aria-pressed",F[k]);renderZones()})});
+
+/* ---------- Absender & Mail-Button ---------- */
+function renderWriter(){
+  const pi=document.getElementById("phoneIntro"); if(!pi) return;
+  pi.textContent="„Hallo, Eda Karaca mein Name. Ich würd gern meinen Geburtstag bei euch feiern, am Samstag, 31. Oktober, mit ungefähr 20 Leuten. Wär da noch was frei, und wie schaut's mit Mindestkonsum oder Miete aus?“";
+}
+document.addEventListener("click",e=>{
+  const om=e.target.closest("[data-openmail]"); if(om){const d=document.querySelector("#card-"+om.dataset.openmail+" details.mail"); if(d){d.open=true; d.scrollIntoView({behavior:"smooth",block:"center"})}}
+});
+
+/* ---------- Tabs ---------- */
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>showTab(t.dataset.panel)));
+function showTab(p){
+  document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.panel===p));
+  document.querySelectorAll(".panel").forEach(s=>s.hidden=s.id!=="panel-"+p);
+  try{localStorage.setItem(LS+"-tab",p)}catch(e){}
+  if(p==="karte") mapShown();
+}
+
+
+/* ---------- Leaflet-Karte (Fallback: SVG) ---------- */
+let LMAP=null, LMARK={}, LHOME=null;
+function lfReady(){return typeof window.L!=="undefined" && L.map}
+function centroid(poly){let x=0,y=0,a=0;const r=poly[0];for(let i=0;i<r.length-1;i++){const f=r[i][0]*r[i+1][1]-r[i+1][0]*r[i][1];a+=f;x+=(r[i][0]+r[i+1][0])*f;y+=(r[i][1]+r[i+1][1])*f}a*=.5;return [y/(6*a),x/(6*a)]}
+function initLeaflet(){
+  if(LMAP||!lfReady()) return !!LMAP;
+  if(!document.getElementById("lmap").offsetWidth) return false; // erst anlegen, wenn der Tab sichtbar ist
+  LMAP=L.map("lmap",{zoomControl:true,attributionControl:true,minZoom:10,maxZoom:18,zoomSnap:.5,tap:true}).setView([48.215,16.375],12);
+  const rt=document.documentElement.dataset.theme, dark = rt==="dark" || (rt!=="light" && matchMedia("(prefers-color-scheme: dark)").matches);
+  const tiles=L.tileLayer(dark?"https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png":"https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",{subdomains:"abcd",maxZoom:19});
+  let tilesOk=false; tiles.on("tileload",()=>{ if(tilesOk) return; tilesOk=true; document.getElementById("lmap").classList.add("has-tiles"); const mn=document.getElementById("mapnote"); if(mn) mn.textContent="Zoomen und verschieben mit zwei Fingern. Pin antippen für Details, Google Maps öffnet die genaue Lage und Route."; LMAP.attributionControl.addAttribution('© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · © <a href="https://carto.com/attributions" target="_blank" rel="noopener">CARTO</a>'); });
+  tiles.addTo(LMAP);
+  LMAP.attributionControl.setPrefix(false).addAttribution("Grenzen: Statistik Austria (CC BY 4.0)");
+  L.geoJSON(VIENNA.bez,{style:f=>({className:"lf-bez"+(f.properties.n===1?" z1":f.properties.n<=9?" z2":"")}),
+    onEachFeature:(f,l)=>l.bindTooltip(f.properties.n+". "+f.properties.name,{sticky:true})}).addTo(LMAP);
+  VIENNA.kanal.forEach(c=>L.polyline(c.map(p=>[p[1],p[0]]),{className:"lf-kanal",interactive:false}).addTo(LMAP));
+  VIENNA.donau.forEach(c=>L.polyline(c.map(p=>[p[1],p[0]]),{className:"lf-donau",interactive:false}).addTo(LMAP));
+  const b1=VIENNA.bez.features.find(f=>f.properties.n===1);
+  b1.geometry.coordinates.forEach(p=>L.polygon(p[0].map(c=>[c[1],c[0]]),{className:"lf-ring",interactive:false}).addTo(LMAP));
+  VIENNA.bez.features.forEach(f=>{
+    const big=f.geometry.coordinates.reduce((m,p)=>p[0].length>m[0].length?p:m);
+    let c=centroid(big); if(f.properties.n===2) c=[48.2125,16.4120];
+    L.marker(c,{interactive:false,keyboard:false,icon:L.divIcon({className:"lf-lab",iconSize:[90,36],iconAnchor:[45,18],html:`<b>${f.properties.n}</b><span>${esc(f.properties.name)}</span>`})}).addTo(LMAP);
+  });
+  [["Donau",48.2215,16.4330],["Donaukanal",48.2060,16.3995],["Ring",48.2185,16.3590]].forEach(([t,la,lo])=>
+    L.marker([la,lo],{interactive:false,keyboard:false,icon:L.divIcon({className:"lf-water",iconSize:[80,16],html:t})}).addTo(LMAP));
+  LHOME=L.marker([HOME.lat,HOME.lng],{keyboard:false,icon:L.divIcon({className:"lf-home",iconSize:[190,24],iconAnchor:[179,11],html:'<div><i></i><span>Start · Friedrich-Engels-Platz</span></div>'})}).addTo(LMAP);
+  return true;
+}
+let LFAIL=false;
+function renderMap(){
+  try{ renderLeafletMap(); }
+  catch(err){ LFAIL=true; try{LMAP&&LMAP.remove()}catch(_){} LMAP=null; document.getElementById("lmap").hidden=true; document.getElementById("map").hidden=false; renderSvgMap(); }
+}
+function renderLeafletMap(){
+  const ok=!LFAIL && initLeaflet();
+  if(!ok && !LFAIL && lfReady()){ fillMapList(); return; } // Karte wird beim Öffnen des Tabs gebaut
+  document.getElementById("lmap").hidden=!ok; document.getElementById("map").hidden=ok;
+  if(!ok){renderSvgMap();return}
+  Object.values(LMARK).forEach(m=>m.remove()); LMARK={};
+  const items=pinItems();
+  items.forEach(it=>{
+    const cls="lf-pin"+(selPin===it.key?" sel":"")+(it.fav?" fav":"");
+    const m=L.marker([it.lat,it.lng],{title:it.name,riseOnHover:true,zIndexOffset:selPin===it.key?1000:0,
+      icon:L.divIcon({className:cls,iconSize:[28,28],iconAnchor:[14,14],html:`<div style="background:${it.color}">${it.no}</div>`})});
+    m.on("click",()=>showPin(it.key)); m.addTo(LMAP); LMARK[it.key]=m;
+  });
+  fillMapList();
+}
+function fillMapList(){
+  const items=pinItems();
+  $("#maplist").innerHTML=items.map(it=>`<li data-pin="${it.key}"><span class="no" style="background:${it.color}">${it.no}</span><span>${esc(it.name)} <span class="lbl">· ${esc(it.sub)}</span>${it.fav?" ★":""}</span></li>`).join("");
+  $("#legend").innerHTML=[1,2,3,4].map(n=>`<span><i style="background:var(${TIERS[n].c})"></i>${TIERS[n].name}</span>`).join("")+`<span><i style="background:var(--fg)"></i>Halloween-Party</span><span><i style="background:var(--accent);border-radius:2px"></i>Start</span>`;
+}
+let mapFitted=false;
+function mapShown(){
+  if(LFAIL) return;
+  if(!LMAP){ renderMap(); if(!LMAP) return; }
+  setTimeout(()=>{LMAP.invalidateSize(); if(!mapFitted){const pts=pinItems().map(i=>[i.lat,i.lng]).concat([[HOME.lat,HOME.lng]]);LMAP.fitBounds(pts,{padding:[30,30],maxZoom:13});mapFitted=true}},30);
+}
+/* ---------- Karte ---------- */
+const BOX={w:16.29,e:16.47,n:48.255,s:48.155}; const W=800,H=670;
+function P(lat,lng){return [ (lng-BOX.w)/(BOX.e-BOX.w)*W, (BOX.n-lat)/(BOX.n-BOX.s)*H ]}
+function path(pts){return pts.map((p,i)=>(i?"L":"M")+P(p[0],p[1]).map(n=>n.toFixed(1)).join(" ")).join(" ")}
+const LAYERS={loc:true,go:false}; let selPin=null;
+const DONAU=[[48.268,16.355],[48.258,16.366],[48.249,16.378],[48.242,16.392],[48.234,16.405],[48.226,16.418],[48.217,16.432],[48.206,16.448],[48.194,16.462],[48.185,16.475]];
+const KANAL=[[48.259,16.368],[48.246,16.364],[48.236,16.359],[48.226,16.364],[48.218,16.369],[48.213,16.376],[48.210,16.383],[48.205,16.392],[48.199,16.403],[48.192,16.416],[48.185,16.432],[48.180,16.447],[48.176,16.462]];
+function ring(cLat,cLng,rLat,rLng,n=60,skew=0){const a=[];for(let i=0;i<=n;i++){const t=i/n*2*Math.PI;a.push([cLat+rLat*Math.sin(t),cLng+rLng*Math.cos(t)+skew*Math.sin(t)])}return a}
+const DISTRICTS=[["1",48.2085,16.3700],["2",48.2190,16.4000],["3",48.1980,16.3950],["4",48.1920,16.3690],["5",48.1875,16.3560],["6",48.1960,16.3500],["7",48.2025,16.3480],["8",48.2110,16.3470],["9",48.2240,16.3560],["10",48.1660,16.3800],["12",48.1750,16.3220],["15",48.1960,16.3250],["16",48.2120,16.3150],["18",48.2320,16.3250],["19",48.2480,16.3400],["20",48.2340,16.3790],["21",48.2540,16.4080],["22",48.2400,16.4450]];
+function renderSvgMap(){
+  const svg=$("#map"); let g="";
+  g+=`<rect width="${W}" height="${H}" fill="var(--mapbg)"/>`;
+  g+=`<path d="${path(ring(48.2075,16.3655,0.0215,0.0315))}" fill="none" stroke="var(--road)" stroke-width="6" stroke-linejoin="round"/>`;
+  g+=`<path d="${path(ring(48.2085,16.3705,0.0072,0.0105))}" fill="none" stroke="var(--road)" stroke-width="5"/>`;
+  g+=`<path d="${path(DONAU)}" fill="none" stroke="var(--water)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>`;
+  g+=`<path d="${path(KANAL)}" fill="none" stroke="var(--water)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`;
+  DISTRICTS.forEach(([n,la,lo])=>{const[x,y]=P(la,lo);g+=`<text x="${x}" y="${y}" text-anchor="middle" font-family="var(--f-display)" font-size="20" font-weight="800" fill="var(--line)">${n}</text>`});
+  const lab=(t,la,lo,a="start")=>{const[x,y]=P(la,lo);return `<text x="${x}" y="${y}" font-size="12" font-style="italic" fill="var(--muted)" text-anchor="${a}">${t}</text>`};
+  g+=lab("Donau",48.229,16.427)+lab("Donaukanal",48.224,16.369)+lab("Ring",48.2165,16.3725,"middle")+lab("Gürtel",48.2305,16.343);
+  // Zuhause
+  {const[x,y]=P(HOME.lat,HOME.lng);g+=`<g><polygon points="${star(x,y,13,6)}" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/><text x="${x+16}" y="${y-8}" font-size="13" font-weight="700" fill="var(--fg)">Du (Friedrich-Engels-Platz)</text></g>`}
+  const items=pinItems();
+  items.forEach(it=>{const[x,y]=P(it.lat,it.lng);
+    g+=`<g class="pin${selPin===it.key?" sel":""}" tabindex="0" role="button" aria-label="${esc(it.name)}" data-pin="${it.key}"><circle cx="${x}" cy="${y}" r="12" fill="${it.color}"/><text x="${x}" y="${y+4}" text-anchor="middle">${it.no}</text></g>`});
+  svg.innerHTML=g;
+  $("#maplist").innerHTML=items.map(it=>`<li data-pin="${it.key}"><span class="no" style="background:${it.color}">${it.no}</span><span>${esc(it.name)} <span class="lbl">· ${esc(it.sub)}</span>${it.fav?" ★":""}</span></li>`).join("");
+  $("#legend").innerHTML=[1,2,3,4].map(n=>`<span><i style="background:var(${TIERS[n].c})"></i>${TIERS[n].name}</span>`).join("")+`<span><i style="background:var(--fg)"></i>Halloween-Party</span><span><i style="background:var(--accent);border-radius:2px"></i>Start</span>`;
+}
+function star(cx,cy,R,r){let p=[];for(let i=0;i<10;i++){const a=Math.PI/5*i-Math.PI/2,rad=i%2?r:R;p.push((cx+rad*Math.cos(a)).toFixed(1)+","+(cy+rad*Math.sin(a)).toFixed(1))}return p.join(" ")}
+function pinItems(){
+  const out=[];
+  if(LAYERS.loc) VENUES.forEach((v,i)=>out.push({key:"v:"+v.id,no:i+1,lat:v.lat,lng:v.lng,name:v.name,sub:v.plz+" · "+v.model,color:`var(${TIERS[v.tier].c})`,fav:STATE[v.id].fav}));
+  if(LAYERS.go) EVENTS.forEach((e,i)=>out.push({key:"e:"+e.id,no:String.fromCharCode(65+i),lat:e.lat,lng:e.lng,name:e.where,sub:e.name,color:"var(--fg)"}));
+  return out;
+}
+function showPin(key){
+  selPin=key;
+  const [type,id]=key.split(":"); const box=$("#mapinfo");
+  let html="";
+  if(type==="v"){const v=VENUES.find(x=>x.id===id),t=TIERS[v.tier];
+    html=`<span class="tag lbl" style="color:var(${t.c})">${t.name}</span><h3>${esc(v.name)}</h3><p class="lbl">${esc(v.addr)}</p>
+    <div class="money ${v.money}" style="margin:10px 0"><b>${esc(v.model)}</b><span>${esc(v.moneyTxt)}</span></div>
+    <p class="lbl">~${v.min} min ab Start · Karaoke: ${esc(v.karaoke)} · Musik: ${esc(v.music)}</p>
+    <p style="margin:8px 0 0;font-size:14px">Verfügbarkeit <b style="color:${heat(availOf(v).val)}">${availOf(v).val}</b> · Location-Score <b style="color:${heat(scoreOf(v).val)}">${scoreOf(v).val}</b></p>
+    <div class="btns" style="margin-top:10px"><a class="btn" href="${gmaps(v.name+", "+v.addr)}" target="_blank" rel="noopener">Google Maps</a><button class="btn ghost" data-goto="${v.id}">Zur Karte in der Liste</button></div>`;
+  } else {const e=EVENTS.find(x=>x.id===id);
+    html=`<span class="lbl">Halloween-Party</span><h3>${esc(e.name)}</h3><p class="lbl">${esc(e.where)} · ${esc(e.addr)}</p><p style="margin:8px 0"><b>${esc(e.price)}</b> · ${esc(e.time)}</p><p class="lbl">${esc(e.music)}</p>
+    <div class="btns" style="margin-top:10px"><a class="btn" href="${esc(e.link)}" target="_blank" rel="noopener">Tickets / Infos</a><a class="btn ghost" href="${gmaps(e.where+", "+e.addr)}" target="_blank" rel="noopener">Google Maps</a></div>`;
+  }
+  box.innerHTML=html+`<ul class="maplist" id="maplist"></ul>`;
+  renderMap();
+  if(LMAP){const it=pinItems().find(i=>i.key===key); if(it) LMAP.panTo([it.lat,it.lng],{animate:true});}
+}
+$("#map").addEventListener("click",e=>{const p=e.target.closest("[data-pin]");if(p)showPin(p.dataset.pin)});
+$("#map").addEventListener("keydown",e=>{if(e.key==="Enter"){const p=e.target.closest("[data-pin]");if(p)showPin(p.dataset.pin)}});
+$("#mapinfo").addEventListener("click",e=>{const li=e.target.closest("[data-pin]");if(li){showPin(li.dataset.pin);return}
+  const g=e.target.closest("[data-goto]");if(g){showTab("locations");F.fav=F.open=F.karaoke=F.music=F["30"]=F.hideNo=false;document.querySelectorAll(".filters .chip[id^=f-]").forEach(b=>b.setAttribute("aria-pressed","false"));renderZones();setTimeout(()=>document.getElementById("card-"+g.dataset.goto)?.scrollIntoView({behavior:"smooth",block:"start"}),50)}});
+["loc","go"].forEach(k=>{const b=$("#l-"+k);b.addEventListener("click",()=>{LAYERS[k]=!LAYERS[k];b.setAttribute("aria-pressed",LAYERS[k]);renderMap()})});
+
+/* ---------- Fortgehen ---------- */
+const G={confirmed:false,sort:false};
+function renderFrom(){
+  const sel=$("#fromBar");
+  sel.innerHTML=VENUES.map(v=>`<option value="${v.id}" ${v.id===SETTINGS.fromBar?"selected":""}>${STATE[v.id].fav?"★ ":""}${esc(v.name)} (${v.plz})</option>`).join("")+`<option value="home" ${SETTINGS.fromBar==="home"?"selected":""}>Von zuhause (Friedrich-Engels-Platz)</option>`;
+}
+function renderEvents(){
+  const gc=gCounts(), gcEl=document.getElementById("goCount"); if(gcEl) gcEl.textContent = (gc.goJa||gc.goVlt) ? `Laut Gästeliste gehen ${gc.goJa} Leute fix mit${gc.goVlt?`, ${gc.goVlt} vielleicht`:""}. Bei großen Partys lohnt sich ein Gruppenticket.` : "";
+  const from = SETTINGS.fromBar==="home" ? {lat:HOME.lat,lng:HOME.lng,q:HOME.q,name:"zuhause"} : (()=>{const v=VENUES.find(x=>x.id===SETTINGS.fromBar)||VENUES[0];return {lat:v.lat,lng:v.lng,q:v.addr,name:v.name}})();
+  let list=EVENTS.map(e=>({...e,t:travel(from,e)}));
+  if(G.confirmed) list=list.filter(e=>e.confirmed);
+  if(G.sort) list.sort((a,b)=>a.t.min-b.t.min);
+  $("#events").innerHTML=list.map(e=>`<article class="ev">
+    <div class="meta"><span class="pill ${e.confirmed?"ok":"q"}">${e.confirmed?"2026 bestätigt":"jährlich, 2026 noch offen"}</span><span class="pill">${esc(e.age)}</span></div>
+    <h3>${esc(e.name)}</h3>
+    <p><b style="color:var(--fg)">${esc(e.where)}</b> · ${esc(e.addr)}</p>
+    <div class="price">${esc(e.price)}</div>
+    <p>${esc(e.time)} · ${esc(e.music)}</p>
+    <p>${esc(e.info)}</p>
+    <div class="btns"><a class="btn" href="${esc(e.link)}" target="_blank" rel="noopener">${e.confirmed?"Tickets / Infos":"Termin 2026 suchen"}</a><a class="btn ghost" href="${gmaps(e.where+", "+e.addr)}" target="_blank" rel="noopener">Google Maps</a></div>
+    <div class="way"><span>Ab ${esc(from.name)}: <b>~${e.t.min} min</b> ${e.t.mode} · ${e.t.d.toFixed(1)} km</span><a href="${route(from.q,e.addr)}" target="_blank" rel="noopener">Route</a></div>
+  </article>`).join("");
+}
+$("#fromBar").addEventListener("change",e=>{SETTINGS.fromBar=e.target.value;saveSettings();renderEvents()});
+["confirmed","sort"].forEach(k=>{const b=$("#g-"+k);b.addEventListener("click",()=>{G[k]=!G[k];b.setAttribute("aria-pressed",G[k]);renderEvents()})});
+
+
+/* ---------- Gästeliste ---------- */
+const GST={fix:{l:"Fix",c:"var(--ok)"},vielleicht:{l:"Vielleicht",c:"var(--warn)"},offen:{l:"Offen",c:"var(--faint)"},abgesagt:{l:"Abgesagt",c:"var(--bad)"}};
+let GUESTS={}; let GF="alle"; let gDelArm=null;
+try{GUESTS=JSON.parse(localStorage.getItem(LS+"-guests")||"{}")||{}}catch(e){}
+function gNorm(x){return {name:String(x.name||"").slice(0,80),status:GST[x.status]?x.status:"offen",plus:Math.max(0,Math.min(9,x.plus===true?1:(parseInt(x.plus)||0))),go:["ja","vlt","nein"].includes(x.go)?x.go:"?",note:String(x.note||"").slice(0,200),t:x.t||0}}
+Object.keys(GUESTS).forEach(k=>{GUESTS[k]=gNorm(GUESTS[k])});
+function gLocal(){try{localStorage.setItem(LS+"-guests",JSON.stringify(GUESTS))}catch(e){}}
+const gTimers={};
+function gSave(id){ gLocal(); if(!useDb) return; clearTimeout(gTimers[id]);
+  gTimers[id]=setTimeout(async()=>{try{ if(GUESTS[id]) await db.collection("guests").doc(id).set({...GUESTS[id]}); else await db.collection("guests").doc(id).delete(); }catch(e){setSync("Gästeliste nur auf diesem Gerät gespeichert")}},400); }
+function gNew(name,status){const id="g"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);GUESTS[id]={name:name.trim().slice(0,80),status:status||"offen",plus:0,go:"?",note:"",t:Date.now()};gSave(id);return id}
+function gCounts(){const c={fix:0,vielleicht:0,offen:0,abgesagt:0,plusFix:0,plusVlt:0,goJa:0,goVlt:0,goNein:0};
+  Object.values(GUESTS).forEach(g=>{c[g.status]++;
+    if(g.status==="fix")c.plusFix+=g.plus; if(g.status==="vielleicht")c.plusVlt+=g.plus;
+    if(g.status!=="abgesagt"){const n=1+g.plus; if(g.go==="ja")c.goJa+=n; else if(g.go==="vlt")c.goVlt+=n; else if(g.go==="nein")c.goNein+=n;}});
+  return c}
+function renderGuests(){
+  if(typeof renderEvents==="function" && document.getElementById("events")) try{renderEvents()}catch(e){}
+  const c=gCounts(), total=c.fix+c.vielleicht+c.offen+c.abgesagt;
+  const sicher=c.fix+c.plusFix, max=sicher+c.vielleicht+c.plusVlt;
+  const all=Math.max(1,total);
+  $("#gSum").innerHTML=`
+    <div class="g-tile total"><b>${sicher}${max>sicher?`–${max}`:""}</b><span>Personen erwartet${c.plusFix+c.plusVlt?` (davon ${c.plusFix+c.plusVlt} Begleitung)`:""}</span></div>
+    <div class="g-tile"><b style="color:var(--ok)">${c.fix}</b><span>fix</span></div>
+    <div class="g-tile"><b style="color:var(--warn)">${c.vielleicht}</b><span>vielleicht</span></div>
+    <div class="g-tile"><b>${c.offen}</b><span>noch offen</span></div>
+    <div class="g-tile"><b style="color:var(--bad)">${c.abgesagt}</b><span>abgesagt</span></div>
+    <div class="g-tile go"><span>Danach fortgehen</span><b>${c.goJa}${c.goVlt?` <small>+ ${c.goVlt} vlt.</small>`:""}</b><span>${c.goNein?c.goNein+" gehen nicht mit · ":""}inkl. Begleitung</span></div>
+    <div class="g-bar" title="Anteil fix / vielleicht / offen / abgesagt">${["fix","vielleicht","offen","abgesagt"].map(k=>`<i style="width:${c[k]/all*100}%;background:${GST[k].c}"></i>`).join("")}</div>`;
+  const list=Object.entries(GUESTS).sort((a,b)=>a[1].name.localeCompare(b[1].name,"de"));
+  if(!list.length){$("#gList").innerHTML=`<div class="g-empty"><b>Noch keine Gäste.</b><br>Oben einen Namen eintippen oder unter „Mehrere auf einmal“ die ganze Liste aus WhatsApp einfügen.</div>`;return}
+  const groups=(GF==="alle"?["fix","vielleicht","offen","abgesagt"]:[GF]);
+  $("#gList").innerHTML=groups.map(st=>{const rows=list.filter(([,g])=>g.status===st); if(!rows.length&&GF==="alle") return "";
+    return `<section class="g-group"><h3><i style="background:${GST[st].c}"></i>${GST[st].l} <span>${rows.length}</span></h3>
+    ${rows.length?`<div class="g-rows">${rows.map(([id,g])=>`<div class="g-row" data-gid="${id}">
+      <span class="g-name">${esc(g.name)}</span>
+      <span class="seg" role="group" aria-label="Status von ${esc(g.name)}">${["fix","vielleicht","offen","abgesagt"].map(k=>`<button data-gs="${k}" aria-pressed="${g.status===k}">${k==="vielleicht"?"vlt.":GST[k].l.toLowerCase()}</button>`).join("")}</span>
+      <span class="g-go" role="group" aria-label="Fortgehen danach"><span class="g-lab">Fortgehen</span><span class="seg">${[["ja","ja"],["vlt","vlt."],["nein","nein"]].map(([k,l])=>`<button data-ggo="${k}" aria-pressed="${g.go===k}">${l}</button>`).join("")}</span></span>
+      <span class="g-plus" role="group" aria-label="Begleitpersonen"><span class="g-lab">Bringt mit</span><span class="step"><button data-gplus="-1" aria-label="weniger" ${g.plus?"":"disabled"}>−</button><b class="mono">+${g.plus}</b><button data-gplus="1" aria-label="mehr">+</button></span></span>
+      <input class="g-note" id="gnote-${id}" data-gnote value="${esc(g.note)}" placeholder="Notiz (bringt Kuchen, kommt später …)">
+      <button class="g-del${gDelArm===id?" arm":""}" data-gdel>${gDelArm===id?"Wirklich löschen?":"Entfernen"}</button>
+    </div>`).join("")}</div>`:`<p class="lbl">Niemand mit diesem Status.</p>`}</section>`}).join("");
+}
+$("#gAdd").addEventListener("submit",e=>{e.preventDefault();const n=$("#gName").value.trim();if(!n)return;gNew(n,$("#gStatus").value);$("#gName").value="";renderGuests();$("#gName").focus();toast(n+" hinzugefügt")});
+$("#gBulkBtn").addEventListener("click",()=>{const names=$("#gBulk").value.split(/[\n,;]+/).map(x=>x.replace(/^[\s\-•*\d.)]+/,"").trim()).filter(Boolean);
+  const have=new Set(Object.values(GUESTS).map(g=>g.name.toLowerCase())); let n=0;
+  names.forEach(x=>{if(!have.has(x.toLowerCase())){gNew(x,"offen");have.add(x.toLowerCase());n++}});
+  $("#gBulk").value="";renderGuests();toast(n+" Gäste hinzugefügt")});
+$("#gFilter").addEventListener("click",e=>{const b=e.target.closest("[data-gf]");if(!b)return;GF=b.dataset.gf;document.querySelectorAll("[data-gf]").forEach(x=>x.setAttribute("aria-pressed",x===b));renderGuests()});
+$("#gCopy").addEventListener("click",e=>{const list=Object.values(GUESTS).sort((a,b)=>a.name.localeCompare(b.name,"de"));
+  const txt="Edas Geburtstag, Sa 31.10.\n"+["fix","vielleicht","offen","abgesagt"].map(k=>{const r=list.filter(g=>g.status===k);return r.length?`\n${GST[k].l} (${r.length}):\n`+r.map(g=>"• "+g.name+(g.plus?" +"+g.plus:"")+(g.go==="ja"?" · geht fort":g.go==="vlt"?" · fortgehen vlt.":g.go==="nein"?" · geht nicht fort":"")+(g.note?" – "+g.note:"")).join("\n"):""}).join("");
+  copy(txt.trim(),e.target)});
+$("#gList").addEventListener("click",e=>{const row=e.target.closest("[data-gid]");if(!row)return;const id=row.dataset.gid;
+  const st=e.target.closest("[data-gs]"); if(st){GUESTS[id].status=st.dataset.gs;gDelArm=null;gSave(id);renderGuests();return}
+  const go=e.target.closest("[data-ggo]"); if(go){const v=go.dataset.ggo;GUESTS[id].go=GUESTS[id].go===v?"?":v;gSave(id);renderGuests();return}
+  const pl=e.target.closest("[data-gplus]"); if(pl){GUESTS[id].plus=Math.max(0,Math.min(9,GUESTS[id].plus+parseInt(pl.dataset.gplus)));gSave(id);renderGuests();return}
+  if(e.target.closest("[data-gdel]")){ if(gDelArm===id){const n=GUESTS[id].name;delete GUESTS[id];gDelArm=null;gSave(id);renderGuests();toast(n+" entfernt")} else {gDelArm=id;renderGuests()} }});
+$("#gList").addEventListener("change",e=>{const row=e.target.closest("[data-gid]");if(!row)return;const id=row.dataset.gid;
+});
+$("#gList").addEventListener("input",e=>{const row=e.target.closest("[data-gid]");if(!row)return;
+  if(e.target.matches("[data-gnote]")){GUESTS[row.dataset.gid].note=e.target.value.slice(0,200);gSave(row.dataset.gid)}});
+function gSubscribe(){
+  let first=true;
+  db.collection("guests").onSnapshot(snap=>{
+    if(snap.metadata.hasPendingWrites) return;
+    const remote={}; snap.docs.forEach(d=>{const x=d.data(); if(x&&x.name) remote[d.id]=gNorm(x)});
+    if(first){ first=false; Object.keys(GUESTS).forEach(id=>{ if(!remote[id]){ remote[id]=GUESTS[id]; gSave(id);} }); }
+    GUESTS=remote; gLocal();
+    const ae=document.activeElement; if(!(ae&&ae.matches&&ae.matches("[data-gnote],#gName,#gBulk"))) renderGuests();
+  },()=>{});
+}
+
+/* ---------- Start ---------- */
+function renderAll(){renderGuests();renderWriter();renderZones();renderProgress();renderMap();renderFrom();renderEvents()}
+renderAll();
+try{const t=localStorage.getItem(LS+"-tab"); if(t&&document.getElementById("panel-"+t)) showTab(t)}catch(e){}
+setSync("Gespeichert auf diesem Gerät");
+try{ if(matchMedia("(max-width:640px)").matches && localStorage.getItem(LS+"-seen")) document.getElementById("howwrap").open=false; localStorage.setItem(LS+"-seen","1"); }catch(e){}
+
+(async()=>{
+  try{
+    db = window.claude?.use ? await window.claude.use("db") : null;
+    if(!db){ setSync("Gespeichert auf diesem Gerät"); return; }
+    useDb = true;
+    setSync("Wird auf der Seite gespeichert (auf allen Geräten)");
+    let first=true;
+    gSubscribe();
+    db.collection("status").onSnapshot(snap=>{
+      let changed=false;
+      snap.docs.forEach(d=>{ if(!STATE[d.id]) return; const data=d.data(); if(d.metadata.hasPendingWrites) return;
+        const cur=JSON.stringify(STATE[d.id]), nxt={...DEF,...data}; if(JSON.stringify(nxt)!==cur){STATE[d.id]=nxt;changed=true}});
+      if(first){ first=false;
+        // lokale Einträge, die noch nicht auf der Seite liegen, nachziehen
+        const remote=new Set(snap.docs.map(d=>d.id));
+        VENUES.forEach(v=>{const s=STATE[v.id]; if(!remote.has(v.id) && (s.asked||s.fav||s.note||s.answer!=="offen"||s.cake!=="?")) saveVenue(v.id)});
+      }
+      if(changed){ const ae=document.activeElement; if(ae&&ae.matches("textarea[data-note]")) {renderProgress();renderMap();} else {renderZones();renderProgress();renderMap();renderFrom()} lsSave(); }
+    }, err=>{ useDb=false; setSync("Verbindung weg, gespeichert nur in diesem Browser"); });
+    db.doc("settings/main").onSnapshot(d=>{ if(d.exists && !d.metadata.hasPendingWrites){ const fb=d.data().fromBar; if(fb && fb!==SETTINGS.fromBar){SETTINGS.fromBar=fb;renderFrom();renderEvents();lsSave()} } }, ()=>{});
+  }catch(e){ useDb=false; setSync("Gespeichert auf diesem Gerät"); }
+})();
+</script>
+
+</body>
+</html>
