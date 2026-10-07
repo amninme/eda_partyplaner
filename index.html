@@ -285,7 +285,7 @@ table.ov .fav{position:static;font-size:18px}
 .ev h3{font-size:19px}
 .ev .meta{display:flex;flex-wrap:wrap;gap:6px}
 .pill{font-size:12px;padding:3px 8px;border-radius:99px;background:var(--sunk);font-weight:600}
-.pill.ok{background:var(--oks);color:var(--ok)} .pill.q{background:var(--warns);color:var(--warn)}
+.pill.ok{background:var(--oks);color:var(--ok)} .pill.q{background:var(--warns);color:var(--warn)} .pill.bad{background:var(--bads,var(--warns));color:var(--bad)}
 .ev .price{font-family:var(--f-display);font-size:22px;font-weight:700}
 .ev p{margin:0;font-size:14px;color:var(--muted)}
 .ev .way{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px dashed var(--line);padding-top:9px;font-size:13px;flex-wrap:wrap}
@@ -463,7 +463,7 @@ table.ov .fav{position:static;font-size:18px}
       </ul></div>
       <div><h3>Wie verlässlich sind die Infos?</h3><ul>
         <li><b class="y">Website 2026</b>: direkt auf der Seite der Location geprüft.</li>
-        <li><b class="q">Ältere Quelle</b>: aus Artikeln/Portalen, Preise können sich geändert haben.</li>
+        <li><b class="q">Ältere Quelle</b> / <b class="q">Eventportal</b>: aus Artikeln oder Location-Portalen, Preise können sich geändert haben.</li>
         <li>Eine Online-Belegung für den 31.10. hat keine der Locations veröffentlicht. Ausgebucht-Infos habe ich keine gefunden, dafür sind Locations mit eigener Halloween-Party unten aussortiert.</li>
       </ul></div>
       <div><h3>Die zwei Indizes</h3><ul>
@@ -472,7 +472,7 @@ table.ov .fav{position:static;font-size:18px}
         <li>„Wie berechnet?“ auf jeder Karte zeigt die Rechnung. Oben rechts kannst du danach sortieren.</li>
       </ul></div>
       <div><h3>Wegzeit</h3><ul>
-        <li>Grün = bis 30 min Öffis ab Friedrich-Engels-Platz, orange = länger.</li>
+        <li>Grün = bis 30 min Öffis ab Friedrich-Engels-Platz, orange = 31–45 min. Alles über 45 min ist aussortiert.</li>
         <li>Zeiten sind von mir geschätzt. „Route“ öffnet Google Maps mit der echten Verbindung.</li>
       </ul></div>
     </div>
@@ -508,6 +508,16 @@ table.ov .fav{position:static;font-size:18px}
         <li><b>Bestens Bar</b> (1070): 1.200 € Mindestkonsum, ab 30 Personen.</li>
         <li><b>Klub GRU</b> (1090): 800 € Mindestkonsum bei geschlossener Gesellschaft.</li>
         <li><b>Luftbad als ganzes Lokal</b>: Fr/Sa 1.500 € + 200 € Miete (nur der Teilbereich passt, siehe Karte).</li>
+        <li><b>Omar</b>: 700 € Mindestkonsum + 50 € Reinigung.</li>
+        <li><b>LEFTBANK</b> (1010): Raummiete ab 300 €.</li>
+        <li><b>Wilheim</b>: exklusiv erst ab 1.000 € Mindestkonsum, sonst nur Tische.</li>
+      </ul></div>
+      <div><h3>Aussortiert: zu weit oder zu</h3><ul>
+        <li><b>Club ro:ses</b> (1120): ca. 55 min Anfahrt, über eurem 45-min-Limit. Taucht nur wieder auf, wenn ihr dort schon etwas eingetragen habt.</li>
+        <li><b>ausklang</b>: seit Dezember 2024 geschlossen.</li>
+        <li><b>Club Dual</b>: Do–Sa eigene Clubnächte, keine private Feier am Samstag.</li>
+        <li><b>Club Berlin</b>: Website offline, Betrieb unklar.</li>
+        <li><b>Pratersauna</b> (Fortgehen): im Herbst 2026 kein Clubbetrieb.</li>
       </ul></div>
     </div>
   </section>
@@ -577,6 +587,8 @@ table.ov .fav{position:static;font-size:18px}
       <button class="chip" id="g-confirmed" aria-pressed="false">Nur für 2026 bestätigt</button>
       <button class="chip" id="g-sort" aria-pressed="false">Nach Wegzeit sortieren</button>
     </div>
+    <div class="filters" role="group" aria-label="Musikrichtung" id="genreChips"></div>
+    <p class="lbl" style="margin:-6px 0 4px"><b id="evCount"></b></p>
     <p class="lbl" id="goCount" style="margin:-6px 0 14px"></p>
     <div class="evgrid" id="events"></div>
     <div class="goodtoknow">
@@ -624,10 +636,10 @@ const TIERS = {
   1:{name:"1. Bezirk", tag:"Top-Wahl", desc:"Mitten in der Stadt, für alle Gäste leicht erreichbar.", c:"--t1", s:"--t1s"},
   2:{name:"Innenbezirke", tag:"2. Wahl", desc:"Bezirke 2–9. Wegzeit ab Friedrich-Engels-Platz steht auf jeder Karte.", c:"--t2", s:"--t2s"},
   3:{name:"Bis 30 min vom Start", tag:"Nah am Start", desc:"Außenbezirke, höchstens ca. 30 Minuten vom Friedrich-Engels-Platz. Meist direkt in der Brigittenau.", c:"--t3", s:"--t3s"},
-  4:{name:"Mehr als 30 min", tag:"Weiter weg", desc:"Passt vom Budget, ist aber eine Reise. Nur wenn sonst nichts klappt.", c:"--t4", s:"--t4s"}
+  4:{name:"31–45 min", tag:"Weiter weg", desc:"Außenbezirke mit 31 bis 45 Minuten Anfahrt. Alles über 45 min ist aussortiert.", c:"--t4", s:"--t4s"}
 };
 
-const VENUES = [
+const ALL_VENUES = [
  {id:"iltoro", name:"IL TORO", tier:1, plz:"1010", addr:"Rudolfsplatz 1, 1010 Wien", lat:48.2149, lng:16.3720,
   phone:"+43 660 526 01 73", email:"cafe@iltoro.at", web:"https://iltoro.at", hours:"nach Vereinbarung, max. bis 03:00",
   model:"Keine Raummiete", money:"ok", moneyTxt:"Keine Raummiete, ihr zahlt nur, was ihr trinkt. Getränkepakete möglich.",
@@ -717,12 +729,81 @@ const VENUES = [
   warn:"Im Einkaufszentrum: Öffnungszeiten am Halloween-Samstag spät abends unbedingt fragen.",
   notes:["Happy Hour 17–19 Uhr","Kontakt über Instagram @singsing.vienna"],
   verified:"Ältere Quelle", src:"https://www.westfield.com/en/austria/donauzentrum/entertainments/singsing-cafe-bar-karaoke/80602"},
- {id:"roses", name:"Club ro:ses", tier:4, plz:"1120", addr:"Rosenhügelstraße 22, 1120 Wien", lat:48.1662, lng:16.3114,
+ {id:"roses", name:"Club ro:ses", tier:4, far:true, plz:"1120", addr:"Rosenhügelstraße 22, 1120 Wien", lat:48.1662, lng:16.3114,
   phone:"+43 664 383 49 85", email:"", web:"", hours:"bis 04:00",
   model:"350 € Mindestumsatz", money:"ok", moneyTxt:"Keine Miete, 350 € Mindestumsatz plus Getränke-Special. Barpersonal, DJ-/Karaokeanlage und Endreinigung inklusive.",
   cap:"ca. 40 Sitzplätze", karaoke:"ja, inklusive", music:"ja", cake:"ja (eigenes Catering erlaubt)", min:55, route:"U6 Meidling, dann Bus/Tram",
   notes:["Günstigste Karaoke-Option der Liste","Eigenes Catering oder Gulasch/Toast vom Lokal"],
-  verified:"Ältere Quelle", src:"https://www.herold.at/blog/karaoke-bar-wien"}
+  verified:"Ältere Quelle", src:"https://www.herold.at/blog/karaoke-bar-wien"},
+ {id:"sofies", name:"Sofie's Bar", tier:1, plz:"1010", addr:"Bieberstraße 9, 1010 Wien", lat:48.2106, lng:16.3811,
+  phone:"", email:"office@sofiesbar.at", web:"http://www.sofiesbar.at", hours:"Fr–Sa abends · Events auch an anderen Tagen",
+  model:"Konditionen auf Anfrage", money:"check", moneyTxt:"Eigener Zusatzraum mit Bar und Tanzfläche für Feiern. Miete oder Mindestkonsum stehen nicht online, per Mail anfragen.",
+  cap:"Zusatzraum", karaoke:"?", music:"?", cake:"?", min:25, route:"U4 Schwedenplatz bzw. U3 Stubentor, 5 min zu Fuß",
+  notes:["Event-Anfragen laut Website an jedem Tag per Mail","Separater Raum, ihr seid nicht mitten im Barbetrieb"],
+  verified:"Website 2026", src:"http://www.sofiesbar.at"},
+ {id:"lemmon", name:"Lemmon Bar", tier:1, plz:"1010", addr:"Wolfengasse 1, 1010 Wien", lat:48.2112, lng:16.3772,
+  phone:"+43 699 11 96 15 72", email:"", web:"http://www.lemmon.at", hours:"Di–Do 18–02, Fr–Sa 18–04",
+  model:"Konditionen unbekannt", money:"check", moneyTxt:"Karaokebar im 1. Bezirk. Gruppenreservierung möglich, Preise für eine Feier telefonisch fragen.",
+  cap:"Bar", karaoke:"ja", music:"nein (Karaoke)", cake:"?", min:22, route:"U1/U4 Schwedenplatz, 3 min zu Fuß",
+  warn:"Am Halloween-Samstag wird die Bar voll, eher nur ein reservierter Bereich.",
+  notes:["Komplett schallisoliert, Karaoke bis spät","Fr–Sa bis 04:00 offen"],
+  verified:"Website 2026", src:"http://www.lemmon.at"},
+ {id:"stage", name:"STAGE Bar", tier:2, plz:"1020", addr:"Gredlerstraße 9, 1020 Wien", lat:48.2155, lng:16.3790,
+  phone:"+43 660 7375339", email:"", web:"https://www.stagebar.at", hours:"Do–Sa 18–02 · private Events So–Mi",
+  model:"Mindestkonsum ab ca. 115 €", money:"ok", moneyTxt:"Laut Eventportal ab ca. 115 € Mindestkonsum. Am Samstag eher Tischreservierung, exklusiv vor allem So–Mi.",
+  cap:"67 sitzend / 150 stehend", karaoke:"?", music:"ja (DJ-Pult)", cake:"?", min:15, route:"Tram 2 hält direkt vor der Tür",
+  notes:["Getränkebörse: Preise schwanken wie an der Börse","Direkt am Donaukanal, Tram 2 ab Friedrich-Engels-Platz"],
+  verified:"Eventportal", src:"https://www.eventlocations.com/"},
+ {id:"mickeyfinns", name:"Mickey Finn's Irish Pub", tier:2, plz:"1030", addr:"Ungargasse 67, 1030 Wien", lat:48.1985, lng:16.3880,
+  phone:"", email:"", web:"", hours:"Fr–Sa bis 01:00",
+  model:"Privatraum, Preis auf Anfrage", money:"check", moneyTxt:"Eigener Privatraum für bis zu 25 Personen mit Soundanlage und Mikro. Preis nicht veröffentlicht.",
+  cap:"Privatraum bis 25", karaoke:"ja (Do Karaoke-Abend)", music:"ja (Soundanlage + Mikro)", cake:"?", min:33, route:"U3 Rochusgasse oder Tram O/71",
+  notes:["Karaoke-Anlage vorhanden, jeden Donnerstag Karaoke-Abend","Irish Pub mit Guinness vom Fass"],
+  verified:"Eventportal", src:"https://www.google.com/search?q=Mickey+Finn%27s+Irish+Pub+Wien+Ungargasse"},
+ {id:"shangrila", name:"Shangrila Karaoke Bar", tier:2, plz:"1030", addr:"Franzosengraben 3, 1030 Wien", lat:48.1905, lng:16.4120,
+  phone:"", email:"", web:"https://www.facebook.com/Shangrilakaraokebar", hours:"täglich",
+  model:"Privatraum, Preis auf Anfrage", money:"check", moneyTxt:"Eigene Karaoke-Räume nur für eure Gruppe. Preise über Facebook anfragen.",
+  cap:"Privatraum", karaoke:"ja, eigene Anlage im Raum", music:"nein (Karaoke)", cake:"?", min:40, route:"U3 Erdberg, 3 min zu Fuß",
+  notes:["Koreanisch-asiatischer Karaoke-Stil mit eigenem Raum","Kontakt nur über Facebook gefunden"],
+  verified:"Ältere Quelle", src:"https://www.facebook.com/Shangrilakaraokebar"},
+ {id:"soulkitchen", name:"Soulkitchen Vienna", tier:2, plz:"1030", addr:"Hintere Zollamtsstraße 2b, 1030 Wien", lat:48.2075, lng:16.3880,
+  phone:"0660 837 25 09", email:"", web:"https://www.soulkitchenvienna.at", hours:"tagsüber Kantine (Mo–Do Mittag), abends Events",
+  model:"Eventraum, Preis auf Anfrage", money:"check", moneyTxt:"Abends als Eventlocation bis 120 Personen buchbar. Catering im Haus, Preis nicht veröffentlicht.",
+  cap:"bis 120", karaoke:"?", music:"ja (DJ-Equipment)", cake:"?", min:25, route:"U3/U4 Wien Mitte, 5 min zu Fuß",
+  notes:["Laut Website keine Lärmbeschränkung","Abends sonst geschlossen, also keine Konkurrenz durch Barbetrieb"],
+  verified:"Website 2026", src:"https://www.soulkitchenvienna.at"},
+ {id:"polkadot", name:"Polkadot", tier:2, plz:"1080", addr:"Albertgasse 12, 1080 Wien", lat:48.2080, lng:16.3450,
+  phone:"+43 1 40 74 125", email:"office@polkadot.at", web:"https://www.polkadot.at", hours:"Fr–Sa 19–03",
+  model:"Reservierung, keine Miete", money:"ok", moneyTxt:"Plätze reservieren, keine Raummiete. Kuchen und Fingerfood mitbringen war laut Herold erlaubt.",
+  cap:"Bar", karaoke:"nein", music:"?", cake:"ja (laut Herold)", min:28, route:"Tram 33 bzw. U6 Josefstädter Straße",
+  notes:["Retro-Bar im 8. Bezirk","Kuchen mitbringen laut älterer Quelle ok"],
+  verified:"Ältere Quelle", src:"https://www.herold.at/blog/geburtstag-feiern-wien-lokale/"},
+ {id:"downunder", name:"Down Under Aussie Pub", tier:2, plz:"1060", addr:"Magdalenenstraße 32, 1060 Wien", lat:48.1940, lng:16.3550,
+  phone:"+43 1 585 73 30", email:"office@downunder.at", web:"https://www.downunder.at", hours:"täglich abends",
+  model:"Lounge/Keller, Preis auf Anfrage", money:"check", moneyTxt:"Lounge bis 80, Keller „Snakepit“ bis 100 Personen. Barkeeper inklusive, Preise auf Anfrage.",
+  cap:"Lounge 80 · Keller 100", karaoke:"?", music:"ja (eigene Musik oder DJ)", cake:"?", min:38, route:"U4 Kettenbrückengasse oder Bus 57A",
+  warn:"Im Keller laufen Fr/Sa oft eigene Partys, eher die Lounge anfragen.",
+  notes:["4,5 ★ bei über 600 Google-Bewertungen","Eigene Musik oder DJ möglich"],
+  verified:"Website 2026", src:"https://www.downunder.at"},
+ {id:"kramladen", name:"Kramladen", tier:2, plz:"1080", addr:"Lerchenfelder Gürtel, Stadtbahnbogen 39–40, 1080 Wien", lat:48.2105, lng:16.3408,
+  phone:"+43 699 121 851 77", email:"", web:"", hours:"Fr–Sa 18–06",
+  model:"Keine Miete, kein Mindestkonsum", money:"ok", moneyTxt:"Laut Herold (2022) keine Miete und kein Mindestkonsum. Live-/DJ-Club im Gürtelbogen.",
+  cap:"Club", karaoke:"nein", music:"?", cake:"?", min:28, route:"U6 Josefstädter Straße, 2 min zu Fuß",
+  warn:"Hat am Halloween-Samstag wahrscheinlich eigenes Programm.",
+  notes:["Gürtel-Club, danach direkt Loft, Loop, Chelsea in Gehweite","Infos von 2022"],
+  verified:"Ältere Quelle", src:"https://www.herold.at/blog/geburtstag-feiern-wien-lokale/"},
+ {id:"klimbim", name:"Café-Bar Klim Bim", tier:3, plz:"1210", addr:"Franz-Jonas-Platz 5, 1210 Wien", lat:48.2570, lng:16.4005,
+  phone:"", email:"", web:"https://klimbim21.at", hours:"täglich bis 01:00",
+  model:"Nebenraum, Preis auf Anfrage", money:"check", moneyTxt:"Nebenraum (ca. 25 m²) oder das ganze Lokal exklusiv bis 70 Personen. Preis nicht veröffentlicht.",
+  cap:"Nebenraum ~25 m², exklusiv 70", karaoke:"?", music:"ja (DJ-Pult)", cake:"?", min:15, route:"Tram 31/30 bis Floridsdorf, direkt am Platz",
+  notes:["Ruhiges Grätzl-Café, wenig Halloween-Andrang","Sehr nah am Friedrich-Engels-Platz"],
+  verified:"Website 2026", src:"https://klimbim21.at"},
+ {id:"maikai", name:"MAI KAI", tier:4, plz:"1150", addr:"Gablenzgasse 1–3, 1150 Wien", lat:48.2035, lng:16.3375,
+  phone:"", email:"", web:"https://www.mai-kai.at", hours:"abends, siehe Website",
+  model:"Reservierung gratis", money:"ok", moneyTxt:"Tischreservierung kostenlos, ihr zahlt nur Getränke.",
+  cap:"Bar", karaoke:"ja (Weltrekord-Karaokebar)", music:"nein (Karaoke)", cake:"?", min:38, route:"U6 Burggasse-Stadthalle, 3 min zu Fuß",
+  notes:["Bekannt für den Karaoke-Weltrekord","Am Halloween-Samstag Hotspot, früh reservieren"],
+  verified:"Website 2026", src:"https://www.mai-kai.at"}
 ];
 
 /* ---------- Index-Grundlagen (meine Einschätzung aus der Recherche) ----------
@@ -742,7 +823,18 @@ const META = {
  razavi:{cond:80, rating:null, fit:1, avail:[["Kleines Feierlokal, wenig Konkurrenz im Grätzl",+10],["Nur eine Feier pro Abend, Samstag",-10]]},
  soho:{cond:45, rating:3.3, ratingN:12, fit:.7, avail:[["Karaokebar mit Reservierung, weniger gehypt",+10]]},
  singsing:{cond:45, rating:null, fit:.8, avail:[["Öffnungszeiten im Einkaufszentrum am Abend unklar",-15],["Neue Bar, VIP-Lounge für Gruppen",+5]]},
- roses:{cond:90, rating:null, fit:1, avail:[["Weit draußen, wenig Nachfrage",+15],["Nur eine Feier pro Abend, Samstag",-5]]}
+ roses:{cond:90, rating:null, fit:1, avail:[["Weit draußen, wenig Nachfrage",+15],["Nur eine Feier pro Abend, Samstag",-5]]},
+ sofies:{cond:50, rating:null, fit:.9, avail:[["Zusatzraum getrennt vom Barbetrieb",+5],["Konditionen unbekannt",-5]]},
+ lemmon:{cond:45, rating:null, fit:.8, avail:[["Karaokebar, Halloween-Samstag voll",-10],["Gruppenreservierung möglich",+5]]},
+ stage:{cond:85, rating:null, fit:.6, avail:[["Samstag Tischreservierung statt Exklusivmiete",+5],["Exklusiv eher So–Mi",-10]]},
+ mickeyfinns:{cond:55, rating:null, fit:1, avail:[["Eigener Privatraum genau für 25",+10],["Pub am Samstag voll",-5]]},
+ shangrila:{cond:50, rating:null, fit:.9, avail:[["Eigene Karaoke-Räume nur für euch",+10],["Gefragt am Wochenende",-5]]},
+ soulkitchen:{cond:50, rating:null, fit:.6, avail:[["Abends sonst geschlossen, nur Events",+20]]},
+ polkadot:{cond:85, rating:null, fit:.8, avail:[["Reservierung ohne Exklusivmiete",+10],["Halloween-Samstag voll",-5]]},
+ downunder:{cond:55, rating:4.5, ratingN:648, fit:.5, avail:[["Keller Fr/Sa oft eigenes Programm",-15],["Lounge als Alternative",+5]]},
+ kramladen:{cond:90, rating:null, fit:.5, avail:[["Club mit eigenem Halloween-Programm wahrscheinlich",-20]]},
+ klimbim:{cond:55, rating:null, fit:.9, avail:[["Ruhiges Grätzl-Café, wenig Halloween-Andrang",+15]]},
+ maikai:{cond:80, rating:null, fit:.8, avail:[["Gratis-Reservierung",+10],["Karaoke-Hotspot am Samstag",-5]]}
 };
 const TIERLAGE={1:100,2:78,3:62,4:35};
 function clamp(x){return Math.max(0,Math.min(100,Math.round(x)))}
@@ -776,43 +868,119 @@ function scoreOf(v){
 function heat(v){return v>=65?"var(--ok)":v>=45?"var(--warn)":"var(--bad)"}
 
 const EVENTS = [
- {id:"nun", name:"The Nun – Halloween Dome Takeover", where:"Hallmann Dome", addr:"Gutheil-Schoder-Gasse 9, 1100 Wien", lat:48.1626, lng:16.3386,
-  time:"21:00–04:00", price:"ab 15 €", music:"Club, Horror-Visuals, Lichtshow", age:"ab 16", confirmed:true,
-  link:"https://www.laviesta.at/the-nun-dome-takeover-halloween-31-10-2026/", info:"Großevent, laut Veranstalter eine der größten Halloween-Partys Österreichs. Barrierefrei."},
- {id:"klyo", name:"Halloween Horror Night", where:"KLYO / Urania Dachsaal", addr:"Uraniastraße 1, 1010 Wien", lat:48.2117, lng:16.3838,
-  time:"ab 17:30, Party danach", price:"2025: 119 € mit Dinner", music:"Party hosted by Heartbreak Hotel", age:"–", confirmed:true,
-  link:"https://www.wien.gv.at/veranstaltungen/halloween-horror-night-2026", info:"Eigentlich Dinner + Party-Paket. Ob es Tickets nur für die Party gibt, beim KLYO fragen."},
- {id:"ottakringer", name:"Halloween Rave – Kein Sonntag ohne Techno", where:"Ottakringer Brauerei", addr:"Ottakringer Platz 1, 1160 Wien", lat:48.2132, lng:16.3226,
-  time:"2025: ab 21:00", price:"2025: ab 40 €", music:"Techno & House, 4 Floors", age:"18+", confirmed:false,
-  link:"https://www.google.com/search?q=Halloween+Rave+Ottakringer+Brauerei+2026", info:"Wiens größte Halloween-Party, jedes Jahr. Kein Wiedereinlass nach dem Verlassen."},
+ /* ---- Große Clubs & Hotspots ---- */
+ {id:"dome", name:"Biggest Halloween Party in Vienna", where:"Prater DOME", addr:"Riesenradplatz 7, 1020 Wien", lat:48.2162, lng:16.3962,
+  time:"ab 22:00", price:"VVK ab 11,90 €", music:"EDM/Club, HipHop, Classics, Chill-out-Rooftop (4 Areas)", age:"18+", confirmed:true, g:["charts","hiphop"],
+  link:"https://praterdome.at/en/events/biggest-halloween-party-in-vienna-31-10-2026", info:"Dresscode „Kostüm oder so, als wär's euer erstes Date mit uns“. Fotocontest bis Mitternacht, Preis: VIP-Jahrespass. Vorher Wurstelprater mit Halloween-Deko."},
+ {id:"vieipee", name:"TRAPPED IN HELL – Halloween", where:"VIE I PEE", addr:"Waldsteingartenstraße 135, 1020 Wien", lat:48.2106, lng:16.4078,
+  time:"ab 22:00", price:"Preis offen (2025: 30 € AK)", music:"HipHop & Rap, 3 Floors, 6 DJs", age:"18+", confirmed:true, g:["hiphop"],
+  link:"https://warda.at/events/trapped-in-hell-halloween-vieipee/", info:"12. Halloween im VIEiPEE, Kostümwettbewerb „Dress like your favorite rapper“. Tickets limitiert, früh kommen."},
+ {id:"u4", name:"Halloween – Death by Sexy", where:"U4", addr:"Schönbrunner Straße 222, 1120 Wien", lat:48.1863, lng:16.3270,
+  time:"Einlass 21:00", price:"AK 26 € (Early Bird 13 € ausverkauft)", music:"Main: Pop, Charts, HipHop · Club-Floor: Bad Taste", age:"18+", confirmed:true, g:["charts","hiphop"],
+  link:"https://www.u4.at/halloween/", info:"Welcome-Shot „Blaues Blut“, Deko im Royal-Horror-Stil, Kostüm erwünscht. Direkt bei U4 Meidling Hauptstraße."},
  {id:"oklub", name:"Halloween Transmission", where:"O – der Klub", addr:"Operngasse 8, 1010 Wien", lat:48.2030, lng:16.3686,
-  time:"2025: ab 22:00", price:"VVK, Preis offen", music:"90s/00s/10s-Hits · Melodic House & Techno · HipHop", age:"19+", confirmed:false,
-  link:"https://www.google.com/search?q=O+der+Klub+Halloween+Transmission+2026", info:"Drei Floors, gut für eine gemischte Gruppe."},
- {id:"loft", name:"Korruptions Halloween Party", where:"The Loft", addr:"Lerchenfelder Gürtel 37, 1160 Wien", lat:48.2086, lng:16.3403,
-  time:"2025: ab 23:00", price:"mit Kostüm günstiger", music:"Party-Sound, Indie, mehrere Floors", age:"–", confirmed:false,
-  link:"https://www.theloft.at", info:"Traditionelle Halloween-Sause am Gürtel, direkt bei der U6 Thaliastraße/Josefstädter Straße."},
- {id:"dome", name:"Biggest Halloween Party in Austria", where:"Prater DOME", addr:"Riesenradplatz 7, 1020 Wien", lat:48.2162, lng:16.3962,
-  time:"2025: ab 22:00", price:"Preis offen", music:"Charts, Party-Hits, 4 Areas", age:"18+", confirmed:false,
-  link:"https://www.google.com/search?q=Prater+Dome+Halloween+2026", info:"Davor gibt's im Wurstelprater die Halloween-Parade und um 22 Uhr eine Feuershow (gratis)."},
- {id:"sauna", name:"Haunted Sauna – Halloween Rave", where:"Pratersauna", addr:"Waldsteingartenstraße 135, 1020 Wien", lat:48.2128, lng:16.4083,
-  time:"2025: ab 22:00", price:"Preis offen", music:"Techno / Elektronisch", age:"18+", confirmed:false,
-  link:"https://www.google.com/search?q=Pratersauna+Halloween+2026", info:"Club im ehemaligen Saunabad im Prater."},
+  time:"22:00–06:00", price:"17–35 €", music:"CORE: Hits · ORBIT: Melodic House & Techno · KONSULAT: HipHop/Urban", age:"18+", confirmed:true, g:["charts","techno","hiphop"],
+  link:"https://o-klub.at/events/halloween-3/", info:"Drei Floors, gut für eine gemischte Gruppe. Dresscode „dress up or come as you are“."},
+ {id:"volksgarten", name:"Halloween x Volksgarten", where:"Volksgarten (Club)", addr:"Burgring 1, 1010 Wien", lat:48.2066, lng:16.3622,
+  time:"2024: ab 23:00", price:"Preis offen (2022: 15 €)", music:"2024: Pop, 2010s", age:"21+", confirmed:false, g:["charts"],
+  link:"https://www.volume.at/events/halloween-x-volksgarten-2024-10-31/", info:"Läuft jedes Jahr (2022–2024 belegt), für 2026 noch kein Listing. Mindestalter 21, Türsteher streng."},
+ {id:"moon", name:"Moon Halloween", where:"MuseumsQuartier Wien", addr:"Museumsplatz 1, 1070 Wien", lat:48.2035, lng:16.3585,
+  time:"ab 22:00, open end", price:"24,50 €", music:"Elektronisch / Club", age:"20+", confirmed:true, g:["techno"],
+  link:"https://wasmachma.at/event/1070-neubau/halloween-special-museums-quartier-9553613", info:"1.600 m² in den ehemaligen Hofstallungen. Tische über reservations@moonevent.at."},
+ {id:"nun", name:"The Nun – Halloween Dome Takeover", where:"Hallmann Dome", addr:"Gutheil-Schoder-Gasse 9, 1100 Wien", lat:48.1626, lng:16.3386,
+  time:"21:00–04:00", price:"ab ca. 24 € (Quellen widersprüchlich)", music:"HipHop, R&B, Charts · Horror-Visuals, Lichtshow", age:"16+ mit Ausweis", confirmed:true, g:["hiphop","charts"],
+  link:"https://www.laviesta.at/the-nun-dome-takeover-halloween-31-10-2026/", info:"Großevent mit Early Bird, Fast Lane, VIP und Tischen. Kostüm optional, Foodtruck vor Ort, Kartenzahlung."},
+ {id:"ottakringer", name:"Halloween Warehouse Rave", where:"Ottakringer Brauerei", addr:"Ottakringer Platz 1, 1160 Wien", lat:48.2132, lng:16.3226,
+  time:"21:00–05:00", price:"VVK ab 25–30 €", music:"Techno & House, 4 Floors", age:"18+", confirmed:true, g:["techno"],
+  link:"https://www.volume.at/events/halloween-warehouse-rave-2026-10-31/", info:"Wiens größter Halloween-Rave. Kein Wiedereinlass, keine brennbaren Kostümteile, Kartenzahlung möglich."},
+ {id:"melia", name:"Halloween Heights (58. Stock)", where:"Altia Skybar, Meliá Vienna", addr:"Donau-City-Straße 7, 1220 Wien", lat:48.2330, lng:16.4140,
+  time:"Night 21:00–02:00 (Day 15–20)", price:"VVK 16 €, AK 22 €", music:"Urban Club Sounds, Nu-Disco", age:"21+", confirmed:true, g:["charts"],
+  link:"https://www.eventbrite.com/e/halloween-heights-sa-3110-day-night-melia-vienna-58th-floor-tickets-2002291466677", info:"Max. 200 Gäste pro Session, Dresscode „Dark Elegance“, Blick über ganz Wien. Nah am Friedrich-Engels-Platz."},
+ {id:"bettelalm", name:"Mega Halloween Party", where:"Bettel-Alm", addr:"Johannesgasse 12, 1010 Wien", lat:48.2050, lng:16.3745,
+  time:"ab 22:00", price:"Preis offen", music:"Hüttenparty, Party-Hits", age:"–", confirmed:true, g:["charts"],
+  link:"https://www.volume.at/events/mega-halloween-party-2026-10-31/", info:"Hütten-Party mitten in der City mit Grusel-Deko. Plätze begrenzt, Tisch über die Bettel-Alm-Website reservieren."},
+ {id:"klyo", name:"Halloween Horror Night", where:"KLYO / Urania", addr:"Uraniastraße 1, 1010 Wien", lat:48.2117, lng:16.3838,
+  time:"ab 17:30, Party danach", price:"Preis offen (2025: 119 € mit Dinner)", music:"Afterparty hosted by Heartbreak Hotel", age:"–", confirmed:true, g:["charts"],
+  link:"https://www.wien.gv.at/veranstaltungen/halloween-horror-night-2026", info:"Haunted House auf der Dachterrasse, 3-Gänge-Dinner, Horrorfilm im Urania-Kino, dann Party. Ob es Party-only-Tickets gibt, beim KLYO fragen."},
+
+ /* ---- Elektronisch ---- */
+ {id:"forelle", name:"Halloween | The Tunegirl Live", where:"Grelle Forelle", addr:"Spittelauer Lände 12, 1090 Wien", lat:48.2352, lng:16.3610,
+  time:"ab 23:00", price:"16,50–22,50 €", music:"Techno / Elektronisch, Live-Act", age:"–", confirmed:true, g:["techno"],
+  link:"https://wasmachma.at/event/1090-alsergrund/halloween-the-tunegirl-live-9332100", info:"Tickets über oeticket. U4/U6 Spittelau, also schnell vom Friedrich-Engels-Platz."},
+ {id:"prst", name:"Halloween at PRST (PRST Invites)", where:"PRST", addr:"Praterstraße 18, 1020 Wien", lat:48.2140, lng:16.3818,
+  time:"23:00–11:00", price:"20–30 €", music:"House, Tech House", age:"18+", confirmed:true, g:["techno"],
+  link:"https://ra.co/events/2549018", info:"12-Stunden-Marathon bis Sonntagmittag. Tickets über prst.ticket.io."},
+ {id:"tasteless", name:"TASTELESS 3 Years – Halloween Special", where:"Otto-Wagner-Areal", addr:"Baumgartner Höhe 1, 1140 Wien", lat:48.2080, lng:16.2810,
+  time:"21:00–06:00", price:"15–45 €", music:"House, Minimal", age:"18+", confirmed:true, g:["techno"],
+  link:"https://ra.co/events/2550640", info:"Geburtstags-Rave am alten Spitalsareal am Stadtrand. Early-Bird-Tickets laut Veranstalter fast weg."},
+ {id:"flucc", name:"Halloween Rave", where:"Flucc (Wanne & Deck)", addr:"Praterstern 5, 1020 Wien", lat:48.2185, lng:16.3925,
+  time:"ab 22:00", price:"15 € (nur bar an der AK)", music:"Tekno, Acid, Hardtek", age:"–", confirmed:true, g:["techno"],
+  link:"https://flucc.at/events/25TgZH-halloween-rave/", info:"Nur Barzahlung. Parallel „Vienn_a_Tek“ in der Wanne und „Pink Mayhem“ am Deck. Direkt am Praterstern."},
+ {id:"nanang", name:"Halloween Night Flight", where:"NaNang Club", addr:"Hernalser Hauptstraße 21, 1170 Wien", lat:48.2153, lng:16.3437,
+  time:"22:00–05:00", price:"10 € vor 24 Uhr, danach 15 €", music:"Psytrance, Darkpsy, Hi-Tech, Techno", age:"–", confirmed:true, g:["techno"],
+  link:"https://www.volume.at/events/halloween-night-flight-2026-10-31/", info:"Psytrance-Nacht mit Deko. Vor Mitternacht kommen spart 5 €."},
+ {id:"loopsignal", name:"BLACK SIGNAL", where:"Loop", addr:"Lerchenfelder Gürtel, Bogen 26, 1080 Wien", lat:48.2103, lng:16.3399,
+  time:"23:00–05:00", price:"5 € Spende", music:"Dark Techno", age:"18+", confirmed:true, g:["techno","dark","cheap"],
+  link:"https://ra.co/events/2548181", info:"Underground-Techno, nicht als Halloween beworben, läuft aber am 31.10. nach dem Live-Abend im selben Club."},
+ {id:"hive", name:"Halloween – Die Nacht der Toten", where:"The HIVE", addr:"Magdalenenstraße 2, 1060 Wien", lat:48.1966, lng:16.3580,
+  time:"ab 20:00", price:"16,45 €", music:"Party (queer)", age:"–", confirmed:true, g:["charts"],
+  link:"https://wasmachma.at/event/1060-mariahilf/halloween-die-nacht-der-toten-8646785", info:"Queere Halloween-Nacht, Kostüm ausdrücklich erwünscht („je dekadenter, desto besser“). Tickets über oeticket."},
+
+ /* ---- Drum & Bass ---- */
+ {id:"flex", name:"FACE OFF – Halloween Special", where:"Flex", addr:"Augartenbrücke 1, 1010 Wien", lat:48.2178, lng:16.3689,
+  time:"ab 23:00", price:"VVK 9–15 €, AK offen", music:"Drum & Bass, Face2Face", age:"–", confirmed:true, g:["dnb","cheap"],
+  link:"https://flex.at/event/the-hive-x-collapse", info:"THE HIVE x COLLAPSE am Donaukanal. Phase-1-Tickets um 9 € über tickethead."},
+ {id:"lugner", name:"KØRE Halloween Rave", where:"Lugner City", addr:"Gablenzgasse 11, 1150 Wien", lat:48.2028, lng:16.3240,
+  time:"ab 22:00", price:"VVK ab 22 €", music:"Drum & Bass", age:"–", confirmed:true, g:["dnb"],
+  link:"https://www.volume.at/events/koere-halloween-rave-2026-2026-10-31/", info:"Rave im Einkaufszentrum (2025 lief hier der „Lugner Rave“). Tickets über nfctron."},
+
+ /* ---- Retro, Rock, Gothic & Live ---- */
+ {id:"loft", name:"2000s & 2010s & 90s Halloween Club", where:"The Loft", addr:"Lerchenfelder Gürtel 37, 1160 Wien", lat:48.2086, lng:16.3403,
+  time:"21:50–06:00", price:"8–14 € (Timeslot-Tickets)", music:"Dachboden 2000s · Folterkeller 2010s · Orakelzimmer 90s", age:"18+", confirmed:true, g:["charts","cheap"],
+  link:"https://ra.co/events/2551715", info:"Mit Kostüm gibt's Goodies, solange der Vorrat reicht. Früher Slot ist billiger."},
+ {id:"oya", name:"OYA! Halloween Party", where:"The Loft", addr:"Lerchenfelder Gürtel 37, 1160 Wien", lat:48.2082, lng:16.3399,
+  time:"19:30–23:45", price:"15–20 €", music:"Party", age:"–", confirmed:true, g:["charts"],
+  link:"https://wasmachma.at/event/1160-ottakring/oya-halloween-party-8849093", info:"Frühe Party, endet vor Mitternacht. Danach läuft im selben Haus der Retro-Halloween-Club."},
  {id:"viper", name:"Evil Disco – Halloween Special", where:"Viper Room", addr:"Landstraßer Hauptstraße 38, 1030 Wien", lat:48.2030, lng:16.3880,
-  time:"2025: ab 22:00", price:"Preis offen", music:"Gothic, Metal, Electro", age:"–", confirmed:false,
-  link:"https://www.google.com/search?q=Viper+Room+Wien+Evil+Disco+Halloween+2026", info:"Düster, mit Horror-Klassikern und Kostümwettbewerb."},
- {id:"chelsea", name:"Halloween Party", where:"Chelsea", addr:"Lerchenfelder Gürtel 29–30 (U-Bahn-Bögen), 1080 Wien", lat:48.2091, lng:16.3418,
-  time:"2025: Liveact 20:30", price:"Preis offen", music:"70s/80s/90s, Garage-Punk live", age:"–", confirmed:false,
-  link:"https://www.google.com/search?q=Chelsea+Wien+Halloween+2026", info:"Szene-Klassiker am Gürtel, Drink-Specials."},
+  time:"ab 22:00", price:"8 €", music:"Gothic, Metal, Electro, Halloween-Klassiker", age:"–", confirmed:true, g:["dark","rock","cheap"],
+  link:"https://www.volume.at/events/evil-disco-halloween-special-2026-10-31/", info:"Horrorfilme auf 3 Screens, Kostümwettbewerb um Konzertkarten."},
+ {id:"chelsea", name:"Halloween: The Spauldings / Lovable Losers", where:"Chelsea", addr:"Lerchenfelder Gürtel, Bögen 29–30, 1080 Wien", lat:48.2091, lng:16.3418,
+  time:"Einlass 20:00, Start 20:30", price:"VVK 12 €, AK 15 €", music:"Horror-Punk live, danach DJ", age:"–", confirmed:true, g:["rock","live","cheap"],
+  link:"https://www.chelsea.co.at/concerts.php", info:"Szene-Klassiker am Gürtel. Ein Portal listet Fr 30.10., die Chelsea-Seite sagt Sa 31.10.: vorher kurz checken."},
+ {id:"zombieball", name:"Wiener Rock & Metal Zombieball", where:"Szene Wien", addr:"Hauffgasse 26, 1110 Wien", lat:48.1786, lng:16.4175,
+  time:"ab 19:30", price:"VVK 36,30 €", music:"Rock, Metal, Punk live (Kontrust u. a.)", age:"–", confirmed:true, g:["rock","live"],
+  link:"https://www.volume.at/events/wiener-rock-metal-zombieball-2026-2026-10-31/", info:"Kostümwettbewerb (u. a. Nova-Rock-Pässe), Aftershow mit DJ im 2. Stock."},
+ {id:"loophw", name:"HalloWien Live", where:"Loop", addr:"Lerchenfelder Gürtel, Bogen 26, 1080 Wien", lat:48.2103, lng:16.3399,
+  time:"Einlass 19:00, Bands ab 20:00", price:"Pay as you want", music:"Metal, Punk live", age:"–", confirmed:true, g:["rock","live","cheap"],
+  link:"https://warda.at/events/hallowien-live/", info:"Live-Bands statt DJ, Kostüm erwünscht. Ab 23:00 Black Signal im selben Club."},
+ {id:"carina", name:"Die Rotzfete des Grauens", where:"Café Carina", addr:"Josefstädter Straße 84, 1080 Wien", lat:48.2106, lng:16.3393,
+  time:"ab 20:00", price:"Eintritt frei", music:"Punk Rock, 3 Bands live", age:"–", confirmed:true, g:["rock","live","cheap"],
+  link:"https://www.volume.at/events/die-rotzfete-des-grauens-2026-2026-10-31/", info:"Gratis Punk-Halloween direkt an der U6 Josefstädter Straße. Klein, schnell voll."},
+ {id:"coco", name:"The Great Halloween Bash", where:"COCO Bar", addr:"Lerchenfelder Gürtel, Bögen 34–35, 1080 Wien", lat:48.2078, lng:16.3402,
+  time:"ab 20:00", price:"Preis offen", music:"Cover-Rock live (The Cover Fiends)", age:"–", confirmed:true, g:["rock","live"],
+  link:"https://wasmachma.at/event/1080-josefstadt/the-great-halloween-bash-2026-9763925", info:"Liegt am Gürtel zwischen Loft, Loop und Chelsea: gut zum Weiterziehen."},
  {id:"fledermaus", name:"Halloween Monster Party", where:"Cabaret Fledermaus", addr:"Spiegelgasse 2, 1010 Wien", lat:48.2072, lng:16.3699,
-  time:"2025: ab 21:00", price:"Preis offen", music:"Rock & 80s-Pop", age:"–", confirmed:false,
-  link:"https://www.google.com/search?q=Fledermaus+Wien+Halloween+2026", info:"Klein und zentral, gut zu Fuß aus dem 1. Bezirk."},
- {id:"u4", name:"Death by Disco – Halloween", where:"U4", addr:"Schönbrunner Straße 222, 1120 Wien", lat:48.1863, lng:16.3270,
-  time:"2025: abends", price:"2025: ca. 13 €", music:"Disco, Party-Klassiker", age:"–", confirmed:false,
-  link:"https://www.google.com/search?q=U4+Wien+Death+by+Disco+Halloween+2026", info:"Günstige Club-Alternative, direkt bei U4 Meidling Hauptstraße."},
+  time:"2025: ab 21:00", price:"Preis offen", music:"Rock & 80s-Pop", age:"–", confirmed:false, g:["rock","charts"],
+  link:"https://www.google.com/search?q=Fledermaus+Wien+Halloween+2026", info:"Klein und zentral, gut zu Fuß aus dem 1. Bezirk. Für 2026 nichts gefunden."},
+ {id:"arena", name:"Dark Beisl II – Devil's Night", date:"Fr 30.10.", where:"Arena Wien – Beisl", addr:"Baumgasse 80, 1030 Wien", lat:48.1882, lng:16.4040,
+  time:"Fr 30.10., ab 21:00", price:"gratis mit Konzertticket (Iceberg)", music:"Dark Wave, 80s, Goth", age:"–", confirmed:true, g:["dark"],
+  link:"https://www.volume.at/events/dark-beisl-ii-devils-night-2026-10-30/", info:"Am Vorabend, nicht am Geburtstag. Kleiner Goth-Dancefloor."},
+
+ /* ---- Bars, Konzerte, früher Abend ---- */
+ {id:"conchita", name:"Conchita Wurst – Haunted Harmonies", where:"Globe Wien – Marx Halle", addr:"Karl-Farkas-Gasse 19, 1030 Wien", lat:48.1860, lng:16.4080,
+  time:"ab 20:00", price:"30,40–58,40 €", music:"Pop, Live-Konzert", age:"–", confirmed:true, g:["live","charts"],
+  link:"https://wasmachma.at/event/1030-landstrasse/conchita-wurst-haunted-harmonies-halloween-tour-2026-3651827", info:"Konzert statt Clubnacht, Kostüme willkommen. Kollidiert zeitlich mit der Feier, eher eine Alternative."},
+ {id:"tube", name:"Halloween Party", where:"The Tube Station", addr:"Löwengasse 51, 1030 Wien", lat:48.2058, lng:16.3918,
+  time:"ab 18:00", price:"Preis offen", music:"Bar, Grusel-Sound", age:"–", confirmed:true, g:["cheap"],
+  link:"https://www.volume.at/events/halloween-party-2026-10-31-3/", info:"Nur Kerzenlicht und Horrorfilme, Bloody Shots um 1 €, Gratis-Shot im Kostüm, Preis fürs beste Outfit."},
+ {id:"landtmann", name:"Halloween-Afterwork", where:"Café Landtmann", addr:"Universitätsring 4, 1010 Wien", lat:48.2115, lng:16.3612,
+  time:"2025: ab 18:00", price:"2025: gratis", music:"DJ", age:"–", confirmed:false, g:["cheap"],
+  link:"https://www.1000thingsmagazine.com/de/a/29288/halloween-events-wien/", info:"2024 und 2025 gratis mit DJ, Deko und Kostümwettbewerb. 2026 noch nicht angekündigt."},
  {id:"zoku", name:"Rooftop Halloween Party", where:"Zoku Vienna", addr:"Perspektivstraße 6, 1020 Wien", lat:48.2183, lng:16.4122,
-  time:"2025: ab 18:00", price:"2025: gratis (Anmeldung)", music:"DJs, Cocktails, Kostümwettbewerb", age:"–", confirmed:false,
-  link:"https://livezoku.com/vienna/de/", info:"Eher als Warm-up am frühen Abend, Dachterrasse mit Prater-Blick."}
+  time:"2025: ab 18:00", price:"2025: gratis (Anmeldung)", music:"DJs, Cocktails, Kostümwettbewerb", age:"–", confirmed:false, g:["cheap"],
+  link:"https://livezoku.com/vienna/de/", info:"Eher Warm-up am frühen Abend, Dachterrasse mit Prater-Blick. 2026 noch kein Listing."}
 ];
+const GENRES = [["charts","Charts & Pop"],["hiphop","HipHop"],["techno","Techno & House"],["dnb","Drum & Bass"],["rock","Rock, Metal, Punk"],["dark","Gothic & Dark"],["live","Live-Bands"],["cheap","Gratis bis 15 €"]];
 
 /* ---------- Status-Speicher ---------- */
 const SENDER = {name:"Eda Karaca", phone:"0699 19951005"};
@@ -825,13 +993,18 @@ const IMG = {
   dreiboegen:"https://framerusercontent.com/images/pJoIeQC6XRdCIoFO9zXIBDqs5WY.png"
 };
 const DEF = {asked:false, answer:"offen", cake:"?", fav:false, note:""};
-let STATE = {}; VENUES.forEach(v=>STATE[v.id]={...DEF});
+let STATE = {}; ALL_VENUES.forEach(v=>STATE[v.id]={...DEF});
+let EXTRA = {}; // Einträge zu Locations, die es nicht mehr gibt: bleiben gespeichert
 let SETTINGS = {fromBar:"iltoro"};
 let db = null, useDb = false;
 const LS = "geb3110-v1";
-function lsLoad(){try{const r=JSON.parse(localStorage.getItem(LS)||"null"); if(r){Object.keys(r.state||{}).forEach(k=>{if(STATE[k])STATE[k]={...DEF,...r.state[k]}}); if(r.settings)SETTINGS={...SETTINGS,...r.settings};}}catch(e){}}
-function lsSave(){try{localStorage.setItem(LS,JSON.stringify({state:STATE,settings:SETTINGS}))}catch(e){}}
+function lsLoad(){try{const r=JSON.parse(localStorage.getItem(LS)||"null"); if(r){Object.keys(r.state||{}).forEach(k=>{if(STATE[k])STATE[k]={...DEF,...r.state[k]}; else EXTRA[k]=r.state[k]}); if(r.settings)SETTINGS={...SETTINGS,...r.settings};}}catch(e){}}
+function lsSave(){try{localStorage.setItem(LS,JSON.stringify({state:{...EXTRA,...STATE},settings:SETTINGS}))}catch(e){}}
 lsLoad();
+function touched(s){return !!s && (s.asked||s.fav||s.note||s.answer!=="offen"||s.cake!=="?")}
+// Über 45 min wird ausgeblendet, außer ihr habt dort schon etwas eingetragen
+const VENUES = ALL_VENUES.filter(v=>!v.far || touched(STATE[v.id]));
+if(!VENUES.some(v=>v.id===SETTINGS.fromBar) && SETTINGS.fromBar!=="home") SETTINGS.fromBar="iltoro";
 
 const pending = {};
 function saveVenue(id){
@@ -877,7 +1050,10 @@ function mailText(v){
     hikxs:"• Wie schaut euer Getränke-Pauschalpreis für den Partykeller aus?",
     roses:"• Gilt noch der Mindestumsatz von 350 € inkl. Karaokeanlage?",
     soho:"• Habt ihr einen eigenen Bereich für Gruppen, wo wir Karaoke singen können?",
-    iltoro:"• Habt ihr eine Karaoke-Anlage im Haus? Und gibt es Getränkepakete für ca. 20 Personen?"
+    iltoro:"• Habt ihr eine Karaoke-Anlage im Haus? Und gibt es Getränkepakete für ca. 20 Personen?",
+    sofies:"• Ist euer Zusatzraum mit Bar und Tanzfläche am 31.10. noch frei, und gibt es Miete oder Mindestkonsum?",
+    polkadot:"• Könnt ihr uns Plätze für ca. 20 Personen reservieren? Dürfen wir eine Torte mitbringen?",
+    downunder:"• Wäre die Lounge (oder der Snakepit-Keller) an dem Abend frei, und was würde das kosten?"
   }[v.id] || "";
   const subj=`Anfrage Geburtstagsfeier Sa, 31.10.2026 – ca. 20 Personen`;
   const intro = "ich würde gern meinen Geburtstag am Samstag, 31. Oktober 2026 bei euch feiern.";
@@ -1228,7 +1404,7 @@ $("#mapinfo").addEventListener("click",e=>{const li=e.target.closest("[data-pin]
 ["loc","go"].forEach(k=>{const b=$("#l-"+k);b.addEventListener("click",()=>{LAYERS[k]=!LAYERS[k];b.setAttribute("aria-pressed",LAYERS[k]);renderMap()})});
 
 /* ---------- Fortgehen ---------- */
-const G={confirmed:false,sort:false};
+const G={confirmed:false,sort:false,genre:""};
 function renderFrom(){
   const sel=$("#fromBar");
   sel.innerHTML=VENUES.map(v=>`<option value="${v.id}" ${v.id===SETTINGS.fromBar?"selected":""}>${STATE[v.id].fav?"★ ":""}${esc(v.name)} (${v.plz})</option>`).join("")+`<option value="home" ${SETTINGS.fromBar==="home"?"selected":""}>Von zuhause (Friedrich-Engels-Platz)</option>`;
@@ -1238,9 +1414,11 @@ function renderEvents(){
   const from = SETTINGS.fromBar==="home" ? {lat:HOME.lat,lng:HOME.lng,q:HOME.q,name:"zuhause"} : (()=>{const v=VENUES.find(x=>x.id===SETTINGS.fromBar)||VENUES[0];return {lat:v.lat,lng:v.lng,q:v.addr,name:v.name}})();
   let list=EVENTS.map(e=>({...e,t:travel(from,e)}));
   if(G.confirmed) list=list.filter(e=>e.confirmed);
+  if(G.genre) list=list.filter(e=>(e.g||[]).includes(G.genre));
+  const ec=document.getElementById("evCount"); if(ec) ec.textContent=list.length+" von "+EVENTS.length+" Partys";
   if(G.sort) list.sort((a,b)=>a.t.min-b.t.min);
   $("#events").innerHTML=list.map(e=>`<article class="ev">
-    <div class="meta"><span class="pill ${e.confirmed?"ok":"q"}">${e.confirmed?"2026 bestätigt":"jährlich, 2026 noch offen"}</span><span class="pill">${esc(e.age)}</span></div>
+    <div class="meta">${e.date?`<span class="pill bad">${esc(e.date)}</span>`:""}<span class="pill ${e.confirmed?"ok":"q"}">${e.confirmed?"2026 bestätigt":"jährlich, 2026 noch offen"}</span><span class="pill">${esc(e.age)}</span>${(e.g||[]).filter(x=>x!=="cheap").map(x=>`<span class="pill">${esc((GENRES.find(y=>y[0]===x)||["",x])[1])}</span>`).join("")}</div>
     <h3>${esc(e.name)}</h3>
     <p><b style="color:var(--fg)">${esc(e.where)}</b> · ${esc(e.addr)}</p>
     <div class="price">${esc(e.price)}</div>
@@ -1252,6 +1430,8 @@ function renderEvents(){
 }
 $("#fromBar").addEventListener("change",e=>{SETTINGS.fromBar=e.target.value;saveSettings();renderEvents()});
 ["confirmed","sort"].forEach(k=>{const b=$("#g-"+k);b.addEventListener("click",()=>{G[k]=!G[k];b.setAttribute("aria-pressed",G[k]);renderEvents()})});
+(function(){const w=$("#genreChips"); w.innerHTML=`<button class="chip" data-genre="" aria-pressed="true">Alle Musik</button>`+GENRES.map(([k,l])=>`<button class="chip" data-genre="${k}" aria-pressed="false">${l}</button>`).join("");
+  w.addEventListener("click",ev=>{const b=ev.target.closest("[data-genre]"); if(!b) return; G.genre=b.dataset.genre; w.querySelectorAll("[data-genre]").forEach(x=>x.setAttribute("aria-pressed",x===b)); renderEvents()});})();
 
 
 /* ---------- Gästeliste ---------- */
